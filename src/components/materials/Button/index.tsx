@@ -1,4 +1,4 @@
-// import styles from './index.module.css';
+// import * as S from './styled';
 import { Button as MaterialButton } from '@arco-design/web-react';
 
 const Button = ({ type, status, size, shape, text }) => {

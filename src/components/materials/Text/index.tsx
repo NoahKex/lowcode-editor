@@ -1,4 +1,4 @@
-// import styles from './index.module.css';
+// import * as S from './styled';
 
 const Text = ({ text, fontSize }) => {
   return (

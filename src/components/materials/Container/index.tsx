@@ -1,4 +1,4 @@
-// import styles from './index.module.css';
+// import * as S from './styled';
 import { Grid } from '@arco-design/web-react';
 
 const { Row } = Grid;
