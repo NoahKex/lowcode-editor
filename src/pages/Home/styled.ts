@@ -6,10 +6,20 @@ export const TopBar = styled.div`
 `;
 
 export const ToolArea = styled.div`
+  height: 100%;
+  width: 50px;
+  box-shadow: 5px 0 5px -5px #DFDFDF;
 `;
 
 export const EditArea = styled.div`
+  height: auto;
+  width: auto;
+  flex: 1;
+  background-color: #F6F6F6;
 `;
 
 export const SetArea = styled.div`
+  height: 100%;
+  width: 300px;
+  box-shadow: -5px 0 5px -5px #DFDFDF;
 `;

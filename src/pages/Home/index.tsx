@@ -5,23 +5,23 @@ import Setter from '@/components/setter';
 import ToolBox from '@/components/toolbox';
 import TopBar from '@/components/topbar';
 import { Layout } from '@arco-design/web-react';
-// import * as S from './styled';
+import * as S from './styled';
 import { Editor, Frame, Element } from '@craftjs/core';
 
-const { Sider } = Layout;
 const { Header } = Layout;
 const { Content } = Layout;
+const { Footer } = Layout;
 
 const Home = () => {
   return (
-    <Layout style={{ height: '100vh', width: '100vw' }}>
+    <Layout style={{ height: '100vh', width: '100vw', minWidth: '1000px' }}>
       <Editor resolver={{ Button, Container, Text }}>
         <Header>
           <TopBar />
         </Header>
-        <Layout>
-          <Sider><ToolBox /></Sider>
-          <Content>
+        <Content style={{ display: 'flex' }}>
+          <S.ToolArea><ToolBox /></S.ToolArea>
+          <S.EditArea>
             <Frame>
               <Element is={Container} padding={5} background="#eee" canvas height={200} width={300}>
                 <Text text="fefef" fontSize={20} />
@@ -31,9 +31,10 @@ const Home = () => {
                 </Element>
               </Element>
             </Frame>
-          </Content>
-          <Sider><Setter /></Sider>
-        </Layout>
+          </S.EditArea>
+          <S.SetArea><Setter /></S.SetArea>
+        </Content>
+        <Footer>123</Footer>
       </Editor>
     </Layout>
   );
