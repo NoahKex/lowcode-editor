@@ -1,7 +1,7 @@
 // import * as S from './styled';
+import ColorPicker from '@/components/custom/ColorPicker';
 import { Form, Grid, InputNumber } from '@arco-design/web-react';
 import { useNode } from '@craftjs/core';
-import { SketchPicker } from 'react-color';
 
 const { Row } = Grid;
 const { Col } = Grid;
@@ -60,10 +60,10 @@ const ContainerSettings = () => {
         />
       </FormItem>
       <FormItem label="容器背景色">
-        <SketchPicker
-          color={props.background}
+        <ColorPicker
+          value={props.background}
           onChange={(val) => {
-            setProp((nodeProps) => { nodeProps.background = val.hex; });
+            setProp((nodeProps) => { nodeProps.background = val; });
           }}
         />
       </FormItem>
