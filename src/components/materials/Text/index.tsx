@@ -20,7 +20,7 @@ const TextSettings = () => {
   }));
 
   return (
-    <Form>
+    <Form labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}>
       <FormItem label="文字内容">
         <Input
           value={text}

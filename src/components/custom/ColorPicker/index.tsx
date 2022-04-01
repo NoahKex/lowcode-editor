@@ -17,7 +17,7 @@ interface ColorPickerPropsType {
   onChange: (value: string) => void;
 }
 
-const ColorBox = (color: string) => {
+const ColorBox = ({ color }: {color: string}) => {
   return (
     <S.ColorBox currentColor={color} />
   );
@@ -38,7 +38,7 @@ const ColorPicker = ({ value, onChange }: ColorPickerPropsType) => {
       />}
       color="#ffffff"
     >
-      <Input readOnly addBefore={ColorBox(value)} value={value} />
+      <Input readOnly addBefore={<ColorBox color={value} />} value={value} />
     </Tooltip>);
 };
 

@@ -23,7 +23,7 @@ const Home = () => {
           <S.ToolArea><ToolBox /></S.ToolArea>
           <S.EditArea>
             <Frame>
-              <Element is={Container} padding={5} background="#eee" canvas height={200} width={300}>
+              <Element is={Container} padding={5} background="#F6F6F6" canvas height={200} width={300}>
                 <Text text="fefef" fontSize={20} />
                 <Button type="primary" status="danger" size="mini" shape="round" text="1233" />
                 <Element is={Container} padding={2} background="#999" canvas height={100} width={150}>

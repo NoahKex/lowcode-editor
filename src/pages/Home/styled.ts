@@ -15,10 +15,14 @@ export const EditArea = styled.div`
   height: auto;
   width: auto;
   flex: 1;
-  background-color: #F6F6F6;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #F1F1F1;
 `;
 
 export const SetArea = styled.div`
+  padding: 10px 20px;
+  box-sizing: border-box;
   height: 100%;
   width: 300px;
   box-shadow: -5px 0 5px -5px #DFDFDF;

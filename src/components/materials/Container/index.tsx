@@ -28,7 +28,7 @@ const ContainerSettings = () => {
   }));
 
   return (
-    <Form>
+    <Form labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}>
       <FormItem label="容器高度">
         <InputNumber
           mode="button"
