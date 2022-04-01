@@ -4,7 +4,7 @@ export const LayerTreeContainer = styled.div`
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  padding: 5px 10px;
+  padding: 10px 10px;
 `;
 
 export const ToolTitle = styled.p`
