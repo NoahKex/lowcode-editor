@@ -1,0 +1,415 @@
+{
+  "$id": "@snaphooks/xingyun-lowcode-editor-component-protocol-schema",
+  "description": "json schema of component info and props for xingyun low code editor",
+  "allOf": [
+    {
+      "$ref": "#/definitions/BasicSection"
+    },
+    {
+      "$ref": "#/definitions/PropsSection"
+    },
+    {
+      "$ref": "#/definitions/ConfigureSection"
+    }
+  ],
+  "definitions": {
+    "BasicSection": {
+      "type": "object",
+      "properties": {
+        "componentName": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "docUrl": {
+          "type": "string"
+        },
+        "screenshot": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "npm": {
+          "$ref": "#/definitions/Npm"
+        }
+      },
+      "required": [
+        "componentName",
+        "title",
+        "docUrl",
+        "icon"
+      ]
+    },
+    "PropsSection": {
+      "type": "object",
+      "properties": {
+        "props": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "propType": {
+                "$ref": "#/definitions/PropType"
+              },
+              "description": {
+                "type": "string"
+              },
+              "defaultValue": {
+                "$ref": "#/definitions/PropType"
+              }
+            },
+            "required": [
+              "name",
+              "propType"
+            ]
+          }
+        }
+      }
+    },
+    "ConfigureSection": {
+      "type": "object",
+      "properties": {
+        "configure": {
+          "type": "object",
+          "properties": {
+            "events": {
+              "type": "object",
+              "properties": {}
+            },
+            "component": {
+              "$ref": "#/definitions/ConfigureComponent"
+            }
+          }
+        }
+      }
+    },
+    "Npm": {
+      "type": "object",
+      "properties": {
+        "package": {
+          "type": "string"
+        },
+        "exportName": {
+          "type": "string"
+        },
+        "subName": {
+          "type": "string"
+        },
+        "main": {
+          "type": "string"
+        },
+        "destructuring": {
+          "type": "boolean"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "package",
+        "exportName",
+        "subName",
+        "main",
+        "destructuring",
+        "version"
+      ]
+    },
+    "PropType": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/BasicType"
+        },
+        {
+          "$ref": "#/definitions/RequiredType"
+        },
+        {
+          "$ref": "#/definitions/ComplexType"
+        }
+      ]
+    },
+    "BasicType": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/NumberType"
+        },
+        {
+          "$ref": "#/definitions/StringType"
+        },
+        {
+          "$ref": "#/definitions/BooleanType"
+        },
+        {
+          "$ref": "#/definitions/ArrayType"
+        },
+        {
+          "$ref": "#/definitions/ObjectType"
+        }
+      ]
+    },
+    "NumberType": {
+      "type": "number"
+    },
+    "StringType": {
+      "type": "string"
+    },
+    "BooleanType": {
+      "type": "boolean"
+    },
+    "ArrayType": {
+      "type": "array"
+    },
+    "ObjectType": {
+      "type": "object"
+    },
+    "RequiredType": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/BasicType"
+        },
+        "isRequired": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ]
+    },
+    "ComplexType": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/OneOf"
+        },
+        {
+          "$ref": "#/definitions/OneOfType"
+        },
+        {
+          "$ref": "#/definitions/ArrayOf"
+        },
+        {
+          "$ref": "#/definitions/ObjectOf"
+        },
+        {
+          "$ref": "#/definitions/Shape"
+        },
+        {
+          "$ref": "#/definitions/Exact"
+        }
+      ]
+    },
+    "OneOf": {
+      "type": "object",
+      "required": [
+        "type",
+        "value"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "oneOf"
+          ]
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "isRequired": {
+          "type": "boolean"
+        }
+      }
+    },
+    "OneOfType": {
+      "type": "object",
+      "required": [
+        "type",
+        "value"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "oneOfType"
+          ]
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PropType"
+          }
+        },
+        "isRequired": {
+          "type": "boolean"
+        }
+      }
+    },
+    "ArrayOf": {
+      "type": "object",
+      "required": [
+        "type",
+        "value"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "arrayOf"
+          ]
+        },
+        "value": {
+          "$ref": "#/definitions/PropType"
+        },
+        "isRequired": {
+          "type": "boolean"
+        }
+      }
+    },
+    "ObjectOf": {
+      "type": "object",
+      "required": [
+        "type",
+        "value"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "objectOf"
+          ]
+        },
+        "value": {
+          "$ref": "#/definitions/PropType"
+        },
+        "isRequired": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Shape": {
+      "type": "object",
+      "required": [
+        "type",
+        "value"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "shape"
+          ]
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "propType": {
+                "$ref": "#/definitions/PropType"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "isRequired": {
+          "type": "boolean"
+        }
+      }
+    },
+    "ShapeItem": {
+      "type": "object",
+      "required": [
+        "name",
+        "propType"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "propType": {
+          "$ref": "#/definitions/PropType"
+        },
+        "isRequired": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Exact": {
+      "type": "object",
+      "required": [
+        "type",
+        "value"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "exact"
+          ]
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "propType": {
+                "$ref": "#/definitions/PropType"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "isRequired": {
+          "type": "boolean"
+        }
+      }
+    },
+    "ConfigureComponent": {
+      "type": "object",
+      "properties": {
+        "isOnline": {
+          "type": "boolean"
+        },
+        "nestingRule": {
+          "type": "object",
+          "properties": {
+            "canMoveInWhitelist": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "canMoveInBlacklist": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
