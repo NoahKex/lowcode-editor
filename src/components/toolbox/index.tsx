@@ -1,28 +1,71 @@
-import { Button as MaterialButton } from '@arco-design/web-react';
-import Button from '@/components/materials/Button';
-import Container from '@/components/materials/Container';
-import Text from '@/components/materials/Text';
-import { Element, useEditor } from '@craftjs/core';
+import { Button as MaterialButton, Trigger } from '@arco-design/web-react';
+import { IconApps, IconMindMapping } from '@arco-design/web-react/icon';
+import styled from 'styled-components';
+import * as S from './styled';
+import { useState } from 'react';
+import ComponentLibraryTool from './components/ComponentLibrary';
+import LayerTreeTool from './components/LayerTree';
+
+/**
+ * 工具箱按钮选择状态
+ */
+enum ToolButtonClickStatus {
+  /**
+   * 选择图层树
+   */
+  LayerTree,
+  /**
+   * 选择组件库
+   */
+  ComponentLibrary,
+  /**
+   * 未选择
+   */
+  None,
+}
+
+const ToolBoxButton = styled(MaterialButton)`
+  margin-top: 10px;
+`;
 
 const ToolBox = () => {
-  const { connectors, query } = useEditor();
+  const [toolButtonClickStatus, setToolButtonClickStatus] = useState<ToolButtonClickStatus>(ToolButtonClickStatus.None);
   return (
-    <>
-      <MaterialButton ref={(ref) => connectors.create(ref as HTMLDivElement,
-        <Button type="default" status="default" size="default" shape="square" text="按钮" />)}
-      >Button
-      </MaterialButton>
-      <MaterialButton ref={(ref) => connectors.create(ref as HTMLDivElement,
-        <Text text="一段文字" fontSize={16} />)}
-      >Text
-      </MaterialButton>
-      <MaterialButton ref={(ref) => connectors.create(ref as HTMLDivElement,
-        <Element is={Container} padding={5} background="#eee" height={200} width={200} canvas>
-          <Text text="一个布局容器" fontSize={16} />
-        </Element>)}
-      >Container
-      </MaterialButton>
-    </>
+    <S.ToolContainer >
+      <Trigger
+        unmountOnExit={false}
+        popupVisible={toolButtonClickStatus === ToolButtonClickStatus.LayerTree}
+        popup={() => <S.ToolItemContainer><LayerTreeTool /></S.ToolItemContainer>}
+        trigger="click"
+        position="right"
+        style={{ position: 'absolute', top: '60px', left: '60px' }}
+        onClickOutside={() => setToolButtonClickStatus(ToolButtonClickStatus.None)}
+      >
+        <ToolBoxButton
+          type={toolButtonClickStatus === ToolButtonClickStatus.LayerTree ? 'primary' : 'default'}
+          onClick={() => setToolButtonClickStatus(ToolButtonClickStatus.LayerTree)}
+          icon={<IconMindMapping />}
+        />
+      </Trigger>
+      <Trigger
+        unmountOnExit={false}
+        popupVisible={toolButtonClickStatus === ToolButtonClickStatus.ComponentLibrary}
+        popup={() => (
+          <S.ToolItemContainer>
+            <ComponentLibraryTool onMaterialMouseDown={() => setToolButtonClickStatus(ToolButtonClickStatus.None)} />
+          </S.ToolItemContainer>)}
+        trigger="click"
+        position="right"
+        style={{ position: 'absolute', top: '60px', left: '60px' }}
+        onClickOutside={() => setToolButtonClickStatus(ToolButtonClickStatus.None)}
+      >
+        <ToolBoxButton
+          type={toolButtonClickStatus === ToolButtonClickStatus.ComponentLibrary ? 'primary' : 'default'}
+          onClick={() => setToolButtonClickStatus(ToolButtonClickStatus.ComponentLibrary)}
+          icon={<IconApps />}
+        />
+      </Trigger>
+    </S.ToolContainer>
   );
 };
 
