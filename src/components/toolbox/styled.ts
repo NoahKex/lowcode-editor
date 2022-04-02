@@ -13,6 +13,6 @@ export const ToolItemContainer = styled.div`
   width: 260px;
   background-color: #FFFFFF;
   border-radius: 10px;
-  box-shadow: 2px 2px 2px -5px #DFDFDF;
+  box-shadow: 0px 0px 5px 2px #DFDFDF;
   overflow: hidden;
 `;

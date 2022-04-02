@@ -7,6 +7,7 @@ import TopBar from '@/components/topbar';
 import { Layout } from '@arco-design/web-react';
 import * as S from './styled';
 import { Editor, Frame, Element } from '@craftjs/core';
+import Page from '@/components/materials/Page';
 
 const { Header } = Layout;
 const { Content } = Layout;
@@ -15,7 +16,7 @@ const { Footer } = Layout;
 const Home = () => {
   return (
     <Layout style={{ height: '100vh', width: '100vw', minWidth: '1000px' }}>
-      <Editor resolver={{ Button, Container, Text }}>
+      <Editor resolver={{ Page, Button, Container, Text }}>
         <Header>
           <TopBar />
         </Header>
@@ -23,12 +24,8 @@ const Home = () => {
           <S.ToolArea><ToolBox /></S.ToolArea>
           <S.EditArea>
             <Frame>
-              <Element is={Container} padding={5} background="#F6F6F6" canvas height={200} width={300}>
-                <Text text="fefef" fontSize={20} />
-                <Button type="primary" status="danger" size="mini" shape="round" text="1233" />
-                <Element is={Container} padding={2} background="#999" canvas height={100} width={150}>
-                  <Button type="primary" status="success" size="small" shape="round" text="2233" />
-                </Element>
+              <Element is={Page} padding={10} backgroundColor="#FFFFFF" canvas>
+                <div />
               </Element>
             </Frame>
           </S.EditArea>

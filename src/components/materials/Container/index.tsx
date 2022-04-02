@@ -1,7 +1,7 @@
-// import * as S from './styled';
 import ColorPicker from '@/components/custom/ColorPicker';
 import { Form, Grid, InputNumber } from '@arco-design/web-react';
 import { useNode } from '@craftjs/core';
+import * as S from './styled';
 
 const { Row } = Grid;
 const { Col } = Grid;
@@ -11,13 +11,13 @@ const FormItem = Form.Item;
 const Container = ({ height, width, background, padding, children }) => {
   const { connectors: { connect, drag } } = useNode();
   return (
-    <div ref={(ref) => connect(drag(ref as HTMLDivElement))} style={{ background, padding, height, width }}>
+    <S.MaterialContainer ref={(ref) => connect(drag(ref as HTMLDivElement))} height={height} width={width} padding={padding} background={background}>
       <Row>
         <Col span={24}>
           {children}
         </Col>
       </Row>
-    </div>
+    </S.MaterialContainer>
   );
 };
 

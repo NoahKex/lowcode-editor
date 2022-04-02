@@ -18,6 +18,7 @@ export const EditArea = styled.div`
   padding: 10px;
   box-sizing: border-box;
   background-color: #F1F1F1;
+  overflow: scroll;
 `;
 
 export const SetArea = styled.div`
