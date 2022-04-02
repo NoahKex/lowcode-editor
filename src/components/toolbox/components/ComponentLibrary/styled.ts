@@ -7,6 +7,13 @@ export const ComponentLibraryContainer = styled.div`
   padding: 10px 10px;
 `;
 
+export const MaterialIcon = styled.img`
+  height: 18px;
+  width: 18px;
+  margin-right: 5px;
+  vertical-align: middle;
+`;
+
 export const ToolTitle = styled.p`
   height: 15px;
   font-size: 16px;

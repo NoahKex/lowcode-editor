@@ -10,7 +10,7 @@ export const ToolContainer = styled.div`
 
 export const ToolItemContainer = styled.div`
   height: 710px;
-  width: 280px;
+  width: 260px;
   background-color: #FFFFFF;
   border-radius: 10px;
   box-shadow: 2px 2px 2px -5px #DFDFDF;
