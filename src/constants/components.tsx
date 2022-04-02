@@ -3,6 +3,7 @@ import Button from '@/components/materials/Button';
 import Container from '@/components/materials/Container';
 import Text from '@/components/materials/Text';
 import { Element } from '@craftjs/core';
+import { SetterCategory } from './setters';
 
 /**
  * 布局组件
@@ -33,24 +34,42 @@ export const LayoutComponentsMessage: ComponentType = {
       propType: 'number',
       description: '容器高度',
       defaultValue: 100,
+      setter: {
+        name: SetterCategory.InputNumber,
+        options: {
+          minNumber: 0,
+        },
+      },
     },
     {
       name: 'width',
       propType: 'number',
       description: '容器宽度',
       defaultValue: 100,
+      setter: {
+        name: SetterCategory.InputNumber,
+        options: {
+          minNumber: 0,
+        },
+      },
     },
     {
       name: 'background',
       propType: 'string',
       description: '容器背景色',
       defaultValue: '#FFFFFF',
+      setter: {
+        name: SetterCategory.ColorPicker,
+      },
     },
     {
       name: 'padding',
       propType: 'number',
       description: '容器内边距',
       defaultValue: 10,
+      setter: {
+        name: SetterCategory.InputNumber,
+      },
     },
   ],
 };
@@ -81,30 +100,60 @@ export const ButtonComponentsMessage: ComponentType = {
       propType: 'string',
       description: '按钮文字',
       defaultValue: '按钮',
+      setter: {
+        name: SetterCategory.Input,
+        options: {
+          maxLength: 10,
+        },
+      },
     },
     {
       name: 'type',
       propType: 'string',
       description: '按钮类型',
       defaultValue: 'default',
+      setter: {
+        name: SetterCategory.Select,
+        options: {
+          selectOptions: ['default', 'primary', 'secondary', 'dashed', 'text', 'outline'],
+        },
+      },
     },
     {
       name: 'status',
       propType: 'string',
       description: '按钮状态',
       defaultValue: 'default',
+      setter: {
+        name: SetterCategory.Select,
+        options: {
+          selectOptions: ['warning', 'danger', 'success', 'default'],
+        },
+      },
     },
     {
       name: 'size',
       propType: 'string',
       description: '按钮尺寸',
       defaultValue: 'default',
+      setter: {
+        name: SetterCategory.Select,
+        options: {
+          selectOptions: ['mini', 'small', 'default', 'large'],
+        },
+      },
     },
     {
       name: 'shape',
       propType: 'string',
       description: '按钮形状',
       defaultValue: 'square',
+      setter: {
+        name: SetterCategory.Select,
+        options: {
+          selectOptions: ['circle', 'round', 'square'],
+        },
+      },
     },
   ],
 };
@@ -129,12 +178,21 @@ export const TextComponentsMessage: ComponentType = {
       propType: 'string',
       description: '文本内容',
       defaultValue: '一段文字',
+      setter: {
+        name: SetterCategory.Input,
+        options: {
+          maxLength: 10,
+        },
+      },
     },
     {
       name: 'fontSize',
       propType: 'number',
       description: '文本大小',
       defaultValue: 16,
+      setter: {
+        name: SetterCategory.Slider,
+      },
     },
   ],
 };

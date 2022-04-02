@@ -1,10 +1,10 @@
-import { IObject, PropsSection } from '@/types';
+import { PropsSection } from '@/types';
 import { cloneDeep } from 'lodash';
 
 /**
  * 格式化props
  */
-export function formatProps({ props }: PropsSection): IObject {
+export function formatProps({ props }: PropsSection): Record<string, any> {
   const formattedProps = {};
   if (props) {
     for (const item of props) {
