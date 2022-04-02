@@ -7,13 +7,9 @@
 /**
  * json schema of component info and props for xingyun low code editor
  */
-export type ComponentType = BasicSection & PropsSection & ConfigureSection;
+export type OriginalComponentType = BasicSection & PropsSection & ConfigureSection;
 export type PropType = BasicType | RequiredType | ComplexType;
-export type BasicType = NumberType | StringType | BooleanType | ArrayType | ObjectType;
-export type NumberType = number;
-export type StringType = string;
-export type BooleanType = boolean;
-export type ArrayType = any[];
+export type BasicType = 'array' | 'bool' | 'func' | 'number' | 'object' | 'string' | 'node' | 'element' | 'any';
 export type ComplexType = OneOf | OneOfType | ArrayOf | ObjectOf | Shape | Exact;
 
 export interface BasicSection {
@@ -41,12 +37,9 @@ export interface PropsSection {
     name: string;
     propType: PropType;
     description?: string;
-    defaultValue?: PropType;
+    defaultValue?: any;
     [k: string]: any;
   }>;
-  [k: string]: any;
-}
-export interface ObjectType {
   [k: string]: any;
 }
 export interface RequiredType {
@@ -114,3 +107,4 @@ export interface ConfigureComponent {
   };
   [k: string]: any;
 }
+

@@ -67,9 +67,7 @@
               "description": {
                 "type": "string"
               },
-              "defaultValue": {
-                "$ref": "#/definitions/PropType"
-              }
+              "defaultValue": {}
             },
             "required": [
               "name",
@@ -141,38 +139,18 @@
       ]
     },
     "BasicType": {
-      "oneOf": [
-        {
-          "$ref": "#/definitions/NumberType"
-        },
-        {
-          "$ref": "#/definitions/StringType"
-        },
-        {
-          "$ref": "#/definitions/BooleanType"
-        },
-        {
-          "$ref": "#/definitions/ArrayType"
-        },
-        {
-          "$ref": "#/definitions/ObjectType"
-        }
+      "type": "string",
+      "enum": [
+        "array",
+        "bool",
+        "func",
+        "number",
+        "object",
+        "string",
+        "node",
+        "element",
+        "any"
       ]
-    },
-    "NumberType": {
-      "type": "number"
-    },
-    "StringType": {
-      "type": "string"
-    },
-    "BooleanType": {
-      "type": "boolean"
-    },
-    "ArrayType": {
-      "type": "array"
-    },
-    "ObjectType": {
-      "type": "object"
     },
     "RequiredType": {
       "type": "object",
