@@ -5,6 +5,7 @@
   "dependencies": {
     "@arco-design/web-react": "^2.31.1",
     "@craftjs/core": "*",
+    "@craftjs/layers": "*",
     "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-color": "^2.19.3",
