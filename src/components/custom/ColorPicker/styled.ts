@@ -9,5 +9,5 @@ export const ColorBox = styled.div<{
   border: 1px solid #ABABAC;
   border-radius: 5px;
   box-sizing: border-box;
-  background-color: ${(props) => props.currentColor ?? '#ffffff'};;
+  background-color: ${(props) => props.currentColor ?? '#ffffff'};
 `;

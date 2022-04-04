@@ -8,6 +8,7 @@ import { Layout } from '@arco-design/web-react';
 import * as S from './styled';
 import { Editor, Frame, Element } from '@craftjs/core';
 import Page from '@/components/materials/Page';
+import RenderNode from '@/components/custom/RenderNode';
 
 const { Header } = Layout;
 const { Content } = Layout;
@@ -16,7 +17,7 @@ const { Footer } = Layout;
 const Home = () => {
   return (
     <Layout style={{ height: '100vh', width: '100vw', minWidth: '1000px' }}>
-      <Editor resolver={{ Page, Button, Container, Text }}>
+      <Editor resolver={{ Page, Button, Container, Text }} onRender={RenderNode}>
         <Header>
           <TopBar />
         </Header>
@@ -25,7 +26,7 @@ const Home = () => {
           <S.EditArea>
             <Frame>
               <Element is={Page} padding={10} backgroundColor="#FFFFFF" canvas>
-                <div />
+                {null}
               </Element>
             </Frame>
           </S.EditArea>

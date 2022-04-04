@@ -16,3 +16,20 @@ ul,li,ol{
 input,a{
   outline:none;
 }
+
+.component-selected{
+  position: relative;
+}
+
+.component-selected::after{
+  content: ' ';
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  --tw-border-opacity: 1;
+  border: 1px dashed #6AA1FF;
+}
