@@ -116,7 +116,6 @@ const RenderNode = ({ render }: RenderNodePropsType) => {
           style={{
             top: getCurrentDomPosition(renderedMaterialDom).currentDomTop,
             left: getCurrentDomPosition(renderedMaterialDom).currentDomLeft,
-            zIndex: 10000,
           }}
         >
           <S.RenderNodeNameContainer>{name}</S.RenderNodeNameContainer>

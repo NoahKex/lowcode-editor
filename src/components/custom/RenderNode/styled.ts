@@ -8,6 +8,7 @@ export const RenderNodeContainer = styled.div<{
   display: flex;
   background-color: #6AA1FF;
   position: fixed;
+  z-index: 999;
 `;
 
 export const RenderNodeNameContainer = styled.div`
