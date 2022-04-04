@@ -87,9 +87,15 @@ const RenderNode = ({ render }: RenderNodePropsType) => {
   useEffect(() => {
     if (renderedMaterialDom) {
       if (isActive || isHover) {
-        renderedMaterialDom.classList.add('component-selected');
+        if (isActive) {
+          renderedMaterialDom.classList.remove('component-hovered');
+          renderedMaterialDom.classList.add('component-selected');
+        } else {
+          renderedMaterialDom.classList.remove('component-selected');
+          renderedMaterialDom.classList.add('component-hovered');
+        }
       } else {
-        renderedMaterialDom.classList.remove('component-selected');
+        renderedMaterialDom.classList.remove('component-selected', 'component-hovered');
       }
     }
   }, [renderedMaterialDom, isActive, isHover]);

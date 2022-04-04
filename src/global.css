@@ -31,5 +31,22 @@ input,a{
   height: 100%;
   width: 100%;
   --tw-border-opacity: 1;
+  border: 1px solid #6AA1FF;
+}
+
+.component-hovered{
+  position: relative;
+}
+
+.component-hovered::after{
+  content: ' ';
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  --tw-border-opacity: 1;
   border: 1px dashed #6AA1FF;
 }
