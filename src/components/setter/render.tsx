@@ -37,7 +37,6 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
             [SetterCategory.InputNumber]: () => {
               return (
                 <InputNumber
-                  mode="button"
                   value={craftProps[name]}
                   min={setter?.options?.minNumber ?? 0}
                   onChange={(val) => {

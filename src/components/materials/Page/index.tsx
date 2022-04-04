@@ -24,7 +24,6 @@ const PageSettings = () => {
     <Form labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}>
       <FormItem label="页面内边距">
         <InputNumber
-          mode="button"
           value={props.padding}
           min={0}
           onChange={(val) => {

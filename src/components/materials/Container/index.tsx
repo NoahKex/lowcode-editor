@@ -9,13 +9,16 @@ const { Col } = Grid;
 
 const Container = ({ height, width, background, padding, children }) => {
   const { connectors: { connect, drag } } = useNode();
+
   return (
     <S.MaterialContainer ref={(ref) => connect(drag(ref as HTMLDivElement))} height={height} width={width} padding={padding} background={background}>
-      <Row>
-        <Col span={24}>
-          {children}
-        </Col>
-      </Row>
+      {children ?
+        <Row>
+          <Col span={24}>
+            {children}
+          </Col>
+        </Row> :
+        <S.BlankContainer >拖拽组件到这里</S.BlankContainer>}
     </S.MaterialContainer>
   );
 };

@@ -11,4 +11,22 @@ export const MaterialContainer = styled.div<{
   box-sizing: border-box;
   padding: ${(props) => `${props.padding}px`};
   background: ${(props) => props.background};
+  position: relative;
+`;
+
+export const BlankContainer = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0 10px;
+  background-color: #E9E9E9;
+  box-sizing: border-box;
+  border: 1px dashed #A9B1BC;
+  font-size: 13px;
+  color: #A9AEB8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

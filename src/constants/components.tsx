@@ -24,7 +24,7 @@ export const LayoutComponentsMessage: ComponentType = {
         width={props.width ?? 200}
         canvas
       >
-        <Text text="一个布局容器" fontSize={16} />
+        {null}
       </Element>
     );
   },
