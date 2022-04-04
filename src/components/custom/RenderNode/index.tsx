@@ -50,7 +50,7 @@ const RenderNode = ({ render }: RenderNodePropsType) => {
   /**
    当前dom根节点
    */
-  const root = document.querySelector('#ice-container');
+  const root = document.querySelector('#xingyun-lowcode-editor');
 
   /**
    要生成的dom节点ref
