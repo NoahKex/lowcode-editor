@@ -1,6 +1,6 @@
 import { SetterCategory } from '@/constants';
 
-export interface SetterOptions {
+export interface SetterConfig {
   setter: {
     name: SetterCategory;
     options?: Record<string, any>;

@@ -38,6 +38,7 @@ export const LayoutComponentsMessage: ComponentType = {
         name: SetterCategory.InputNumber,
         options: {
           minNumber: 0,
+          numberType: '%',
         },
       },
     },
@@ -50,6 +51,7 @@ export const LayoutComponentsMessage: ComponentType = {
         name: SetterCategory.InputNumber,
         options: {
           minNumber: 0,
+          numberType: '%',
         },
       },
     },
@@ -69,6 +71,10 @@ export const LayoutComponentsMessage: ComponentType = {
       defaultValue: 10,
       setter: {
         name: SetterCategory.InputNumber,
+        options: {
+          minNumber: 0,
+          numberType: '%',
+        },
       },
     },
   ],

@@ -1,5 +1,5 @@
 import { SetterCategory } from '@/constants';
-import { ComponentType, SetterOptions } from '@/types';
+import { ComponentType } from '@/types';
 import { Form, Input, InputNumber, Select, Slider } from '@arco-design/web-react';
 import ColorPicker from '../custom/ColorPicker';
 
@@ -17,8 +17,7 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
   return (
     <Form labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}>
       {props?.map((item) => {
-        const { name, description } = item;
-        const { setter } = item as unknown as SetterOptions;
+        const { name, description, setter } = item;
         const renderSetter = (setterName: SetterCategory): JSX.Element => {
           const setterObject: Record<SetterCategory, () => JSX.Element> = {
             [SetterCategory.Input]: () => {
