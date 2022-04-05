@@ -1,10 +1,13 @@
 import { SetterCategory } from '@/constants';
 import { ComponentType } from '@/types';
-import { Form, Input, InputNumber, Select, Slider } from '@arco-design/web-react';
-import ColorPicker from '../custom/ColorPicker';
+import { Form } from '@arco-design/web-react';
+import ColorPickerSetter from './ColorPicker';
+import InputSetter from './Input';
+import InputNumberSetter from './InputNumber';
+import SelectSetter from './Select';
+import SliderSetter from './Slider';
 
 const FormItem = Form.Item;
-const { Option } = Select;
 
 interface RenderedSetterType {
   craftProps: Record<string, any>;
@@ -22,11 +25,9 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
           const setterObject: Record<SetterCategory, () => JSX.Element> = {
             [SetterCategory.Input]: () => {
               return (
-                <Input
+                <InputSetter
                   value={craftProps[name]}
-                  maxLength={setter?.options?.maxLength ?? 10}
-                  allowClear
-                  placeholder="请输入"
+                  maxLength={setter?.options?.maxLength}
                   onChange={(val) => {
                     setProp((nodeProps) => { nodeProps[name] = val; });
                   }}
@@ -35,9 +36,9 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
             },
             [SetterCategory.InputNumber]: () => {
               return (
-                <InputNumber
+                <InputNumberSetter
                   value={craftProps[name]}
-                  min={setter?.options?.minNumber ?? 0}
+                  min={setter?.options?.minNumber}
                   onChange={(val) => {
                     setProp((nodeProps) => { nodeProps[name] = val; });
                   }}
@@ -46,7 +47,7 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
             },
             [SetterCategory.ColorPicker]: () => {
               return (
-                <ColorPicker
+                <ColorPickerSetter
                   value={craftProps[name]}
                   onChange={(val) => {
                     setProp((nodeProps) => { nodeProps[name] = val; });
@@ -56,7 +57,7 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
             },
             [SetterCategory.Slider]: () => {
               return (
-                <Slider
+                <SliderSetter
                   value={craftProps[name]}
                   onChange={(val) => {
                     setProp((nodeProps) => { nodeProps[name] = val; });
@@ -66,17 +67,11 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
             },
             [SetterCategory.Select]: () => {
               return (
-                <Select
-                  placeholder="请选择"
-                  defaultValue={craftProps[name]}
+                <SelectSetter
+                  value={craftProps[name]}
                   onChange={(val) => setProp((nodeProps) => { nodeProps[name] = val; })}
-                >
-                  {setter?.options?.selectOptions.map((option) => (
-                    <Option key={option} value={option}>
-                      {option}
-                    </Option>
-                  ))}
-                </Select>
+                  selectOptions={setter?.options?.selectOptions}
+                />
               );
             },
           };
