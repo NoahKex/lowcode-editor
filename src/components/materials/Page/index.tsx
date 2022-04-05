@@ -1,5 +1,6 @@
-import ColorPicker from '@/components/custom/ColorPicker';
-import { Form, InputNumber } from '@arco-design/web-react';
+import ColorPickerSetter from '@/components/setter/ColorPicker';
+import InputNumberSetter from '@/components/setter/InputNumber';
+import { Form } from '@arco-design/web-react';
 import { useNode } from '@craftjs/core';
 import * as S from './styled';
 
@@ -23,16 +24,16 @@ const PageSettings = () => {
   return (
     <Form labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}>
       <FormItem label="页面内边距">
-        <InputNumber
+        <InputNumberSetter
           value={props.padding}
           min={0}
-          onChange={(val) => {
-            setProp((nodeProps) => { nodeProps.padding = val; });
+          onChange={(num, unit) => {
+            setProp((nodeProps) => { nodeProps.padding = `${num}${unit}`; });
           }}
         />
       </FormItem>
       <FormItem label="页面背景色">
-        <ColorPicker
+        <ColorPickerSetter
           value={props.backgroundColor}
           onChange={(val) => {
             setProp((nodeProps) => { nodeProps.backgroundColor = val; });

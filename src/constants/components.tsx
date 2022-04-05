@@ -18,10 +18,10 @@ export const LayoutComponentsMessage: ComponentType = {
     return (
       <Element
         is={Container}
-        padding={props.padding ?? 5}
+        padding={props.padding ?? '5px'}
         background={props.background ?? '#eee'}
-        height={props.height ?? 200}
-        width={props.width ?? 200}
+        height={props.height ?? '100%'}
+        width={props.width ?? '100%'}
         canvas
       >
         {null}
@@ -31,27 +31,25 @@ export const LayoutComponentsMessage: ComponentType = {
   props: [
     {
       name: 'height',
-      propType: 'number',
+      propType: 'string',
       description: '容器高度',
-      defaultValue: 100,
+      defaultValue: '100%',
       setter: {
         name: SetterCategory.InputNumber,
         options: {
           minNumber: 0,
-          numberType: '%',
         },
       },
     },
     {
       name: 'width',
-      propType: 'number',
+      propType: 'string',
       description: '容器宽度',
-      defaultValue: 100,
+      defaultValue: '100%',
       setter: {
         name: SetterCategory.InputNumber,
         options: {
           minNumber: 0,
-          numberType: '%',
         },
       },
     },
@@ -66,14 +64,13 @@ export const LayoutComponentsMessage: ComponentType = {
     },
     {
       name: 'padding',
-      propType: 'number',
+      propType: 'string',
       description: '容器内边距',
-      defaultValue: 10,
+      defaultValue: '5px',
       setter: {
         name: SetterCategory.InputNumber,
         options: {
           minNumber: 0,
-          numberType: '%',
         },
       },
     },

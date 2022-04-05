@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const MaterialContainer = styled.div<{
   background: string;
-  padding: number;
-  height: number;
-  width: number;
+  padding: string;
+  height: string;
+  width: string;
 }>`
-  height: ${(props) => `${props.height}px`};
-  width: ${(props) => `${props.width}px`};
+  height: ${(props) => `${props.height}`};
+  width: ${(props) => `${props.width}`};
   box-sizing: border-box;
-  padding: ${(props) => `${props.padding}px`};
+  padding: ${(props) => `${props.padding}`};
   background: ${(props) => props.background};
   position: relative;
 `;

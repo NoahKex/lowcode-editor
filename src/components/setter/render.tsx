@@ -39,8 +39,8 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
                 <InputNumberSetter
                   value={craftProps[name]}
                   min={setter?.options?.minNumber}
-                  onChange={(val) => {
-                    setProp((nodeProps) => { nodeProps[name] = val; });
+                  onChange={(num, unit) => {
+                    setProp((nodeProps) => { nodeProps[name] = `${num}${unit}`; });
                   }}
                 />
               );

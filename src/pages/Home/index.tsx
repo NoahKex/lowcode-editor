@@ -25,7 +25,7 @@ const Home = () => {
           <S.ToolArea><ToolBox /></S.ToolArea>
           <S.EditArea>
             <Frame>
-              <Element is={Page} padding={10} backgroundColor="#FFFFFF" canvas>
+              <Element is={Page} padding={'10px'} backgroundColor="#FFFFFF" canvas>
                 {null}
               </Element>
             </Frame>

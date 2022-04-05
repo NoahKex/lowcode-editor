@@ -11,7 +11,13 @@ const Container = ({ height, width, background, padding, children }) => {
   const { connectors: { connect, drag } } = useNode();
 
   return (
-    <S.MaterialContainer ref={(ref) => connect(drag(ref as HTMLDivElement))} height={height} width={width} padding={padding} background={background}>
+    <S.MaterialContainer
+      ref={(ref) => connect(drag(ref as HTMLDivElement))}
+      height={height}
+      width={width}
+      padding={padding}
+      background={background}
+    >
       {children ?
         <Row>
           <Col span={24}>

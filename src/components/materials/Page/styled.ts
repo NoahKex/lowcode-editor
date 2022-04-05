@@ -7,6 +7,6 @@ export const PageContainer = styled.div<{
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  padding: ${(props) => `${props.padding}px`};
+  padding: ${(props) => `${props.padding}`};
   background-color: ${(props) => props.backgroundColor};
 `;
