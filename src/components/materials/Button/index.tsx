@@ -22,6 +22,7 @@ const ButtonSettings = () => {
 };
 
 Button.craft = {
+  displayName: '按钮',
   related: {
     settings: ButtonSettings,
   },

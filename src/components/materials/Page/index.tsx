@@ -45,6 +45,7 @@ const PageSettings = () => {
 };
 
 Page.craft = {
+  displayName: '页面',
   related: {
     settings: PageSettings,
   },

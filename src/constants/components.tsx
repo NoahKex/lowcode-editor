@@ -1,39 +1,22 @@
 import { ComponentType } from '@/types';
-import Button from '@/components/materials/Button';
-import Container from '@/components/materials/Container';
-import Text from '@/components/materials/Text';
-import { Element } from '@craftjs/core';
-import { SetterCategory } from './setters';
+import { MaterialCategory, SetterCategory } from './category';
 
 /**
  * 布局组件
  */
 export const LayoutComponentsMessage: ComponentType = {
-  componentName: '栅格布局',
-  title: '栅格布局',
-  description: '栅格布局通过等分区块，可以有效的保证页面的一致性、逻辑性',
-  docUrl: 'https://arco.design/react/components/grid',
+  componentName: '容器',
+  title: '容器',
+  description: '容器是包裹各种元素的载体',
+  docUrl: '',
   icon: 'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/7b75627f14234b708d3ad3e064d8bed5~tplv-uwbnlip3yd-image.image',
-  render: (props) => {
-    return (
-      <Element
-        is={Container}
-        padding={props.padding ?? '5px'}
-        background={props.background ?? '#eee'}
-        height={props.height ?? '100%'}
-        width={props.width ?? '100%'}
-        canvas
-      >
-        {null}
-      </Element>
-    );
-  },
+  render: MaterialCategory.Container,
   props: [
     {
       name: 'height',
       propType: 'string',
       description: '容器高度',
-      defaultValue: '100%',
+      defaultValue: '15%',
       setter: {
         name: SetterCategory.InputNumber,
         options: {
@@ -86,17 +69,7 @@ export const ButtonComponentsMessage: ComponentType = {
   description: '按钮是一种命令组件，可发起一个即时操作',
   docUrl: 'https://arco.design/react/components/button',
   icon: 'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/7b75627f14234b708d3ad3e064d8bed5~tplv-uwbnlip3yd-image.image',
-  render: (props) => {
-    return (
-      <Button
-        type={props.type ?? 'default'}
-        status={props.status ?? 'default'}
-        size={props.size ?? 'default'}
-        shape={props.shape ?? 'square'}
-        text={props.text ?? '按钮'}
-      />
-    );
-  },
+  render: MaterialCategory.Button,
   props: [
     {
       name: 'text',
@@ -170,11 +143,7 @@ export const TextComponentsMessage: ComponentType = {
   description: '文本即一段文字表达',
   docUrl: '',
   icon: 'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/7b75627f14234b708d3ad3e064d8bed5~tplv-uwbnlip3yd-image.image',
-  render: (props) => {
-    return (
-      <Text text={props.text ?? '一段文字'} fontSize={props.fontSize ?? 16} />
-    );
-  },
+  render: MaterialCategory.Text,
   props: [
     {
       name: 'text',

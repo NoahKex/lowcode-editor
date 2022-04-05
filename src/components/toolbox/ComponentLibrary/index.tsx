@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import * as S from './styled';
 import { ComponentsMessage } from '@/constants';
 import { formatProps } from '@/utils';
+import { renderMaterial } from './render';
 
 
 const { TabPane } = Tabs;
@@ -31,7 +32,7 @@ const ComponentLibrary = ({ onMaterialMouseDown }: {onMaterialMouseDown: () => v
                   key={componentName}
                   type="dashed"
                   onDragLeave={() => onMaterialMouseDown()}
-                  ref={(ref) => connectors.create(ref as HTMLDivElement, render(formatProps({ props })))}
+                  ref={(ref) => connectors.create(ref as HTMLDivElement, renderMaterial(formatProps({ props }), render))}
                 ><S.MaterialIcon src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/7b75627f14234b708d3ad3e064d8bed5~tplv-uwbnlip3yd-image.image" />
                   {componentName}
                 </StyledMaterialButton>

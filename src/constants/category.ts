@@ -28,3 +28,21 @@ export enum SetterCategory {
    */
   Slider
 }
+
+/**
+ * 材料组件种类
+ */
+export enum MaterialCategory {
+  /**
+   * 按钮
+   */
+  Button,
+  /**
+   * 容器
+   */
+  Container,
+  /**
+   * 文本
+   */
+  Text,
+}

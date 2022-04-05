@@ -23,6 +23,7 @@ const TextSettings = () => {
 };
 
 Text.craft = {
+  displayName: '文本',
   related: {
     settings: TextSettings,
   },

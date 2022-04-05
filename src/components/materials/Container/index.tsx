@@ -41,6 +41,7 @@ const ContainerSettings = () => {
 };
 
 Container.craft = {
+  displayName: '容器',
   related: {
     settings: ContainerSettings,
   },
