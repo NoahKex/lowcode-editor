@@ -3,8 +3,8 @@ import { IconApps, IconMindMapping } from '@arco-design/web-react/icon';
 import styled from 'styled-components';
 import * as S from './styled';
 import { useState } from 'react';
-import ComponentLibraryTool from './components/ComponentLibrary';
-import LayerTreeTool from './components/LayerTree';
+import ComponentLibraryTool from './ComponentLibrary';
+import LayerTreeTool from './LayerTree';
 
 /**
  * 工具箱按钮选择状态
