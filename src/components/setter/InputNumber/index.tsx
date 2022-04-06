@@ -1,7 +1,6 @@
 import { InputNumber, Select } from '@arco-design/web-react';
 import styled from 'styled-components';
 import * as S from './styled';
-import { useState } from 'react';
 
 const StyledSelect = styled(Select)`
   width: 50px;
@@ -38,27 +37,23 @@ const NumberUnitSelect = ({ unit, onOptionChange }: NumberUnitSelectPropsType) =
   );
 };
 
-const InputNumberSetter = ({ value, min, onChange }) => {
+const InputNumberSetter = ({ value, min = 0, onChange }) => {
   const reg = /([0-9]+)(px|%)/i;
   const [,number, unit] = value.match(reg);
-  const [numberValue, setNumberValue] = useState<number>(number);
-  const [numberUnit, setNumberUnit] = useState<string>(unit);
   return (
     <InputNumber
-      value={numberValue}
-      min={min ?? 0}
+      value={number}
+      min={min}
       onChange={(val) => {
         const revisedValue = val ?? 0;
-        setNumberValue(revisedValue);
-        onChange(revisedValue, numberUnit);
+        onChange(revisedValue, unit);
       }}
       prefix={
         <S.NumberUnitSuffixContainer >
           <NumberUnitSelect
-            unit={numberUnit}
+            unit={unit}
             onOptionChange={(val) => {
-              setNumberUnit(val);
-              onChange(numberValue, val);
+              onChange(number, val);
             }}
           />
         </S.NumberUnitSuffixContainer>}

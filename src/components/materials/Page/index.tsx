@@ -1,5 +1,5 @@
 import ColorPickerSetter from '@/components/setter/ColorPicker';
-import InputNumberSetter from '@/components/setter/InputNumber';
+import PropertyMixer from '@/components/setter/PropertyMixer';
 import { Divider, Form } from '@arco-design/web-react';
 import { useNode } from '@craftjs/core';
 import * as S from './styled';
@@ -24,11 +24,11 @@ const PageSettings = () => {
   return (
     <Form labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}>
       <FormItem label="页面内边距">
-        <InputNumberSetter
+        <PropertyMixer
+          propertyList={['上内边距', '下内边距', '左内边距', '右内边距']}
           value={props.padding}
-          min={0}
-          onChange={(num, unit) => {
-            setProp((nodeProps) => { nodeProps.padding = `${num}${unit}`; });
+          onChange={(val) => {
+            setProp((nodeProps) => { nodeProps.padding = val; });
           }}
         />
       </FormItem>

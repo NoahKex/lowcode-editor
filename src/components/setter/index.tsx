@@ -9,6 +9,8 @@ const { TabPane } = Tabs;
 
 const StyledTabPane = styled(TabPane)`
   padding: 10px 10px 10px 0;
+  height: 82vh;
+  overflow: scroll;
 `;
 
 const Setter = () => {

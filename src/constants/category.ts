@@ -4,29 +4,34 @@
 export enum SetterCategory {
   /**
    * 输入框
-   * 详见https://arco.design/react/components/input
+   * 详见src/components/setter/Input
    */
   Input,
   /**
    * 数字输入框
-   * 详见https://arco.design/react/components/input-number
+   * 详见src/components/setter/InputNumber
    */
   InputNumber,
   /**
    * 颜色选择器
-   * 详见src/components/custom/ColorPicker
+   * 详见src/components/setter/ColorPicker
    */
   ColorPicker,
   /**
    * 选择器
-   * 详见https://arco.design/react/components/select
+   * 详见src/components/setter/Select
    */
   Select,
   /**
    * 滑动输入条
-   * 详见https://arco.design/react/components/slider
+   * 详见src/components/setter/Slider
    */
-  Slider
+  Slider,
+  /**
+   * 属性混合器（处理margin、padding、border等）
+   * 详见src/components/setter/PropertyMixer
+   */
+  PropertyMixer,
 }
 
 /**

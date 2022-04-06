@@ -15,7 +15,7 @@ export const LayoutComponentsMessage: ComponentType = {
     {
       name: 'height',
       propType: 'string',
-      description: '容器高度',
+      description: '高度',
       defaultValue: '15%',
       setter: {
         name: SetterCategory.InputNumber,
@@ -27,7 +27,7 @@ export const LayoutComponentsMessage: ComponentType = {
     {
       name: 'width',
       propType: 'string',
-      description: '容器宽度',
+      description: '宽度',
       defaultValue: '100%',
       setter: {
         name: SetterCategory.InputNumber,
@@ -39,21 +39,45 @@ export const LayoutComponentsMessage: ComponentType = {
     {
       name: 'background',
       propType: 'string',
-      description: '容器背景色',
+      description: '背景色',
       defaultValue: '#FFFFFF',
       setter: {
         name: SetterCategory.ColorPicker,
       },
     },
     {
+      name: 'margin',
+      propType: 'string',
+      description: '外边距',
+      defaultValue: '0px',
+      setter: {
+        name: SetterCategory.PropertyMixer,
+        options: {
+          propertyList: ['上外边距', '下外边距', '左外边距', '右外边距'],
+        },
+      },
+    },
+    {
       name: 'padding',
       propType: 'string',
-      description: '容器内边距',
+      description: '内边距',
       defaultValue: '5px',
       setter: {
-        name: SetterCategory.InputNumber,
+        name: SetterCategory.PropertyMixer,
         options: {
-          minNumber: 0,
+          propertyList: ['上内边距', '下内边距', '左内边距', '右内边距'],
+        },
+      },
+    },
+    {
+      name: 'borderWidth',
+      propType: 'string',
+      description: '边框',
+      defaultValue: '5px',
+      setter: {
+        name: SetterCategory.PropertyMixer,
+        options: {
+          propertyList: ['上边框', '下边框', '左边框', '右边框'],
         },
       },
     },

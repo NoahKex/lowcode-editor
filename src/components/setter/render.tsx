@@ -4,6 +4,7 @@ import { Divider, Form } from '@arco-design/web-react';
 import ColorPickerSetter from './ColorPicker';
 import InputSetter from './Input';
 import InputNumberSetter from './InputNumber';
+import PropertyMixer from './PropertyMixer';
 import SelectSetter from './Select';
 import SliderSetter from './Slider';
 
@@ -71,6 +72,17 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
                   value={craftProps[name]}
                   onChange={(val) => setProp((nodeProps) => { nodeProps[name] = val; })}
                   selectOptions={setter?.options?.selectOptions}
+                />
+              );
+            },
+            [SetterCategory.PropertyMixer]: () => {
+              return (
+                <PropertyMixer
+                  propertyList={setter?.options?.propertyList}
+                  value={craftProps[name]}
+                  onChange={(val) => {
+                    setProp((nodeProps) => { nodeProps[name] = val; });
+                  }}
                 />
               );
             },

@@ -7,7 +7,7 @@ import * as S from './styled';
 const { Row } = Grid;
 const { Col } = Grid;
 
-const Container = ({ height, width, background, padding, children }) => {
+const Container = ({ height, width, background, margin, padding, borderWidth, children }) => {
   const { connectors: { connect, drag } } = useNode();
 
   return (
@@ -15,8 +15,10 @@ const Container = ({ height, width, background, padding, children }) => {
       ref={(ref) => connect(drag(ref as HTMLDivElement))}
       height={height}
       width={width}
+      margin={margin}
       padding={padding}
       background={background}
+      borderWidth={borderWidth}
     >
       {children ?
         <Row>

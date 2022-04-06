@@ -28,6 +28,8 @@ export const renderMaterial = (props: Record<string, any>, category: MaterialCat
           background={props.background ?? '#FFFFFF'}
           height={props.height ?? '100%'}
           width={props.width ?? '100%'}
+          margin={props.margin ?? '0px'}
+          borderWidth={props.borderWidth ?? '0px'}
           canvas
         >
           {null}

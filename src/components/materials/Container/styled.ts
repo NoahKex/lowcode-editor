@@ -2,15 +2,21 @@ import styled from 'styled-components';
 
 export const MaterialContainer = styled.div<{
   background: string;
+  margin: string;
   padding: string;
   height: string;
   width: string;
+  borderWidth: string;
 }>`
   height: ${(props) => `${props.height}`};
   width: ${(props) => `${props.width}`};
   box-sizing: border-box;
+  margin: ${(props) => `${props.margin}`};
   padding: ${(props) => `${props.padding}`};
   background: ${(props) => props.background};
+  border-width: ${(props) => `${props.borderWidth}`};
+  border-color: red;
+  border-style: solid;
   position: relative;
 `;
 
