@@ -1,6 +1,6 @@
 import ColorPickerSetter from '@/components/setter/ColorPicker';
 import InputNumberSetter from '@/components/setter/InputNumber';
-import { Form } from '@arco-design/web-react';
+import { Divider, Form } from '@arco-design/web-react';
 import { useNode } from '@craftjs/core';
 import * as S from './styled';
 
@@ -32,6 +32,7 @@ const PageSettings = () => {
           }}
         />
       </FormItem>
+      <Divider style={{ height: '1px', margin: '-10px 0 10px 0' }} />
       <FormItem label="页面背景色">
         <ColorPickerSetter
           value={props.backgroundColor}
@@ -40,6 +41,7 @@ const PageSettings = () => {
           }}
         />
       </FormItem>
+      <Divider style={{ height: '1px', margin: '-10px 0 10px 0' }} />
     </Form>
   );
 };

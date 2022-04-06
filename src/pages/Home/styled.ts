@@ -22,7 +22,7 @@ export const EditArea = styled.div`
 `;
 
 export const SetArea = styled.div`
-  padding: 10px 20px;
+padding-left: 10px;
   box-sizing: border-box;
   height: 100%;
   width: 300px;

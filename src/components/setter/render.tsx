@@ -1,6 +1,6 @@
 import { SetterCategory } from '@/constants';
 import { ComponentType } from '@/types';
-import { Form } from '@arco-design/web-react';
+import { Divider, Form } from '@arco-design/web-react';
 import ColorPickerSetter from './ColorPicker';
 import InputSetter from './Input';
 import InputNumberSetter from './InputNumber';
@@ -78,9 +78,12 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
           return setterObject[setterName]();
         };
         return (
-          <FormItem key={name} label={description}>
-            {renderSetter(setter.name)}
-          </FormItem>
+          <div key={name}>
+            <FormItem label={description}>
+              {renderSetter(setter.name)}
+            </FormItem>
+            <Divider style={{ height: '1px', margin: '-10px 0 10px 0' }} />
+          </div>
         );
       })}
     </Form>

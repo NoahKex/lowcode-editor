@@ -22,7 +22,7 @@ const ComponentLibrary = ({ onMaterialMouseDown }: {onMaterialMouseDown: () => v
     <S.ComponentLibraryContainer>
       <S.ToolTitle>组件库</S.ToolTitle>
       <Divider />
-      <Tabs defaultActiveTab="1" type="rounded">
+      <Tabs defaultActiveTab="1" type="rounded" style={{ width: '100%' }} overflow="dropdown">
         <TabPane key="1" title="基础组件">
           {
             ComponentsMessage.map((materialItem) => {

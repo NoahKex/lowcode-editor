@@ -1,10 +1,18 @@
-import { Button, Divider } from '@arco-design/web-react';
+import { Tabs } from '@arco-design/web-react';
+import { IconBrush, IconEdit, IconRobot } from '@arco-design/web-react/icon';
 import { useEditor } from '@craftjs/core';
 import React from 'react';
+import styled from 'styled-components';
 import * as S from './styled';
 
+const { TabPane } = Tabs;
+
+const StyledTabPane = styled(TabPane)`
+  padding: 10px 10px 10px 0;
+`;
+
 const Setter = () => {
-  const { actions, selected } = useEditor((state, query) => {
+  const { selected } = useEditor((state, query) => {
     const currentNodeId = [...state.events.selected][0];
     let currentSelected;
 
@@ -23,15 +31,19 @@ const Setter = () => {
   });
 
   return selected ? (
-    <>
-      <S.SetterTitle>属性设置</S.SetterTitle>
-      <Divider />
-      {
+    <Tabs defaultActiveTab="2" style={{ width: '100%' }} >
+      <StyledTabPane key="1" title={<span><IconEdit style={{ marginRight: 10 }} />属性</span>}>
+        wip
+      </StyledTabPane>
+      <StyledTabPane key="2" title={<span><IconBrush style={{ marginRight: 10 }} />样式</span>}>
+        {
           selected.settings && React.createElement(selected.settings)
         }
-      <br />
-      {selected.isDeletable && <Button status="danger" onClick={() => { actions.delete(selected.id); }}>删除组件</Button>}
-    </>
+      </StyledTabPane>
+      <StyledTabPane key="3" title={<span><IconRobot style={{ marginRight: 10 }} />高级</span>}>
+        wip
+      </StyledTabPane>
+    </Tabs>
   ) : <S.SetterTitle>请先从画布中选择节点</S.SetterTitle>;
 };
 
