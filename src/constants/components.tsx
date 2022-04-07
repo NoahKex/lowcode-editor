@@ -107,7 +107,8 @@ export const LayoutComponentsMessage: ComponentType = {
           {
             value: 'double',
             description: '双实线',
-          }, {
+          },
+          {
             value: 'groove',
             description: '雕刻效果',
           },
@@ -154,6 +155,70 @@ export const LayoutComponentsMessage: ComponentType = {
       defaultValue: '#000000',
       setter: {
         name: SetterCategory.ColorPicker,
+      },
+    },
+    {
+      name: 'opacity',
+      propType: 'number',
+      description: '不透明度',
+      defaultValue: 100,
+      setter: {
+        name: SetterCategory.Slider,
+        options: {
+          step: 1,
+          min: 0,
+          max: 100,
+        },
+      },
+    },
+    {
+      name: 'cursor',
+      propType: 'string',
+      description: '鼠标手势',
+      defaultValue: 'auto',
+      setter: {
+        name: SetterCategory.Select,
+        options: {
+          selectOptions: [{
+            value: 'auto',
+            description: '自动',
+          }, {
+            value: 'default',
+            description: '箭头',
+          },
+          {
+            value: 'help',
+            description: '帮助',
+          },
+          {
+            value: 'pointer',
+            description: '可点击',
+          },
+          {
+            value: 'wait',
+            description: '等待',
+          },
+          {
+            value: 'crosshair',
+            description: '指针',
+          },
+          {
+            value: 'text',
+            description: '文本',
+          },
+          {
+            value: 'not-allowed',
+            description: '不可选中',
+          },
+          {
+            value: 'zoom-in',
+            description: '可放大',
+          },
+          {
+            value: 'zoom-out',
+            description: '可缩小',
+          }],
+        },
       },
     },
   ],
@@ -319,11 +384,14 @@ export const TextComponentsMessage: ComponentType = {
     },
     {
       name: 'fontSize',
-      propType: 'number',
+      propType: 'string',
       description: '文本大小',
-      defaultValue: 16,
+      defaultValue: '16px',
       setter: {
-        name: SetterCategory.Slider,
+        name: SetterCategory.InputNumber,
+        options: {
+          minNumber: 0,
+        },
       },
     },
   ],

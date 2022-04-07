@@ -23,9 +23,10 @@ const PageSettings = () => {
 
   return (
     <Form labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}>
-      <FormItem label="页面内边距">
+      <FormItem label="内边距">
         <PropertyMixer
           propertyList={['上内边距', '下内边距', '左内边距', '右内边距']}
+          description="内边距"
           value={props.padding}
           onChange={(val) => {
             setProp((nodeProps) => { nodeProps.padding = val; });
@@ -33,7 +34,7 @@ const PageSettings = () => {
         />
       </FormItem>
       <Divider style={{ height: '1px', margin: '-10px 0 10px 0' }} />
-      <FormItem label="页面背景色">
+      <FormItem label="背景色">
         <ColorPickerSetter
           value={props.backgroundColor}
           onChange={(val) => {

@@ -34,6 +34,8 @@ export const renderMaterial = (props: Record<string, any>, category: MaterialCat
           borderColor={props.borderColor ?? '#000000'}
           boxShadow={props.boxShadow ?? '0px 0px 0px 0px'}
           boxShadowColor={props.boxShadowColor ?? '#000000'}
+          opacity={props.opacity ?? 100}
+          cursor={props.cursor ?? 'auto'}
           canvas
         >
           {null}

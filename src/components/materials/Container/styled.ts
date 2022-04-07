@@ -11,6 +11,8 @@ export const MaterialContainer = styled.div<{
   borderColor: string;
   boxShadow: string;
   boxShadowColor: string;
+  opacity: number;
+  cursor: string;
 }>`
   height: ${(props) => `${props.height}`};
   width: ${(props) => `${props.width}`};
@@ -22,6 +24,8 @@ export const MaterialContainer = styled.div<{
   border-color: ${(props) => props.borderColor};
   border-style: ${(props) => `${props.borderStyle}`};
   box-shadow: ${(props) => `${props.boxShadowColor} ${props.boxShadow}`};
+  opacity: ${(props) => `${props.opacity / 100}`};
+  cursor: ${(props) => `${props.cursor}`};
   position: relative;
 `;
 

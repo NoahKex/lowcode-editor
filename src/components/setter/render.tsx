@@ -60,6 +60,9 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
               return (
                 <SliderSetter
                   value={craftProps[name]}
+                  min={setter?.options?.min}
+                  max={setter?.options?.max}
+                  step={setter?.options?.step}
                   onChange={(val) => {
                     setProp((nodeProps) => { nodeProps[name] = val; });
                   }}
@@ -79,6 +82,7 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
               return (
                 <PropertyMixer
                   propertyList={setter?.options?.propertyList}
+                  description={description}
                   value={craftProps[name]}
                   onChange={(val) => {
                     setProp((nodeProps) => { nodeProps[name] = val; });

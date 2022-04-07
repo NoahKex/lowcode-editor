@@ -7,7 +7,8 @@ import * as S from './styled';
 const { Row } = Grid;
 const { Col } = Grid;
 
-const Container = ({ height, width, background, margin, padding, borderWidth, borderStyle, borderColor, boxShadow, boxShadowColor, children }) => {
+// eslint-disable-next-line max-len
+const Container = ({ height, width, background, margin, padding, borderWidth, borderStyle, borderColor, boxShadow, boxShadowColor, opacity, cursor, children }) => {
   const { connectors: { connect, drag } } = useNode();
 
   return (
@@ -23,6 +24,8 @@ const Container = ({ height, width, background, margin, padding, borderWidth, bo
       borderColor={borderColor}
       boxShadow={boxShadow}
       boxShadowColor={boxShadowColor}
+      opacity={opacity}
+      cursor={cursor}
     >
       {children ?
         <Row>

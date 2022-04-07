@@ -1,18 +1,31 @@
 import { formatMixedProperty } from '@/utils';
-import { Form, Input } from '@arco-design/web-react';
+import { Collapse, Form } from '@arco-design/web-react';
+import { IconMoreVertical } from '@arco-design/web-react/icon';
 import InputNumberSetter from '../InputNumber';
-import * as S from './styled';
+import styled from 'styled-components';
 
 const FormItem = Form.Item;
+const CollapseItem = Collapse.Item;
 
-const PropertyMixer = ({ value, propertyList, onChange }) => {
+const StyledCollapseItem = styled(CollapseItem)`
+  .arco-collapse-item-content-box{
+    padding: 10px;
+  }
+  .arco-collapse-item-header-left{
+    padding-right: 0;
+  }
+`;
+
+const PropertyMixer = ({ value, propertyList, description, onChange }) => {
   const valueList = value.split(' ');
   const propertyState = formatMixedProperty(valueList);
-  const { top, left, right, bottom } = propertyState;
   return (
-    <>
-      <Input value={`(${top},${right},${bottom},${left})`} disabled />
-      <S.PropertyMixerContainer>
+    <Collapse defaultActiveKey="1" bordered={false} style={{ marginLeft: '-80px' }}>
+      <StyledCollapseItem
+        header={description}
+        name="1"
+        extra={<IconMoreVertical />}
+      >
         {Object.keys(propertyState).map((item, index) => {
           return (
             <FormItem
@@ -33,8 +46,8 @@ const PropertyMixer = ({ value, propertyList, onChange }) => {
             </FormItem>
           );
         })}
-      </S.PropertyMixerContainer>
-    </>
+      </StyledCollapseItem>
+    </Collapse>
   );
 };
 
