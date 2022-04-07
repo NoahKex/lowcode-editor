@@ -7,7 +7,7 @@ import * as S from './styled';
 const { Row } = Grid;
 const { Col } = Grid;
 
-const Container = ({ height, width, background, margin, padding, borderWidth, children }) => {
+const Container = ({ height, width, background, margin, padding, borderWidth, borderStyle, borderColor, boxShadow, boxShadowColor, children }) => {
   const { connectors: { connect, drag } } = useNode();
 
   return (
@@ -19,6 +19,10 @@ const Container = ({ height, width, background, margin, padding, borderWidth, ch
       padding={padding}
       background={background}
       borderWidth={borderWidth}
+      borderStyle={borderStyle}
+      borderColor={borderColor}
+      boxShadow={boxShadow}
+      boxShadowColor={boxShadowColor}
     >
       {children ?
         <Row>

@@ -30,6 +30,10 @@ export const renderMaterial = (props: Record<string, any>, category: MaterialCat
           width={props.width ?? '100%'}
           margin={props.margin ?? '0px'}
           borderWidth={props.borderWidth ?? '0px'}
+          borderStyle={props.borderStyle ?? 'none'}
+          borderColor={props.borderColor ?? '#000000'}
+          boxShadow={props.boxShadow ?? '0px 0px 0px 0px'}
+          boxShadowColor={props.boxShadowColor ?? '#000000'}
           canvas
         >
           {null}

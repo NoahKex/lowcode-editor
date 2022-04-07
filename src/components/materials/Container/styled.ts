@@ -7,6 +7,10 @@ export const MaterialContainer = styled.div<{
   height: string;
   width: string;
   borderWidth: string;
+  borderStyle: string;
+  borderColor: string;
+  boxShadow: string;
+  boxShadowColor: string;
 }>`
   height: ${(props) => `${props.height}`};
   width: ${(props) => `${props.width}`};
@@ -15,8 +19,9 @@ export const MaterialContainer = styled.div<{
   padding: ${(props) => `${props.padding}`};
   background: ${(props) => props.background};
   border-width: ${(props) => `${props.borderWidth}`};
-  border-color: red;
-  border-style: solid;
+  border-color: ${(props) => props.borderColor};
+  border-style: ${(props) => `${props.borderStyle}`};
+  box-shadow: ${(props) => `${props.boxShadowColor} ${props.boxShadow}`};
   position: relative;
 `;
 

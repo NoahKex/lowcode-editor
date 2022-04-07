@@ -81,6 +81,81 @@ export const LayoutComponentsMessage: ComponentType = {
         },
       },
     },
+    {
+      name: 'borderStyle',
+      propType: 'string',
+      description: '边框样式',
+      defaultValue: 'none',
+      setter: {
+        name: SetterCategory.Select,
+        options: {
+          selectOptions: [{
+            value: 'none',
+            description: '不显示',
+          }, {
+            value: 'dotted',
+            description: '圆点',
+          },
+          {
+            value: 'dashed',
+            description: '虚线',
+          },
+          {
+            value: 'solid',
+            description: '实线',
+          },
+          {
+            value: 'double',
+            description: '双实线',
+          }, {
+            value: 'groove',
+            description: '雕刻效果',
+          },
+          {
+            value: 'ridge',
+            description: '浮雕效果',
+          },
+          {
+            value: 'inset',
+            description: '陷入效果',
+          },
+          {
+            value: 'outset',
+            description: '突出效果',
+          }],
+        },
+      },
+    },
+    {
+      name: 'borderColor',
+      propType: 'string',
+      description: '边框颜色',
+      defaultValue: '#000000',
+      setter: {
+        name: SetterCategory.ColorPicker,
+      },
+    },
+    {
+      name: 'boxShadow',
+      propType: 'string',
+      description: '阴影',
+      defaultValue: '0px 0px 0px 0px',
+      setter: {
+        name: SetterCategory.PropertyMixer,
+        options: {
+          propertyList: ['X', 'Y', 'Blur', 'Spread'],
+        },
+      },
+    },
+    {
+      name: 'boxShadowColor',
+      propType: 'string',
+      description: '阴影颜色',
+      defaultValue: '#000000',
+      setter: {
+        name: SetterCategory.ColorPicker,
+      },
+    },
   ],
 };
 
@@ -115,7 +190,28 @@ export const ButtonComponentsMessage: ComponentType = {
       setter: {
         name: SetterCategory.Select,
         options: {
-          selectOptions: ['default', 'primary', 'secondary', 'dashed', 'text', 'outline'],
+          selectOptions: [{
+            value: 'default',
+            description: '默认',
+          }, {
+            value: 'primary',
+            description: '主要',
+          },
+          {
+            value: 'secondary',
+            description: '次要',
+          },
+          {
+            value: 'dashed',
+            description: '虚线',
+          },
+          {
+            value: 'text',
+            description: '文本',
+          }, {
+            value: 'outline',
+            description: '线性',
+          }],
         },
       },
     },
@@ -127,7 +223,21 @@ export const ButtonComponentsMessage: ComponentType = {
       setter: {
         name: SetterCategory.Select,
         options: {
-          selectOptions: ['warning', 'danger', 'success', 'default'],
+          selectOptions: [{
+            value: 'default',
+            description: '默认',
+          }, {
+            value: 'warning',
+            description: '警告',
+          },
+          {
+            value: 'danger',
+            description: '危险',
+          },
+          {
+            value: 'success',
+            description: '成功',
+          }],
         },
       },
     },
@@ -139,7 +249,22 @@ export const ButtonComponentsMessage: ComponentType = {
       setter: {
         name: SetterCategory.Select,
         options: {
-          selectOptions: ['mini', 'small', 'default', 'large'],
+          selectOptions: [{
+            value: 'mini',
+            description: '迷你',
+          },
+          {
+            value: 'small',
+            description: '小',
+          },
+          {
+            value: 'default',
+            description: '中',
+          },
+          {
+            value: 'large',
+            description: '大',
+          }],
         },
       },
     },
@@ -151,7 +276,18 @@ export const ButtonComponentsMessage: ComponentType = {
       setter: {
         name: SetterCategory.Select,
         options: {
-          selectOptions: ['circle', 'round', 'square'],
+          selectOptions: [{
+            value: 'square',
+            description: '长方形',
+          },
+          {
+            value: 'circle',
+            description: '圆形',
+          },
+          {
+            value: 'round',
+            description: '全圆角',
+          }],
         },
       },
     },

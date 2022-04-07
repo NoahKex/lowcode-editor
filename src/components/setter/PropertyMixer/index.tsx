@@ -15,7 +15,13 @@ const PropertyMixer = ({ value, propertyList, onChange }) => {
       <S.PropertyMixerContainer>
         {Object.keys(propertyState).map((item, index) => {
           return (
-            <FormItem key={item} label={propertyList[index]} style={{ marginBottom: '5px' }}>
+            <FormItem
+              labelCol={{ span: 8 }}
+              wrapperCol={{ span: 16 }}
+              key={item}
+              label={propertyList[index]}
+              style={{ marginBottom: '5px' }}
+            >
               <InputNumberSetter
                 value={propertyState[item]}
                 onChange={(num, unit) => {

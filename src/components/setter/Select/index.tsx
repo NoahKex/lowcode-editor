@@ -9,9 +9,9 @@ const SelectSetter = ({ value, selectOptions, onChange }) => {
       defaultValue={value}
       onChange={onChange}
     >
-      {selectOptions.map((option) => (
-        <Option key={option} value={option}>
-          {option}
+      {selectOptions.map(({ value: itemValue, description }) => (
+        <Option key={itemValue} value={itemValue}>
+          {description}
         </Option>
       ))}
     </Select>
