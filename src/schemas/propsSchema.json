@@ -9,6 +9,9 @@
       "$ref": "#/definitions/PropsSection"
     },
     {
+      "$ref": "#/definitions/StylesSection"
+    },
+    {
       "$ref": "#/definitions/ConfigureSection"
     }
   ],
@@ -55,6 +58,32 @@
       "type": "object",
       "properties": {
         "props": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "propType": {
+                "$ref": "#/definitions/PropType"
+              },
+              "description": {
+                "type": "string"
+              },
+              "defaultValue": {}
+            },
+            "required": [
+              "name",
+              "propType"
+            ]
+          }
+        }
+      }
+    },
+    "StylesSection": {
+      "type": "object",
+      "properties": {
+        "styles": {
           "type": "array",
           "items": {
             "properties": {
