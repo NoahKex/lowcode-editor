@@ -1,5 +1,21 @@
+/* eslint-disable max-lines */
 import { ComponentType } from '@/types';
-import { MaterialCategory, SetterCategory } from './category';
+import { MaterialCategory, MaterialGroupSortCategory, MaterialSortCategory, SetterCategory } from './category';
+
+/**
+ * 组件排序组列表
+ */
+export const MaterialGroupSortCategoryList: MaterialGroupSortCategory[] = [MaterialGroupSortCategory.Basic, MaterialGroupSortCategory.User];
+/**
+ * 组件排序子类型列表
+ */
+export const MaterialSortCategoryList: MaterialSortCategory[] = [
+  MaterialSortCategory.Layout,
+  MaterialSortCategory.Common,
+  MaterialSortCategory.Input,
+  MaterialSortCategory.InformationExhibition,
+  MaterialSortCategory.InformationFeedback,
+];
 
 /**
  * 页面
@@ -11,6 +27,10 @@ export const PageMessage: ComponentType = {
   docUrl: '',
   icon: 'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/7b75627f14234b708d3ad3e064d8bed5~tplv-uwbnlip3yd-image.image',
   render: MaterialCategory.Page,
+  sort: {
+    groupSortCategory: MaterialGroupSortCategory.Basic,
+    sortCategory: MaterialSortCategory.Layout,
+  },
   styles: [
     {
       name: 'background',
@@ -210,6 +230,10 @@ export const LayoutComponentsMessage: ComponentType = {
   docUrl: '',
   icon: 'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/7b75627f14234b708d3ad3e064d8bed5~tplv-uwbnlip3yd-image.image',
   render: MaterialCategory.Container,
+  sort: {
+    groupSortCategory: MaterialGroupSortCategory.Basic,
+    sortCategory: MaterialSortCategory.Layout,
+  },
   styles: [
     {
       name: 'height',
@@ -433,6 +457,10 @@ export const ButtonComponentsMessage: ComponentType = {
   docUrl: 'https://arco.design/react/components/button',
   icon: 'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/7b75627f14234b708d3ad3e064d8bed5~tplv-uwbnlip3yd-image.image',
   render: MaterialCategory.Button,
+  sort: {
+    groupSortCategory: MaterialGroupSortCategory.Basic,
+    sortCategory: MaterialSortCategory.Common,
+  },
   props: [
     {
       name: 'children',
@@ -568,6 +596,10 @@ export const TextComponentsMessage: ComponentType = {
   docUrl: '',
   icon: 'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/7b75627f14234b708d3ad3e064d8bed5~tplv-uwbnlip3yd-image.image',
   render: MaterialCategory.Text,
+  sort: {
+    groupSortCategory: MaterialGroupSortCategory.Basic,
+    sortCategory: MaterialSortCategory.Common,
+  },
   props: [
     {
       name: 'children',

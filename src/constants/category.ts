@@ -79,3 +79,43 @@ export enum MaterialCategory {
    */
   Text,
 }
+
+/**
+ * 组件排序组种类
+ */
+export enum MaterialGroupSortCategory {
+  /**
+   * 基础组件
+   */
+  Basic = '基础组件',
+  /**
+   * 自定义组件
+   */
+  User = '自定义组件',
+}
+
+/**
+ * 组件排序子类型种类
+ */
+export enum MaterialSortCategory {
+  /**
+   * 布局
+   */
+  Layout = '布局',
+  /**
+   * 通用
+   */
+  Common = '通用',
+  /**
+   * 输入
+   */
+  Input = '输入',
+  /**
+   * 信息展示
+   */
+  InformationExhibition = '信息展示',
+  /**
+   * 信息反馈
+   */
+  InformationFeedback = '信息反馈',
+}

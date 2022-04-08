@@ -20,3 +20,12 @@ export const ToolTitle = styled.p`
   color: #2E2E30;
   margin-bottom: -5px;
 `;
+
+export const SortTitle = styled.p`
+  height: 20px;
+  width: 100%;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4E5969;
+`;
