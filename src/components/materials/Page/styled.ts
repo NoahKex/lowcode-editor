@@ -1,12 +1,14 @@
+import { toUnderline } from '@/utils';
 import styled from 'styled-components';
 
 export const PageContainer = styled.div<{
-  backgroundColor: string;
-  padding: number;
+  userStyles: Record<string, any>;
 }>`
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  padding: ${(props) => `${props.padding}`};
-  background-color: ${(props) => props.backgroundColor};
+  ${(props) => {
+    const { userStyles } = props;
+    return Object.keys(userStyles).map((item) => `${toUnderline(item)}: ${userStyles[item]};`);
+  }};
 `;

@@ -1,13 +1,15 @@
-import { PropsSection } from '@/types';
+import { formatStylePropsRules } from '@/constants';
+import { PropsSection, StylesSection } from '@/types';
 import { cloneDeep } from 'lodash';
 
 /**
  * 格式化props
  */
-export function formatProps({ props }: PropsSection): Record<string, any> {
+export function formatProps({ props, styles }: PropsSection | StylesSection): Record<string, any> {
+  const propsValue = props ?? styles;
   const formattedProps = {};
-  if (props) {
-    for (const item of props) {
+  if (propsValue) {
+    for (const item of propsValue) {
       const { name, defaultValue } = item;
       if (defaultValue) {
         formattedProps[name] = defaultValue;
@@ -64,4 +66,18 @@ export function formatMixedProperty(propertyList: string[]): {
         right: propertyList[0],
       };
   }
+}
+
+/**
+ * 格式化styleProps样式对象
+ */
+export function formatStyleProps(props: Record<string, any>): Record<string, any> {
+  return formatStylePropsRules.reduce((pre, cur) => {
+    const curProps = { ...pre };
+    const { from, to } = cur;
+    const fromData = pre[from];
+    curProps[to] = `${pre[to]} ${fromData}`;
+    delete curProps[from];
+    return curProps;
+  }, props);
 }

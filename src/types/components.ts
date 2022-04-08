@@ -11,3 +11,9 @@ export type CustomBasicSection = BasicSection & {
 };
 
 export type ComponentType = CustomBasicSection & CustomPropsSection & CustomStylesSection & ConfigureSection;
+
+export interface PropFunctionalType {
+  userProps: Record<string, any>;
+  styleProps: Record<string, any>;
+  [k: string]: any;
+}

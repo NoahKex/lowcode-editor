@@ -2,6 +2,205 @@ import { ComponentType } from '@/types';
 import { MaterialCategory, SetterCategory } from './category';
 
 /**
+ * 页面
+ */
+export const PageMessage: ComponentType = {
+  componentName: '页面',
+  title: '页面',
+  description: '承载当前页组件的唯一根元素',
+  docUrl: '',
+  icon: 'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/7b75627f14234b708d3ad3e064d8bed5~tplv-uwbnlip3yd-image.image',
+  render: MaterialCategory.Page,
+  styles: [
+    {
+      name: 'background',
+      propType: 'string',
+      description: '背景色',
+      defaultValue: '#FFFFFF',
+      setter: {
+        name: SetterCategory.ColorPicker,
+      },
+    },
+    {
+      name: 'margin',
+      propType: 'string',
+      description: '外边距',
+      defaultValue: '0px',
+      setter: {
+        name: SetterCategory.PropertyMixer,
+        options: {
+          propertyList: ['上外边距', '下外边距', '左外边距', '右外边距'],
+        },
+      },
+    },
+    {
+      name: 'padding',
+      propType: 'string',
+      description: '内边距',
+      defaultValue: '5px',
+      setter: {
+        name: SetterCategory.PropertyMixer,
+        options: {
+          propertyList: ['上内边距', '下内边距', '左内边距', '右内边距'],
+        },
+      },
+    },
+    {
+      name: 'borderWidth',
+      propType: 'string',
+      description: '边框',
+      defaultValue: '5px',
+      setter: {
+        name: SetterCategory.PropertyMixer,
+        options: {
+          propertyList: ['上边框', '下边框', '左边框', '右边框'],
+        },
+      },
+    },
+    {
+      name: 'borderStyle',
+      propType: 'string',
+      description: '边框样式',
+      defaultValue: 'none',
+      setter: {
+        name: SetterCategory.Select,
+        options: {
+          selectOptions: [{
+            value: 'none',
+            description: '不显示',
+          }, {
+            value: 'dotted',
+            description: '圆点',
+          },
+          {
+            value: 'dashed',
+            description: '虚线',
+          },
+          {
+            value: 'solid',
+            description: '实线',
+          },
+          {
+            value: 'double',
+            description: '双实线',
+          },
+          {
+            value: 'groove',
+            description: '雕刻效果',
+          },
+          {
+            value: 'ridge',
+            description: '浮雕效果',
+          },
+          {
+            value: 'inset',
+            description: '陷入效果',
+          },
+          {
+            value: 'outset',
+            description: '突出效果',
+          }],
+        },
+      },
+    },
+    {
+      name: 'borderColor',
+      propType: 'string',
+      description: '边框颜色',
+      defaultValue: '#000000',
+      setter: {
+        name: SetterCategory.ColorPicker,
+      },
+    },
+    {
+      name: 'boxShadow',
+      propType: 'string',
+      description: '阴影',
+      defaultValue: '0px 0px 0px 0px',
+      setter: {
+        name: SetterCategory.PropertyMixer,
+        options: {
+          propertyList: ['X', 'Y', 'Blur', 'Spread'],
+        },
+      },
+    },
+    {
+      name: 'boxShadowColor',
+      propType: 'string',
+      description: '阴影颜色',
+      defaultValue: '#000000',
+      setter: {
+        name: SetterCategory.ColorPicker,
+      },
+    },
+    {
+      name: 'opacity',
+      propType: 'number',
+      description: '不透明度',
+      defaultValue: 100,
+      setter: {
+        name: SetterCategory.Slider,
+        options: {
+          step: 1,
+          min: 0,
+          max: 100,
+        },
+      },
+    },
+    {
+      name: 'cursor',
+      propType: 'string',
+      description: '鼠标手势',
+      defaultValue: 'auto',
+      setter: {
+        name: SetterCategory.Select,
+        options: {
+          selectOptions: [{
+            value: 'auto',
+            description: '自动',
+          }, {
+            value: 'default',
+            description: '箭头',
+          },
+          {
+            value: 'help',
+            description: '帮助',
+          },
+          {
+            value: 'pointer',
+            description: '可点击',
+          },
+          {
+            value: 'wait',
+            description: '等待',
+          },
+          {
+            value: 'crosshair',
+            description: '指针',
+          },
+          {
+            value: 'text',
+            description: '文本',
+          },
+          {
+            value: 'not-allowed',
+            description: '不可选中',
+          },
+          {
+            value: 'zoom-in',
+            description: '可放大',
+          },
+          {
+            value: 'zoom-out',
+            description: '可缩小',
+          }],
+        },
+      },
+    },
+  ],
+};
+
+/**
  * 布局组件
  */
 export const LayoutComponentsMessage: ComponentType = {
@@ -11,7 +210,7 @@ export const LayoutComponentsMessage: ComponentType = {
   docUrl: '',
   icon: 'https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/7b75627f14234b708d3ad3e064d8bed5~tplv-uwbnlip3yd-image.image',
   render: MaterialCategory.Container,
-  props: [
+  styles: [
     {
       name: 'height',
       propType: 'string',
@@ -236,7 +435,7 @@ export const ButtonComponentsMessage: ComponentType = {
   render: MaterialCategory.Button,
   props: [
     {
-      name: 'text',
+      name: 'children',
       propType: 'string',
       description: '按钮文字',
       defaultValue: '按钮',
@@ -371,7 +570,7 @@ export const TextComponentsMessage: ComponentType = {
   render: MaterialCategory.Text,
   props: [
     {
-      name: 'text',
+      name: 'children',
       propType: 'string',
       description: '文本内容',
       defaultValue: '一段文字',
@@ -382,6 +581,8 @@ export const TextComponentsMessage: ComponentType = {
         },
       },
     },
+  ],
+  styles: [
     {
       name: 'fontSize',
       propType: 'string',
@@ -401,3 +602,13 @@ export const TextComponentsMessage: ComponentType = {
  * 组件列表
  */
 export const ComponentsMessage: ComponentType[] = [LayoutComponentsMessage, ButtonComponentsMessage, TextComponentsMessage];
+
+/**
+ * styleProps样式对象转换依赖
+ */
+export const formatStylePropsRules: [{from: string; to: string}] = [
+  {
+    from: 'boxShadowColor',
+    to: 'boxShadow',
+  },
+];

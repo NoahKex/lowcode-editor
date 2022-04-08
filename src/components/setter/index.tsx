@@ -1,3 +1,4 @@
+import { SettingsPropsName } from '@/constants';
 import { Tabs } from '@arco-design/web-react';
 import { IconBrush, IconEdit, IconRobot } from '@arco-design/web-react/icon';
 import { useEditor } from '@craftjs/core';
@@ -22,7 +23,7 @@ const Setter = () => {
       currentSelected = {
         id: currentNodeId,
         name: state.nodes[currentNodeId].data.name,
-        settings: state.nodes[currentNodeId].related && state.nodes[currentNodeId].related.settings,
+        related: state.nodes[currentNodeId].related,
         isDeletable: query.node(currentNodeId).isDeletable(),
       };
     }
@@ -35,11 +36,13 @@ const Setter = () => {
   return selected ? (
     <Tabs defaultActiveTab="2" style={{ width: '100%' }} >
       <StyledTabPane key="1" title={<span><IconEdit style={{ marginRight: 10 }} />属性</span>}>
-        wip
+        {
+          selected.related && React.createElement(selected.related[SettingsPropsName.Props])
+        }
       </StyledTabPane>
       <StyledTabPane key="2" title={<span><IconBrush style={{ marginRight: 10 }} />样式</span>}>
         {
-          selected.settings && React.createElement(selected.settings)
+          selected.related && React.createElement(selected.related[SettingsPropsName.Styles])
         }
       </StyledTabPane>
       <StyledTabPane key="3" title={<span><IconRobot style={{ marginRight: 10 }} />高级</span>}>

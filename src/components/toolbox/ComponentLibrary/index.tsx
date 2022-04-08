@@ -26,13 +26,16 @@ const ComponentLibrary = ({ onMaterialMouseDown }: {onMaterialMouseDown: () => v
         <TabPane key="1" title="基础组件">
           {
             ComponentsMessage.map((materialItem) => {
-              const { render, props, componentName } = materialItem;
+              const { render, props, styles, componentName } = materialItem;
               return (
                 <StyledMaterialButton
                   key={componentName}
                   type="dashed"
                   onDragLeave={() => onMaterialMouseDown()}
-                  ref={(ref) => connectors.create(ref as HTMLDivElement, renderMaterial(formatProps({ props }), render))}
+                  ref={(ref) => connectors.create(ref as HTMLDivElement, renderMaterial({
+                    userProps: formatProps({ props }),
+                    styleProps: formatProps({ styles }),
+                  }, render))}
                 ><S.MaterialIcon src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/7b75627f14234b708d3ad3e064d8bed5~tplv-uwbnlip3yd-image.image" />
                   {componentName}
                 </StyledMaterialButton>

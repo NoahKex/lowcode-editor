@@ -1,4 +1,4 @@
-import { SetterCategory } from '@/constants';
+import { ComponentsMessagePropName, CraftPropsName, SetterCategory } from '@/constants';
 import { ComponentType } from '@/types';
 import { Divider, Form } from '@arco-design/web-react';
 import ColorPickerSetter from './ColorPicker';
@@ -13,11 +13,13 @@ const FormItem = Form.Item;
 interface RenderedSetterType {
   craftProps: Record<string, any>;
   componentsMessage: ComponentType;
+  componentsMessagePropName: ComponentsMessagePropName;
+  craftPropsName: CraftPropsName;
   setProp: (cb: any, throttleRate?: number | undefined) => void;
 }
 
-const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSetterType): JSX.Element => {
-  const { props } = componentsMessage;
+const RenderedSetter = ({ craftProps, componentsMessage, componentsMessagePropName, craftPropsName, setProp }: RenderedSetterType): JSX.Element => {
+  const props = componentsMessage[componentsMessagePropName];
   return (
     <Form labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}>
       {props?.map((item) => {
@@ -30,7 +32,7 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
                   value={craftProps[name]}
                   maxLength={setter?.options?.maxLength}
                   onChange={(val) => {
-                    setProp((nodeProps) => { nodeProps[name] = val; });
+                    setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; });
                   }}
                 />
               );
@@ -41,7 +43,7 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
                   value={craftProps[name]}
                   min={setter?.options?.minNumber}
                   onChange={(num, unit) => {
-                    setProp((nodeProps) => { nodeProps[name] = `${num}${unit}`; });
+                    setProp((nodeProps) => { nodeProps[craftPropsName][name] = `${num}${unit}`; });
                   }}
                 />
               );
@@ -51,7 +53,7 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
                 <ColorPickerSetter
                   value={craftProps[name]}
                   onChange={(val) => {
-                    setProp((nodeProps) => { nodeProps[name] = val; });
+                    setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; });
                   }}
                 />
               );
@@ -64,7 +66,7 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
                   max={setter?.options?.max}
                   step={setter?.options?.step}
                   onChange={(val) => {
-                    setProp((nodeProps) => { nodeProps[name] = val; });
+                    setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; });
                   }}
                 />
               );
@@ -73,7 +75,7 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
               return (
                 <SelectSetter
                   value={craftProps[name]}
-                  onChange={(val) => setProp((nodeProps) => { nodeProps[name] = val; })}
+                  onChange={(val) => setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; })}
                   selectOptions={setter?.options?.selectOptions}
                 />
               );
@@ -85,7 +87,7 @@ const RenderedSetter = ({ craftProps, componentsMessage, setProp }: RenderedSett
                   description={description}
                   value={craftProps[name]}
                   onChange={(val) => {
-                    setProp((nodeProps) => { nodeProps[name] = val; });
+                    setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; });
                   }}
                 />
               );
