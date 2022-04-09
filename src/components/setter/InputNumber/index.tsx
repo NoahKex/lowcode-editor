@@ -46,14 +46,14 @@ const InputNumberSetter = ({ value, min = 0, onChange }) => {
       min={min}
       onChange={(val) => {
         const revisedValue = val ?? 0;
-        onChange(revisedValue, unit);
+        onChange(`${revisedValue}${unit}`);
       }}
       prefix={
         <S.NumberUnitSuffixContainer >
           <NumberUnitSelect
             unit={unit}
             onOptionChange={(val) => {
-              onChange(number, val);
+              onChange(`${number}${val}`);
             }}
           />
         </S.NumberUnitSuffixContainer>}

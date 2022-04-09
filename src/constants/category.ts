@@ -52,6 +52,11 @@ export enum SetterCategory {
    */
   Slider,
   /**
+   * 单选框
+   * 详见src/components/setter/Radio
+   */
+  Radio,
+  /**
    * 属性混合器（处理margin、padding、border等）
    * 详见src/components/setter/PropertyMixer
    */

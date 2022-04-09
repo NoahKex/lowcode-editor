@@ -6,6 +6,7 @@ export const MaterialContainer = styled.div<{
 }>`
   box-sizing: border-box;
   position: relative;
+  display: flex;
   ${(props) => {
     const { userStyles } = props;
     return Object.keys(userStyles).map((item) => `${toUnderline(item)}: ${userStyles[item]};`);

@@ -1,15 +1,14 @@
-// import * as S from './styled';
 import { useNode } from '@craftjs/core';
 import RenderedSetter from '@/components/setter/render';
 import { ComponentsMessagePropName, CraftPropsName, SettingsPropsName, TextComponentsMessage } from '@/constants';
 import { PropFunctionalType } from '@/types';
+import * as S from './styled';
+import { formatStyleProps } from '@/utils';
 
 const Text = ({ userProps, styleProps }: PropFunctionalType) => {
   const { connectors: { connect, drag } } = useNode();
   return (
-    <div ref={(ref) => connect(drag(ref as HTMLDivElement))}>
-      <p style={{ fontSize: styleProps.fontSize }}>{ userProps.children }</p>
-    </div>
+    <S.TextContainer ref={(ref) => connect(drag(ref as HTMLDivElement))} userStyles={formatStyleProps(styleProps)} {...userProps} />
   );
 };
 

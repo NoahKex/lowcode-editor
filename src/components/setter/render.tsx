@@ -5,6 +5,7 @@ import ColorPickerSetter from './ColorPicker';
 import InputSetter from './Input';
 import InputNumberSetter from './InputNumber';
 import PropertyMixer from './PropertyMixer';
+import RadioSetter from './Radio';
 import SelectSetter from './Select';
 import SliderSetter from './Slider';
 
@@ -42,8 +43,8 @@ const RenderedSetter = ({ craftProps, componentsMessage, componentsMessagePropNa
                 <InputNumberSetter
                   value={craftProps[name]}
                   min={setter?.options?.minNumber}
-                  onChange={(num, unit) => {
-                    setProp((nodeProps) => { nodeProps[craftPropsName][name] = `${num}${unit}`; });
+                  onChange={(val) => {
+                    setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; });
                   }}
                 />
               );
@@ -75,8 +76,21 @@ const RenderedSetter = ({ craftProps, componentsMessage, componentsMessagePropNa
               return (
                 <SelectSetter
                   value={craftProps[name]}
-                  onChange={(val) => setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; })}
                   selectOptions={setter?.options?.selectOptions}
+                  onChange={(val) => {
+                    setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; });
+                  }}
+                />
+              );
+            },
+            [SetterCategory.Radio]: () => {
+              return (
+                <RadioSetter
+                  value={craftProps[name]}
+                  radioOptions={setter?.options?.radioOptions}
+                  onChange={(val) => {
+                    setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; });
+                  }}
                 />
               );
             },

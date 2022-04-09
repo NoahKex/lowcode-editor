@@ -1,5 +1,5 @@
 import { SettingsPropsName } from '@/constants';
-import { Tabs } from '@arco-design/web-react';
+import { Tabs, Form, Divider } from '@arco-design/web-react';
 import { IconBrush, IconEdit, IconRobot } from '@arco-design/web-react/icon';
 import { useEditor } from '@craftjs/core';
 import React from 'react';
@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import * as S from './styled';
 
 const { TabPane } = Tabs;
+const FormItem = Form.Item;
 
 const StyledTabPane = styled(TabPane)`
   padding: 10px 20px 10px 0;
@@ -36,6 +37,13 @@ const Setter = () => {
   return selected ? (
     <Tabs defaultActiveTab="2" style={{ width: '100%' }} >
       <StyledTabPane key="1" title={<span><IconEdit style={{ marginRight: 10 }} />属性</span>}>
+        <Form labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}>
+          <FormItem label="唯一标识">
+            <p>{selected.id}</p>
+          </FormItem>
+          <Divider style={{ height: '1px', margin: '-10px 0 10px 0' }} />
+        </Form>
+
         {
           selected.related && React.createElement(selected.related[SettingsPropsName.Props])
         }

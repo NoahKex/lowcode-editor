@@ -37,8 +37,8 @@ const PropertyMixer = ({ value, propertyList, description, onChange }) => {
             >
               <InputNumberSetter
                 value={propertyState[item]}
-                onChange={(num, unit) => {
-                  const curPropertyState = { ...propertyState, [item]: `${num}${unit}` };
+                onChange={(val) => {
+                  const curPropertyState = { ...propertyState, [item]: val };
                   const { top: curTop, left: curLeft, right: curRight, bottom: curBottom } = curPropertyState;
                   onChange(`${curTop} ${curRight} ${curBottom} ${curLeft}`);
                 }}

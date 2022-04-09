@@ -2,13 +2,31 @@
 import RenderedSetter from '@/components/setter/render';
 import { ButtonComponentsMessage, ComponentsMessagePropName, CraftPropsName, SettingsPropsName } from '@/constants';
 import { PropFunctionalType } from '@/types';
+import { formatStyleProps, toUnderline } from '@/utils';
 import { Button as MaterialButton } from '@arco-design/web-react';
 import { useNode } from '@craftjs/core';
+import styled from 'styled-components';
+
+const StyledMaterialButton = styled(MaterialButton)<{
+  userstyles: Record<string, any>;
+}>`
+  &.material-button-user{
+    ${(props) => {
+    const { userstyles } = props;
+    return Object.keys(userstyles).map((item) => `${toUnderline(item)}: ${userstyles[item]};`);
+  }};
+  }
+`;
 
 const Button = ({ userProps, styleProps }: PropFunctionalType) => {
   const { connectors: { connect, drag } } = useNode();
   return (
-    <MaterialButton ref={(ref) => connect(drag(ref as HTMLDivElement))} {...userProps} />
+    <StyledMaterialButton
+      className="material-button-user"
+      userstyles={formatStyleProps(styleProps)}
+      ref={(ref) => connect(drag(ref as HTMLDivElement))}
+      {...userProps}
+    />
   );
 };
 
