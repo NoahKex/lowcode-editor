@@ -4,7 +4,8 @@ import styled from 'styled-components';
 export const PageContainer = styled.div<{
   userStyles: Record<string, any>;
 }>`
-  height: 100%;
+  min-height: 100%;
+  height: auto;
   width: 100%;
   box-sizing: border-box;
   ${(props) => {

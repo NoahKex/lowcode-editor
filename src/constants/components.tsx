@@ -490,7 +490,7 @@ export const LayoutComponentsMessage: ComponentType = {
       name: 'height',
       propType: 'string',
       description: '高度',
-      defaultValue: '15%',
+      defaultValue: '150px',
       setter: {
         name: SetterCategory.InputNumber,
         options: {

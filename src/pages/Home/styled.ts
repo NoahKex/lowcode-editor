@@ -12,7 +12,7 @@ export const ToolArea = styled.div`
 `;
 
 export const EditArea = styled.div`
-  height: auto;
+  height: 91vh;
   width: auto;
   flex: 1;
   padding: 10px;
