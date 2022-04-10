@@ -37,13 +37,14 @@ const NumberUnitSelect = ({ unit, onOptionChange }: NumberUnitSelectPropsType) =
   );
 };
 
-const InputNumberSetter = ({ value, min = 0, onChange }) => {
-  const reg = /([0-9]+)(px|%)/i;
+const InputNumberSetter = ({ value, min = -Infinity, max = Infinity, onChange }) => {
+  const reg = /(-?[0-9]+)(px|%)/i;
   const [,number, unit] = value.match(reg);
   return (
     <InputNumber
       value={number}
       min={min}
+      max={max}
       onChange={(val) => {
         const revisedValue = val ?? 0;
         onChange(`${revisedValue}${unit}`);

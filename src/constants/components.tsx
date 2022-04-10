@@ -128,6 +128,31 @@ export const PageMessage: ComponentType = {
       },
     },
     {
+      name: 'flexWrap',
+      propType: 'string',
+      description: '子项布局',
+      defaultValue: 'nowrap',
+      setter: {
+        name: SetterCategory.Radio,
+        options: {
+          radioOptions: [
+            {
+              value: 'nowrap',
+              label: '不换行',
+            },
+            {
+              value: 'wrap',
+              label: '正换行',
+            },
+            {
+              value: 'wrap-reverse',
+              label: '逆换行',
+            },
+          ],
+        },
+      },
+    },
+    {
       name: 'background',
       propType: 'string',
       description: '背景色',
@@ -265,9 +290,6 @@ export const PageMessage: ComponentType = {
       defaultValue: '18px',
       setter: {
         name: SetterCategory.InputNumber,
-        options: {
-          minNumber: 0,
-        },
       },
     },
     {
@@ -584,6 +606,31 @@ export const LayoutComponentsMessage: ComponentType = {
       },
     },
     {
+      name: 'flexWrap',
+      propType: 'string',
+      description: '子项布局',
+      defaultValue: 'nowrap',
+      setter: {
+        name: SetterCategory.Radio,
+        options: {
+          radioOptions: [
+            {
+              value: 'nowrap',
+              label: '不换行',
+            },
+            {
+              value: 'wrap',
+              label: '正换行',
+            },
+            {
+              value: 'wrap-reverse',
+              label: '逆换行',
+            },
+          ],
+        },
+      },
+    },
+    {
       name: 'background',
       propType: 'string',
       description: '背景色',
@@ -721,9 +768,6 @@ export const LayoutComponentsMessage: ComponentType = {
       defaultValue: '18px',
       setter: {
         name: SetterCategory.InputNumber,
-        options: {
-          minNumber: 0,
-        },
       },
     },
     {
@@ -1494,9 +1538,6 @@ export const TextComponentsMessage: ComponentType = {
       defaultValue: '18px',
       setter: {
         name: SetterCategory.InputNumber,
-        options: {
-          minNumber: 0,
-        },
       },
     },
     {
