@@ -2,12 +2,8 @@ import RenderedSetter from '@/components/setter/render';
 import { ComponentsMessagePropName, CraftPropsName, LayoutComponentsMessage, SettingsPropsName } from '@/constants';
 import { PropFunctionalType } from '@/types';
 import { formatStyleProps } from '@/utils';
-import { Grid } from '@arco-design/web-react';
 import { useNode } from '@craftjs/core';
 import * as S from './styled';
-
-const { Row } = Grid;
-const { Col } = Grid;
 
 const Container = ({ userProps, styleProps, children }: PropFunctionalType) => {
   const { connectors: { connect, drag } } = useNode();
@@ -17,11 +13,7 @@ const Container = ({ userProps, styleProps, children }: PropFunctionalType) => {
       ref={(ref) => connect(drag(ref as HTMLDivElement))}
     >
       {children ?
-        <Row>
-          <Col span={24}>
-            {children}
-          </Col>
-        </Row> :
+        <>{ children }</> :
         <S.BlankContainer >拖拽组件到这里</S.BlankContainer>}
     </S.MaterialContainer>
   );

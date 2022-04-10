@@ -227,7 +227,7 @@ export const PageMessage: ComponentType = {
             },
             {
               value: 'justify',
-              label: 'justify',
+              label: '两侧对齐',
             },
           ],
         },
@@ -369,7 +369,7 @@ export const PageMessage: ComponentType = {
       setter: {
         name: SetterCategory.PropertyMixer,
         options: {
-          propertyList: ['X', 'Y', 'Blur', 'Spread'],
+          propertyList: ['X轴偏移', 'Y轴偏移', '模糊半径', '扩张半径'],
         },
       },
     },
@@ -683,7 +683,7 @@ export const LayoutComponentsMessage: ComponentType = {
             },
             {
               value: 'justify',
-              label: 'justify',
+              label: '两侧对齐',
             },
           ],
         },
@@ -825,7 +825,7 @@ export const LayoutComponentsMessage: ComponentType = {
       setter: {
         name: SetterCategory.PropertyMixer,
         options: {
-          propertyList: ['X', 'Y', 'Blur', 'Spread'],
+          propertyList: ['X轴偏移', 'Y轴偏移', '模糊半径', '扩张半径'],
         },
       },
     },
@@ -1223,7 +1223,7 @@ export const ButtonComponentsMessage: ComponentType = {
       setter: {
         name: SetterCategory.PropertyMixer,
         options: {
-          propertyList: ['X', 'Y', 'Blur', 'Spread'],
+          propertyList: ['X轴偏移', 'Y轴偏移', '模糊半径', '扩张半径'],
         },
       },
     },
@@ -1456,7 +1456,7 @@ export const TextComponentsMessage: ComponentType = {
             },
             {
               value: 'justify',
-              label: 'justify',
+              label: '两侧对齐',
             },
           ],
         },
@@ -1598,7 +1598,7 @@ export const TextComponentsMessage: ComponentType = {
       setter: {
         name: SetterCategory.PropertyMixer,
         options: {
-          propertyList: ['X', 'Y', 'Blur', 'Spread'],
+          propertyList: ['X轴偏移', 'Y轴偏移', '模糊半径', '扩张半径'],
         },
       },
     },
