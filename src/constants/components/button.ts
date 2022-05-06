@@ -346,55 +346,5 @@ export const ButtonComponentsMessage: ComponentType = {
         },
       },
     },
-    {
-      name: 'cursor',
-      propType: 'string',
-      description: '鼠标手势',
-      defaultValue: 'pointer',
-      setter: {
-        name: SetterCategory.Select,
-        options: {
-          selectOptions: [{
-            value: 'auto',
-            description: '自动',
-          }, {
-            value: 'default',
-            description: '箭头',
-          },
-          {
-            value: 'help',
-            description: '帮助',
-          },
-          {
-            value: 'pointer',
-            description: '可点击',
-          },
-          {
-            value: 'wait',
-            description: '等待',
-          },
-          {
-            value: 'crosshair',
-            description: '指针',
-          },
-          {
-            value: 'text',
-            description: '文本',
-          },
-          {
-            value: 'not-allowed',
-            description: '不可选中',
-          },
-          {
-            value: 'zoom-in',
-            description: '可放大',
-          },
-          {
-            value: 'zoom-out',
-            description: '可缩小',
-          }],
-        },
-      },
-    },
   ],
 };
