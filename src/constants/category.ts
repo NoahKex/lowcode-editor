@@ -83,6 +83,142 @@ export enum MaterialCategory {
    * 文本
    */
   Text,
+  /**
+   * Alert
+   */
+  Alert,
+  /**
+   * Avatar
+   */
+  Avatar,
+  /**
+   * AvatarGroup
+   */
+  AvatarGroup,
+  /**
+   * Badge
+   */
+  Badge,
+  /**
+   * Breadcrumb
+   */
+  Breadcrumb,
+  /**
+   * BreadCrumbItem
+   */
+  BreadCrumbItem,
+  /**
+   * ButtonGroup
+   */
+  ButtonGroup,
+  /**
+   * Card
+   */
+  Card,
+  /**
+   * Carousel
+   */
+  Carousel,
+  /**
+   * Cascader
+   */
+  Cascader,
+  /**
+   * Checkbox
+   */
+  Checkbox,
+  /**
+   * CheckboxGroup
+   */
+  CheckboxGroup,
+  /**
+   * Collapse
+   */
+  Collapse,
+  /**
+   * CollapseItem
+   */
+  CollapseItem,
+  /**
+   * DatePicker
+   */
+  DatePicker,
+  /**
+   * MonthPicker
+   */
+  MonthPicker,
+  /**
+   * YearPicker
+   */
+  YearPicker,
+  /**
+   * WeekPicker
+   */
+  WeekPicker,
+  /**
+   * QuarterPicker
+   */
+  QuarterPicker,
+  /**
+   * RangePicker
+   */
+  RangePicker,
+  /**
+   * Descriptions
+   */
+  Descriptions,
+  /**
+   * Divider
+   */
+  Divider,
+  /**
+   * Dropdown
+   */
+  Dropdown,
+  /**
+   * DropdownButton
+   */
+  DropdownButton,
+  /**
+   * Empty
+   */
+  Empty,
+  /**
+   * Input
+   */
+  Input,
+  /**
+   * TextArea
+   */
+  TextArea,
+  /**
+   * InputTag
+   */
+  InputTag,
+  /**
+   * InputNumber
+   */
+  InputNumber,
+  /**
+   * Link
+   */
+  Link,
+  /**
+   * Radio
+   */
+  Radio,
+  /**
+   * RadioGroup
+   */
+  RadioGroup,
+  /**
+   * Switch
+   */
+  Switch,
+  /**
+   * Tag
+   */
+  Tag,
 }
 
 /**
