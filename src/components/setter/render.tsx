@@ -44,6 +44,8 @@ const RenderedSetter = ({ craftProps, componentsMessage, componentsMessagePropNa
                 <InputNumberSetter
                   value={craftProps[name]}
                   min={setter?.options?.minNumber}
+                  max={setter?.options?.maxNumber}
+                  optionDisabled={setter?.options?.optionDisabled}
                   onChange={(val) => {
                     setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; });
                   }}
