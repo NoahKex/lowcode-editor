@@ -35,7 +35,7 @@ const Setter = () => {
   });
 
   return selected ? (
-    <Tabs defaultActiveTab="2" style={{ width: '100%' }} >
+    <Tabs defaultActiveTab="1" style={{ width: '100%' }} >
       <StyledTabPane key="1" title={<span><IconEdit style={{ marginRight: 10 }} />属性</span>}>
         <Form labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}>
           <FormItem label="唯一标识">
