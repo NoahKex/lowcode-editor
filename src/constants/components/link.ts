@@ -31,22 +31,10 @@ export const LinkComponentsMessage: ComponentType = {
     {
       name: 'icon',
       propType: 'any',
-      description: '是否显示图标',
+      description: '显示图标',
       defaultValue: true,
       setter: {
-        name: SetterCategory.Radio,
-        options: {
-          radioOptions: [
-            {
-              value: true,
-              label: '是',
-            },
-            {
-              value: false,
-              label: '否',
-            },
-          ],
-        },
+        name: SetterCategory.Switch,
       },
     },
     {
@@ -79,43 +67,19 @@ export const LinkComponentsMessage: ComponentType = {
     {
       name: 'disabled',
       propType: 'any',
-      description: '是否禁用',
+      description: '禁用',
       defaultValue: false,
       setter: {
-        name: SetterCategory.Radio,
-        options: {
-          radioOptions: [
-            {
-              value: true,
-              label: '是',
-            },
-            {
-              value: false,
-              label: '否',
-            },
-          ],
-        },
+        name: SetterCategory.Switch,
       },
     },
     {
       name: 'hoverable',
       propType: 'any',
-      description: '悬浮态底色',
+      description: '显示悬浮态底色',
       defaultValue: true,
       setter: {
-        name: SetterCategory.Radio,
-        options: {
-          radioOptions: [
-            {
-              value: true,
-              label: '有',
-            },
-            {
-              value: false,
-              label: '无',
-            },
-          ],
-        },
+        name: SetterCategory.Switch,
       },
     },
   ],

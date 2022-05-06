@@ -8,6 +8,7 @@ import PropertyMixer from './PropertyMixer';
 import RadioSetter from './Radio';
 import SelectSetter from './Select';
 import SliderSetter from './Slider';
+import SwitchSetter from './Switch';
 
 const FormItem = Form.Item;
 
@@ -88,6 +89,16 @@ const RenderedSetter = ({ craftProps, componentsMessage, componentsMessagePropNa
                 <RadioSetter
                   value={craftProps[name]}
                   radioOptions={setter?.options?.radioOptions}
+                  onChange={(val) => {
+                    setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; });
+                  }}
+                />
+              );
+            },
+            [SetterCategory.Switch]: () => {
+              return (
+                <SwitchSetter
+                  value={craftProps[name]}
                   onChange={(val) => {
                     setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; });
                   }}

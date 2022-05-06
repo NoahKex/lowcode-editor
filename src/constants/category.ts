@@ -61,6 +61,11 @@ export enum SetterCategory {
    * 详见src/components/setter/PropertyMixer
    */
   PropertyMixer,
+  /**
+   * 开关
+   * 详见src/components/setter/Switch
+   */
+  Switch,
 }
 
 /**
