@@ -31,7 +31,7 @@ import { DividerComponentsMessage } from './divider';
 // import { DropdownButtonComponentsMessage } from './dropdownbutton';
 // import { EmptyComponentsMessage } from './empty';
 import { InputComponentsMessage } from './input';
-// import { TextAreaComponentsMessage } from './textarea';
+import { TextAreaComponentsMessage } from './textarea';
 // import { InputTagComponentsMessage } from './inputtag';
 // import { InputNumberComponentsMessage } from './inputnumber';
 // import { RadioComponentsMessage } from './radio';
@@ -70,7 +70,7 @@ export { DividerComponentsMessage } from './divider';
 // export { DropdownButtonComponentsMessage } from './dropdownbutton';
 // export { EmptyComponentsMessage } from './empty';
 export { InputComponentsMessage } from './input';
-// export { TextAreaComponentsMessage } from './textarea';
+export { TextAreaComponentsMessage } from './textarea';
 // export { InputTagComponentsMessage } from './inputtag';
 // export { InputNumberComponentsMessage } from './inputnumber';
 // export { RadioComponentsMessage } from './radio';
@@ -112,7 +112,7 @@ export const ComponentsMessage: ComponentType[] = [
   // DropdownButtonComponentsMessage,
   // EmptyComponentsMessage,
   InputComponentsMessage,
-  // TextAreaComponentsMessage,
+  TextAreaComponentsMessage,
   // InputTagComponentsMessage,
   // InputNumberComponentsMessage,
   // RadioComponentsMessage,

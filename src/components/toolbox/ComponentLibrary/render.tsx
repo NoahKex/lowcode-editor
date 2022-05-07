@@ -32,7 +32,7 @@ import Divider from '@/components/materials/Divider';
 // import DropdownButton from '@/components/materials/DropdownButton';
 // import Empty from '@/components/materials/Empty';
 import Input from '@/components/materials/Input';
-// import TextArea from '@/components/materials/TextArea';
+import TextArea from '@/components/materials/TextArea';
 // import InputTag from '@/components/materials/InputTag';
 // import InputNumber from '@/components/materials/InputNumber';
 // import Radio from '@/components/materials/Radio';
@@ -302,14 +302,14 @@ export const renderMaterial = (props: PropFunctionalType, category: MaterialCate
         />
       );
     },
-    // [MaterialCategory.TextArea]: () => {
-    //   return (
-    //     <TextArea
-    //       userProps={userProps}
-    //       styleProps={styleProps}
-    //     />
-    //   );
-    // },
+    [MaterialCategory.TextArea]: () => {
+      return (
+        <TextArea
+          userProps={userProps}
+          styleProps={styleProps}
+        />
+      );
+    },
     // [MaterialCategory.InputTag]: () => {
     //   return (
     //     <InputTag

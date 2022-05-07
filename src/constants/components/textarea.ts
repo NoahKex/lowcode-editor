@@ -2,15 +2,15 @@ import { ComponentType } from '@/types';
 import { MaterialCategory, MaterialGroupSortCategory, MaterialSortCategory, SetterCategory } from '@/constants/category';
 
 /**
- * Input组件
+ * TextArea组件
  */
-export const InputComponentsMessage: ComponentType = {
-  componentName: '输入框',
-  title: '输入框',
-  description: '基本表单组件，并在原生控件基础上进行了功能扩展，可以组合使用',
+export const TextAreaComponentsMessage: ComponentType = {
+  componentName: '文本域',
+  title: '文本域',
+  description: '可以用于多行输入',
   docUrl: '',
   icon: '',
-  render: MaterialCategory.Input,
+  render: MaterialCategory.TextArea,
   sort: {
     groupSortCategory: MaterialGroupSortCategory.Basic,
     sortCategory: MaterialSortCategory.Input,
@@ -53,12 +53,12 @@ export const InputComponentsMessage: ComponentType = {
       },
     },
     {
-      name: 'placeholder',
+      name: 'autoSize',
       propType: 'any',
-      description: '输入框提示文字',
-      defaultValue: '请输入内容',
+      description: '是否自动调整输入框高度',
+      defaultValue: false,
       setter: {
-        name: SetterCategory.Input,
+        name: SetterCategory.Switch,
       },
     },
     {
@@ -71,73 +71,18 @@ export const InputComponentsMessage: ComponentType = {
       },
     },
     {
-      name: 'addBefore',
+      name: 'placeholder',
       propType: 'any',
-      description: '输入框前附加内容',
-      defaultValue: '',
+      description: '输入框提示文字',
+      defaultValue: '请输入内容',
       setter: {
         name: SetterCategory.Input,
-      },
-    },
-    {
-      name: 'addAfter',
-      propType: 'any',
-      description: '输入框后附加内容',
-      defaultValue: '',
-      setter: {
-        name: SetterCategory.Input,
-      },
-    },
-    {
-      name: 'prefix',
-      propType: 'any',
-      description: '前缀图标',
-      defaultValue: null,
-      setter: {
-        name: SetterCategory.IconSelect,
-      },
-    },
-    {
-      name: 'suffix',
-      propType: 'any',
-      description: '后缀图标',
-      defaultValue: null,
-      setter: {
-        name: SetterCategory.IconSelect,
-      },
-    },
-    {
-      name: 'size',
-      propType: 'any',
-      description: '输入框的尺寸',
-      defaultValue: 'default',
-      setter: {
-        name: SetterCategory.Select,
-        options: {
-          selectOptions: [{
-            value: 'mini',
-            description: '迷你',
-          },
-          {
-            value: 'small',
-            description: '小',
-          },
-          {
-            value: 'default',
-            description: '中',
-          },
-          {
-            value: 'large',
-            description: '大',
-          }],
-        },
       },
     },
     {
       name: 'maxLength',
       propType: 'any',
       description: '最大输入长度',
-      defaultValue: '',
       setter: {
         name: SetterCategory.InputNumber,
         options: {
@@ -157,22 +102,10 @@ export const InputComponentsMessage: ComponentType = {
   ],
   styles: [
     {
-      name: 'height',
-      propType: 'string',
-      description: '高度',
-      defaultValue: '30px',
-      setter: {
-        name: SetterCategory.WithUnitInputNumber,
-        options: {
-          minNumber: 0,
-        },
-      },
-    },
-    {
       name: 'width',
       propType: 'string',
       description: '宽度',
-      defaultValue: '260px',
+      defaultValue: '300px',
       setter: {
         name: SetterCategory.WithUnitInputNumber,
         options: {
