@@ -26,7 +26,7 @@ import { AvatarComponentsMessage } from './avatar';
 // import { QuarterPickerComponentsMessage } from './quarterpicker';
 // import { RangePickerComponentsMessage } from './rangepicker';
 // import { DescriptionsComponentsMessage } from './descriptions';
-// import { DividerComponentsMessage } from './divider';
+import { DividerComponentsMessage } from './divider';
 // import { DropdownComponentsMessage } from './dropdown';
 // import { DropdownButtonComponentsMessage } from './dropdownbutton';
 // import { EmptyComponentsMessage } from './empty';
@@ -65,7 +65,7 @@ export { AvatarComponentsMessage } from './avatar';
 // export { QuarterPickerComponentsMessage } from './quarterpicker';
 // export { RangePickerComponentsMessage } from './rangepicker';
 // export { DescriptionsComponentsMessage } from './descriptions';
-// export { DividerComponentsMessage } from './divider';
+export { DividerComponentsMessage } from './divider';
 // export { DropdownComponentsMessage } from './dropdown';
 // export { DropdownButtonComponentsMessage } from './dropdownbutton';
 // export { EmptyComponentsMessage } from './empty';
@@ -107,7 +107,7 @@ export const ComponentsMessage: ComponentType[] = [
   // QuarterPickerComponentsMessage,
   // RangePickerComponentsMessage,
   // DescriptionsComponentsMessage,
-  // DividerComponentsMessage,
+  DividerComponentsMessage,
   // DropdownComponentsMessage,
   // DropdownButtonComponentsMessage,
   // EmptyComponentsMessage,

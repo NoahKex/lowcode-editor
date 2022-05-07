@@ -27,7 +27,7 @@ import Avatar from '@/components/materials/Avatar';
 // import QuarterPicker from '@/components/materials/QuarterPicker';
 // import RangePicker from '@/components/materials/RangePicker';
 // import Descriptions from '@/components/materials/Descriptions';
-// import Divider from '@/components/materials/Divider';
+import Divider from '@/components/materials/Divider';
 // import Dropdown from '@/components/materials/Dropdown';
 // import DropdownButton from '@/components/materials/DropdownButton';
 // import Empty from '@/components/materials/Empty';
@@ -262,14 +262,14 @@ export const renderMaterial = (props: PropFunctionalType, category: MaterialCate
     //     />
     //   );
     // },
-    // [MaterialCategory.Divider]: () => {
-    //   return (
-    //     <Divider
-    //       userProps={userProps}
-    //       styleProps={styleProps}
-    //     />
-    //   );
-    // },
+    [MaterialCategory.Divider]: () => {
+      return (
+        <Divider
+          userProps={userProps}
+          styleProps={styleProps}
+        />
+      );
+    },
     // [MaterialCategory.Dropdown]: () => {
     //   return (
     //     <Dropdown
