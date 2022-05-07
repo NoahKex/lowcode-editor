@@ -77,7 +77,7 @@ export const TagComponentsMessage: ComponentType = {
     {
       name: 'checkable',
       propType: 'any',
-      description: '支持选中',
+      description: '是否支持选中',
       defaultValue: true,
       setter: {
         name: SetterCategory.Switch,
@@ -86,7 +86,7 @@ export const TagComponentsMessage: ComponentType = {
     {
       name: 'defaultChecked',
       propType: 'any',
-      description: '默认选中',
+      description: '是否默认选中',
       defaultValue: true,
       setter: {
         name: SetterCategory.Switch,

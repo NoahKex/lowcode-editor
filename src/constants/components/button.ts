@@ -29,6 +29,15 @@ export const ButtonComponentsMessage: ComponentType = {
       },
     },
     {
+      name: 'icon',
+      propType: 'any',
+      description: '按钮图标',
+      defaultValue: null,
+      setter: {
+        name: SetterCategory.IconSelect,
+      },
+    },
+    {
       name: 'type',
       propType: 'string',
       description: '按钮类型',
@@ -135,6 +144,15 @@ export const ButtonComponentsMessage: ComponentType = {
             description: '全圆角',
           }],
         },
+      },
+    },
+    {
+      name: 'loading',
+      propType: 'any',
+      description: '是否是加载状态',
+      defaultValue: false,
+      setter: {
+        name: SetterCategory.Switch,
       },
     },
   ],

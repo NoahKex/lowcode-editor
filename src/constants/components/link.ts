@@ -31,7 +31,7 @@ export const LinkComponentsMessage: ComponentType = {
     {
       name: 'icon',
       propType: 'any',
-      description: '显示图标',
+      description: '是否显示图标',
       defaultValue: true,
       setter: {
         name: SetterCategory.Switch,
@@ -67,7 +67,7 @@ export const LinkComponentsMessage: ComponentType = {
     {
       name: 'disabled',
       propType: 'any',
-      description: '禁用',
+      description: '是否禁用',
       defaultValue: false,
       setter: {
         name: SetterCategory.Switch,
@@ -76,7 +76,7 @@ export const LinkComponentsMessage: ComponentType = {
     {
       name: 'hoverable',
       propType: 'any',
-      description: '显示悬浮态底色',
+      description: '是否显示悬浮态底色',
       defaultValue: true,
       setter: {
         name: SetterCategory.Switch,
