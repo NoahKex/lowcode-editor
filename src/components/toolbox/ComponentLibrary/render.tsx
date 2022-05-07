@@ -37,7 +37,7 @@ import Divider from '@/components/materials/Divider';
 // import InputNumber from '@/components/materials/InputNumber';
 // import Radio from '@/components/materials/Radio';
 // import RadioGroup from '@/components/materials/RadioGroup';
-// import Switch from '@/components/materials/Switch';
+import Switch from '@/components/materials/Switch';
 import Tag from '@/components/materials/Tag';
 
 /**
@@ -342,14 +342,14 @@ export const renderMaterial = (props: PropFunctionalType, category: MaterialCate
     //     />
     //   );
     // },
-    // [MaterialCategory.Switch]: () => {
-    //   return (
-    //     <Switch
-    //       userProps={userProps}
-    //       styleProps={styleProps}
-    //     />
-    //   );
-    // },
+    [MaterialCategory.Switch]: () => {
+      return (
+        <Switch
+          userProps={userProps}
+          styleProps={styleProps}
+        />
+      );
+    },
     [MaterialCategory.Tag]: () => {
       return (
         <Tag

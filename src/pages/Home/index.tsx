@@ -44,7 +44,7 @@ import Divider from '@/components/materials/Divider';
 // import InputNumber from '@/components/materials/InputNumber';
 // import Radio from '@/components/materials/Radio';
 // import RadioGroup from '@/components/materials/RadioGroup';
-// import Switch from '@/components/materials/Switch';
+import Switch from '@/components/materials/Switch';
 import Tag from '@/components/materials/Tag';
 
 const { Header } = Layout;
@@ -94,7 +94,7 @@ const Home = () => {
           // InputNumber,
           // Radio,
           // RadioGroup,
-          // Switch,
+          Switch,
           Tag,
         }}
         onRender={RenderNode}

@@ -36,7 +36,7 @@ import { DividerComponentsMessage } from './divider';
 // import { InputNumberComponentsMessage } from './inputnumber';
 // import { RadioComponentsMessage } from './radio';
 // import { RadioGroupComponentsMessage } from './radiogroup';
-// import { SwitchComponentsMessage } from './switch';
+import { SwitchComponentsMessage } from './switch';
 import { TagComponentsMessage } from './tag';
 
 export { PageMessage } from './page';
@@ -75,7 +75,7 @@ export { DividerComponentsMessage } from './divider';
 // export { InputNumberComponentsMessage } from './inputnumber';
 // export { RadioComponentsMessage } from './radio';
 // export { RadioGroupComponentsMessage } from './radiogroup';
-// export { SwitchComponentsMessage } from './switch';
+export { SwitchComponentsMessage } from './switch';
 export { TagComponentsMessage } from './tag';
 
 /**
@@ -117,7 +117,7 @@ export const ComponentsMessage: ComponentType[] = [
   // InputNumberComponentsMessage,
   // RadioComponentsMessage,
   // RadioGroupComponentsMessage,
-  // SwitchComponentsMessage,
+  SwitchComponentsMessage,
   TagComponentsMessage,
 ];
 
