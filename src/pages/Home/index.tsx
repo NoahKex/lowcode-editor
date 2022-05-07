@@ -38,7 +38,7 @@ import Divider from '@/components/materials/Divider';
 // import Dropdown from '@/components/materials/Dropdown';
 // import DropdownButton from '@/components/materials/DropdownButton';
 // import Empty from '@/components/materials/Empty';
-// import Input from '@/components/materials/Input';
+import Input from '@/components/materials/Input';
 // import TextArea from '@/components/materials/TextArea';
 // import InputTag from '@/components/materials/InputTag';
 // import InputNumber from '@/components/materials/InputNumber';
@@ -88,7 +88,7 @@ const Home = () => {
           // Dropdown,
           // DropdownButton,
           // Empty,
-          // Input,
+          Input,
           // TextArea,
           // InputTag,
           // InputNumber,
