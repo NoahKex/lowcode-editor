@@ -10,7 +10,7 @@ import styled from 'styled-components';
 const StyledMaterialButton = styled(MaterialButton)<{
   userstyles: Record<string, any>;
 }>`
-  &.material-button-user{
+  &.material-user{
     ${(props) => {
     const { userstyles } = props;
     return Object.keys(userstyles).map((item) => `${toUnderline(item)}: ${userstyles[item]};`);
@@ -22,7 +22,7 @@ const Button = ({ userProps, styleProps }: PropFunctionalType) => {
   const { connectors: { connect, drag } } = useNode();
   return (
     <StyledMaterialButton
-      className="material-button-user"
+      className="material-user"
       userstyles={formatStyleProps(styleProps)}
       ref={(ref) => connect(drag(ref as HTMLDivElement))}
       {...userProps}

@@ -68,7 +68,7 @@ const TagStyleSettings = () => {
 
 
 Tag.craft = {
-  displayName: '头像',
+  displayName: '标签',
   related: {
     [SettingsPropsName.Props]: TagAttributeSettings,
     [SettingsPropsName.Styles]: TagStyleSettings,
