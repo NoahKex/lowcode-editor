@@ -47,15 +47,6 @@ export const TagComponentsMessage: ComponentType = {
       },
     },
     {
-      name: 'bordered',
-      propType: 'any',
-      description: '显示边框',
-      defaultValue: true,
-      setter: {
-        name: SetterCategory.Switch,
-      },
-    },
-    {
       name: 'size',
       propType: 'any',
       description: '标签尺寸',
@@ -227,6 +218,73 @@ export const TagComponentsMessage: ComponentType = {
         options: {
           propertyList: ['上内边距', '下内边距', '左内边距', '右内边距'],
         },
+      },
+    },
+    {
+      name: 'borderWidth',
+      propType: 'string',
+      description: '边框',
+      defaultValue: '1px',
+      setter: {
+        name: SetterCategory.PropertyMixer,
+        options: {
+          propertyList: ['上边框', '下边框', '左边框', '右边框'],
+        },
+      },
+    },
+    {
+      name: 'borderStyle',
+      propType: 'string',
+      description: '边框样式',
+      defaultValue: 'none',
+      setter: {
+        name: SetterCategory.Select,
+        options: {
+          selectOptions: [{
+            value: 'none',
+            description: '不显示',
+          }, {
+            value: 'dotted',
+            description: '圆点',
+          },
+          {
+            value: 'dashed',
+            description: '虚线',
+          },
+          {
+            value: 'solid',
+            description: '实线',
+          },
+          {
+            value: 'double',
+            description: '双实线',
+          },
+          {
+            value: 'groove',
+            description: '雕刻效果',
+          },
+          {
+            value: 'ridge',
+            description: '浮雕效果',
+          },
+          {
+            value: 'inset',
+            description: '陷入效果',
+          },
+          {
+            value: 'outset',
+            description: '突出效果',
+          }],
+        },
+      },
+    },
+    {
+      name: 'borderColor',
+      propType: 'string',
+      description: '边框颜色',
+      defaultValue: '#000000',
+      setter: {
+        name: SetterCategory.ColorPicker,
       },
     },
     {
