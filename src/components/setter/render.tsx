@@ -1,7 +1,8 @@
-import { ComponentsMessagePropName, CraftPropsName, SetterCategory } from '@/constants';
+import { ComponentsMessagePropName, CraftPropsName, IconMapping, SetterCategory } from '@/constants';
 import { ComponentType } from '@/types';
 import { Divider, Form } from '@arco-design/web-react';
 import ColorPickerSetter from './ColorPicker';
+import IconSelectSetter from './IconSelect';
 import InputSetter from './Input';
 import InputNumberSetter from './InputNumber';
 import PropertyMixer from './PropertyMixer';
@@ -82,6 +83,16 @@ const RenderedSetter = ({ craftProps, componentsMessage, componentsMessagePropNa
                   selectOptions={setter?.options?.selectOptions}
                   onChange={(val) => {
                     setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; });
+                  }}
+                />
+              );
+            },
+            [SetterCategory.IconSelect]: () => {
+              return (
+                <IconSelectSetter
+                  value={craftProps[name] ? craftProps[name].type.render.displayName : 'null'}
+                  onChange={(val) => {
+                    setProp((nodeProps) => { nodeProps[craftPropsName][name] = val === 'null' ? null : IconMapping[val]; });
                   }}
                 />
               );

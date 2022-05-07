@@ -47,6 +47,11 @@ export enum SetterCategory {
    */
   Select,
   /**
+   * 图标选择器
+   * 详见src/components/setter/IconSelect
+   */
+  IconSelect,
+  /**
    * 滑动输入条
    * 详见src/components/setter/Slider
    */
