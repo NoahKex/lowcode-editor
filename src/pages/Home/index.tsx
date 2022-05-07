@@ -14,7 +14,7 @@ import { renderMaterial } from '@/components/toolbox/ComponentLibrary/render';
 import { formatProps } from '@/utils';
 import Link from '@/components/materials/Link';
 // import Alert from '@/components/materials/Alert';
-// import Avatar from '@/components/materials/Avatar';
+import Avatar from '@/components/materials/Avatar';
 // import AvatarGroup from '@/components/materials/AvatarGroup';
 // import Badge from '@/components/materials/Badge';
 // import Breadcrumb from '@/components/materials/Breadcrumb';
@@ -64,7 +64,7 @@ const Home = () => {
           Text,
           Link,
           // Alert,
-          // Avatar,
+          Avatar,
           // AvatarGroup,
           // Badge,
           // Breadcrumb,

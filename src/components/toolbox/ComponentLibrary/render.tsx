@@ -7,7 +7,7 @@ import { PropFunctionalType } from '@/types';
 import Page from '@/components/materials/Page';
 import Link from '@/components/materials/Link';
 // import Alert from '@/components/materials/Alert';
-// import Avatar from '@/components/materials/Avatar';
+import Avatar from '@/components/materials/Avatar';
 // import AvatarGroup from '@/components/materials/AvatarGroup';
 // import Badge from '@/components/materials/Badge';
 // import Breadcrumb from '@/components/materials/Breadcrumb';
@@ -102,14 +102,14 @@ export const renderMaterial = (props: PropFunctionalType, category: MaterialCate
     //     />
     //   );
     // },
-    // [MaterialCategory.Avatar]: () => {
-    //   return (
-    //     <Avatar
-    //       userProps={userProps}
-    //       styleProps={styleProps}
-    //     />
-    //   );
-    // },
+    [MaterialCategory.Avatar]: () => {
+      return (
+        <Avatar
+          userProps={userProps}
+          styleProps={styleProps}
+        />
+      );
+    },
     // [MaterialCategory.AvatarGroup]: () => {
     //   return (
     //     <AvatarGroup

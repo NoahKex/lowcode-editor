@@ -6,7 +6,7 @@ import { LayoutComponentsMessage } from './layout';
 import { TextComponentsMessage } from './text';
 import { LinkComponentsMessage } from './link';
 // import { AlertComponentsMessage } from './alert';
-// import { AvatarComponentsMessage } from './avatar';
+import { AvatarComponentsMessage } from './avatar';
 // import { AvatarGroupComponentsMessage } from './avatargroup';
 // import { BadgeComponentsMessage } from './badge';
 // import { BreadcrumbComponentsMessage } from './breadcrumb';
@@ -45,7 +45,7 @@ export { LayoutComponentsMessage } from './layout';
 export { TextComponentsMessage } from './text';
 export { LinkComponentsMessage } from './link';
 // export { AlertComponentsMessage } from './alert';
-// export { AvatarComponentsMessage } from './avatar';
+export { AvatarComponentsMessage } from './avatar';
 // export { AvatarGroupComponentsMessage } from './avatargroup';
 // export { BadgeComponentsMessage } from './badge';
 // export { BreadcrumbComponentsMessage } from './breadcrumb';
@@ -87,7 +87,7 @@ export const ComponentsMessage: ComponentType[] = [
   TextComponentsMessage,
   LinkComponentsMessage,
   // AlertComponentsMessage,
-  // AvatarComponentsMessage,
+  AvatarComponentsMessage,
   // AvatarGroupComponentsMessage,
   // BadgeComponentsMessage,
   // BreadcrumbComponentsMessage,
