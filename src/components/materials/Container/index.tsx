@@ -2,17 +2,20 @@ import RenderedSetter from '@/components/setter/render';
 import { ComponentsMessagePropName, CraftPropsName, LayoutComponentsMessage, SettingsPropsName } from '@/constants';
 import { PropFunctionalType } from '@/types';
 import { formatStyleProps } from '@/utils';
-import { useNode } from '@craftjs/core';
+import { useEditor, useNode } from '@craftjs/core';
 import * as S from './styled';
 
 const Container = ({ userProps, styleProps, children }: PropFunctionalType) => {
   const { connectors: { connect, drag } } = useNode();
+  const { enabled } = useEditor((state) => ({
+    enabled: state.options.enabled,
+  }));
   return (
     <S.MaterialContainer
       userStyles={formatStyleProps(styleProps)}
       ref={(ref) => connect(drag(ref as HTMLDivElement))}
     >
-      {children ?
+      {(children || !enabled) ?
         <>{ children }</> :
         <S.BlankContainer >拖拽组件到这里</S.BlankContainer>}
     </S.MaterialContainer>
