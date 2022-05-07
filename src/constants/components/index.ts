@@ -37,7 +37,7 @@ import { AvatarComponentsMessage } from './avatar';
 // import { RadioComponentsMessage } from './radio';
 // import { RadioGroupComponentsMessage } from './radiogroup';
 // import { SwitchComponentsMessage } from './switch';
-// import { TagComponentsMessage } from './tag';
+import { TagComponentsMessage } from './tag';
 
 export { PageMessage } from './page';
 export { ButtonComponentsMessage } from './button';
@@ -76,7 +76,7 @@ export { AvatarComponentsMessage } from './avatar';
 // export { RadioComponentsMessage } from './radio';
 // export { RadioGroupComponentsMessage } from './radiogroup';
 // export { SwitchComponentsMessage } from './switch';
-// export { TagComponentsMessage } from './tag';
+export { TagComponentsMessage } from './tag';
 
 /**
  * 组件列表
@@ -118,7 +118,7 @@ export const ComponentsMessage: ComponentType[] = [
   // RadioComponentsMessage,
   // RadioGroupComponentsMessage,
   // SwitchComponentsMessage,
-  // TagComponentsMessage,
+  TagComponentsMessage,
 ];
 
 /**

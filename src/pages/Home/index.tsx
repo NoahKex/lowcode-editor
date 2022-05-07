@@ -45,7 +45,7 @@ import Avatar from '@/components/materials/Avatar';
 // import Radio from '@/components/materials/Radio';
 // import RadioGroup from '@/components/materials/RadioGroup';
 // import Switch from '@/components/materials/Switch';
-// import Tag from '@/components/materials/Tag';
+import Tag from '@/components/materials/Tag';
 
 const { Header } = Layout;
 const { Content } = Layout;
@@ -95,7 +95,7 @@ const Home = () => {
           // Radio,
           // RadioGroup,
           // Switch,
-          // Tag,
+          Tag,
         }}
         onRender={RenderNode}
       >

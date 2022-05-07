@@ -38,7 +38,7 @@ import Avatar from '@/components/materials/Avatar';
 // import Radio from '@/components/materials/Radio';
 // import RadioGroup from '@/components/materials/RadioGroup';
 // import Switch from '@/components/materials/Switch';
-// import Tag from '@/components/materials/Tag';
+import Tag from '@/components/materials/Tag';
 
 /**
  * 初始化渲染材料组件
@@ -350,14 +350,14 @@ export const renderMaterial = (props: PropFunctionalType, category: MaterialCate
     //     />
     //   );
     // },
-    // [MaterialCategory.Tag]: () => {
-    //   return (
-    //     <Tag
-    //       userProps={userProps}
-    //       styleProps={styleProps}
-    //     />
-    //   );
-    // },
+    [MaterialCategory.Tag]: () => {
+      return (
+        <Tag
+          userProps={userProps}
+          styleProps={styleProps}
+        />
+      );
+    },
   };
   return materialObject[category]();
 };
