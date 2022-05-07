@@ -207,7 +207,7 @@ export const ButtonComponentsMessage: ComponentType = {
       description: '字体大小',
       defaultValue: '14px',
       setter: {
-        name: SetterCategory.InputNumber,
+        name: SetterCategory.WithUnitInputNumber,
         options: {
           minNumber: 0,
         },

@@ -1,7 +1,7 @@
 import { formatMixedProperty } from '@/utils';
 import { Collapse, Form } from '@arco-design/web-react';
 import { IconMoreVertical } from '@arco-design/web-react/icon';
-import InputNumberSetter from '../InputNumber';
+import WithUnitInputNumberSetter from '../WithUnitInputNumber';
 import styled from 'styled-components';
 
 const FormItem = Form.Item;
@@ -35,7 +35,7 @@ const PropertyMixer = ({ value, propertyList, description, onChange }) => {
               label={propertyList[index]}
               style={{ marginBottom: '5px' }}
             >
-              <InputNumberSetter
+              <WithUnitInputNumberSetter
                 value={propertyState[item]}
                 onChange={(val) => {
                   const curPropertyState = { ...propertyState, [item]: val };

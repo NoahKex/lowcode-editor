@@ -64,7 +64,7 @@ export const AvatarComponentsMessage: ComponentType = {
       description: '头像尺寸',
       defaultValue: '50px',
       setter: {
-        name: SetterCategory.InputNumber,
+        name: SetterCategory.WithUnitInputNumber,
         options: {
           minNumber: 0,
           optionDisabled: true,
@@ -127,7 +127,7 @@ export const AvatarComponentsMessage: ComponentType = {
       description: '字体大小',
       defaultValue: '12px',
       setter: {
-        name: SetterCategory.InputNumber,
+        name: SetterCategory.WithUnitInputNumber,
         options: {
           minNumber: 0,
         },

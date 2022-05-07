@@ -36,7 +36,7 @@ export const TextComponentsMessage: ComponentType = {
       description: '高度',
       defaultValue: '18px',
       setter: {
-        name: SetterCategory.InputNumber,
+        name: SetterCategory.WithUnitInputNumber,
         options: {
           minNumber: 0,
         },
@@ -48,7 +48,7 @@ export const TextComponentsMessage: ComponentType = {
       description: '宽度',
       defaultValue: '100px',
       setter: {
-        name: SetterCategory.InputNumber,
+        name: SetterCategory.WithUnitInputNumber,
         options: {
           minNumber: 0,
         },
@@ -104,7 +104,7 @@ export const TextComponentsMessage: ComponentType = {
       description: '字体大小',
       defaultValue: '14px',
       setter: {
-        name: SetterCategory.InputNumber,
+        name: SetterCategory.WithUnitInputNumber,
         options: {
           minNumber: 0,
         },
@@ -191,7 +191,7 @@ export const TextComponentsMessage: ComponentType = {
       description: '行高',
       defaultValue: '18px',
       setter: {
-        name: SetterCategory.InputNumber,
+        name: SetterCategory.WithUnitInputNumber,
       },
     },
     {

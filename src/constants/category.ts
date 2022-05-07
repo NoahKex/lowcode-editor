@@ -37,6 +37,11 @@ export enum SetterCategory {
    */
   InputNumber,
   /**
+   * 带单位数字输入框
+   * 详见src/components/setter/WithUnitInputNumber
+   */
+  WithUnitInputNumber,
+  /**
    * 颜色选择器
    * 详见src/components/setter/ColorPicker
    */

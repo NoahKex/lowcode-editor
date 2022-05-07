@@ -4,6 +4,7 @@ import { Divider, Form } from '@arco-design/web-react';
 import ColorPickerSetter from './ColorPicker';
 import IconSelectSetter from './IconSelect';
 import InputSetter from './Input';
+import WithUnitInputNumberSetter from './WithUnitInputNumber';
 import InputNumberSetter from './InputNumber';
 import PropertyMixer from './PropertyMixer';
 import RadioSetter from './Radio';
@@ -43,6 +44,18 @@ const RenderedSetter = ({ craftProps, componentsMessage, componentsMessagePropNa
             [SetterCategory.InputNumber]: () => {
               return (
                 <InputNumberSetter
+                  value={craftProps[name]}
+                  min={setter?.options?.minNumber}
+                  max={setter?.options?.maxNumber}
+                  onChange={(val) => {
+                    setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; });
+                  }}
+                />
+              );
+            },
+            [SetterCategory.WithUnitInputNumber]: () => {
+              return (
+                <WithUnitInputNumberSetter
                   value={craftProps[name]}
                   min={setter?.options?.minNumber}
                   max={setter?.options?.maxNumber}
