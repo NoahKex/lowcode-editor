@@ -122,6 +122,15 @@ export const SwitchComponentsMessage: ComponentType = {
         name: SetterCategory.Switch,
       },
     },
+    {
+      name: 'disabled',
+      propType: 'any',
+      description: '是否禁用',
+      defaultValue: false,
+      setter: {
+        name: SetterCategory.Switch,
+      },
+    },
   ],
   styles: [
     // {
