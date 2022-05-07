@@ -6,6 +6,7 @@ const { Option } = Select;
 const IconSelectSetter = ({ value, onChange }) => {
   return (
     <Select
+      showSearch
       placeholder="请选择图标"
       defaultValue={value}
       onChange={onChange}
