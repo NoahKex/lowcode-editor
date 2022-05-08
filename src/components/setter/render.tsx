@@ -11,6 +11,7 @@ import RadioSetter from './Radio';
 import SelectSetter from './Select';
 import SliderSetter from './Slider';
 import SwitchSetter from './Switch';
+import OptionConfigSetter from './OptionConfig';
 
 const FormItem = Form.Item;
 
@@ -137,6 +138,17 @@ const RenderedSetter = ({ craftProps, componentsMessage, componentsMessagePropNa
                   propertyList={setter?.options?.propertyList}
                   description={description}
                   value={craftProps[name]}
+                  onChange={(val) => {
+                    setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; });
+                  }}
+                />
+              );
+            },
+            [SetterCategory.OptionConfig]: () => {
+              return (
+                <OptionConfigSetter
+                  value={craftProps[name]}
+                  materialOptions={setter?.options?.materialOptions}
                   onChange={(val) => {
                     setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; });
                   }}

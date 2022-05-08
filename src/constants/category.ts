@@ -76,6 +76,11 @@ export enum SetterCategory {
    * 详见src/components/setter/Switch
    */
   Switch,
+  /**
+   * 属性配置
+   * 详见src/components/setter/OptionConfig
+   */
+  OptionConfig,
 }
 
 /**
