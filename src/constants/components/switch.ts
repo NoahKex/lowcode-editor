@@ -134,15 +134,6 @@ export const SwitchComponentsMessage: ComponentType = {
     },
   ],
   styles: [
-    // {
-    //   name: 'background',
-    //   propType: 'string',
-    //   description: '背景色',
-    //   defaultValue: '#FFFFFF',
-    //   setter: {
-    //     name: SetterCategory.ColorPicker,
-    //   },
-    // },
     {
       name: 'fontWeight',
       propType: 'string',
