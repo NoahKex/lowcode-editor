@@ -170,7 +170,7 @@ export const AvatarComponentsMessage: ComponentType = {
       name: 'padding',
       propType: 'string',
       description: '内边距',
-      defaultValue: '5px',
+      defaultValue: '0px',
       setter: {
         name: SetterCategory.PropertyMixer,
         options: {
