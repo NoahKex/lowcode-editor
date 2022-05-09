@@ -30,7 +30,7 @@ const OperateButton = styled(Button)`
    font-size: 12px;
 `;
 
-const OptionConfigSetter = ({ value, materialOptions, onChange }) => {
+const OptionConfigSetter = ({ value, materialOptions, description, onChange }) => {
   const typedValue = value as Array<Record<string, any>>;
   const typedMaterialOptions = materialOptions as Record<string, {
     name: SetterCategory;
@@ -39,9 +39,9 @@ const OptionConfigSetter = ({ value, materialOptions, onChange }) => {
     options: Record<string, any>;
   }>;
   return (
-    <Collapse defaultActiveKey="1" bordered={false} style={{ marginLeft: '-80px' }}>
+    <Collapse defaultActiveKey="1" bordered={false} style={{ marginLeft: '-90px' }}>
       <StyledCollapseItem
-        header="选项"
+        header={description}
         name="1"
         extra={<IconMoreVertical />}
       >

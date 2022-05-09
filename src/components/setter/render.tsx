@@ -148,6 +148,7 @@ const RenderedSetter = ({ craftProps, componentsMessage, componentsMessagePropNa
               return (
                 <OptionConfigSetter
                   value={craftProps[name]}
+                  description={description}
                   materialOptions={setter?.options?.materialOptions}
                   onChange={(val) => {
                     setProp((nodeProps) => { nodeProps[craftPropsName][name] = val; });

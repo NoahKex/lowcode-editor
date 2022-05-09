@@ -20,7 +20,7 @@ const PropertyMixer = ({ value, propertyList, description, onChange }) => {
   const valueList = value.split(' ');
   const propertyState = formatMixedProperty(valueList);
   return (
-    <Collapse defaultActiveKey="1" bordered={false} style={{ marginLeft: '-80px' }}>
+    <Collapse defaultActiveKey="1" bordered={false} style={{ marginLeft: '-90px' }}>
       <StyledCollapseItem
         header={description}
         name="1"

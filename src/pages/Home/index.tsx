@@ -42,7 +42,7 @@ import Input from '@/components/materials/Input';
 import TextArea from '@/components/materials/TextArea';
 // import InputTag from '@/components/materials/InputTag';
 import InputNumber from '@/components/materials/InputNumber';
-// import Radio from '@/components/materials/Radio';
+import Radio from '@/components/materials/Radio';
 // import RadioGroup from '@/components/materials/RadioGroup';
 import Switch from '@/components/materials/Switch';
 import Tag from '@/components/materials/Tag';
@@ -92,7 +92,7 @@ const Home = () => {
           TextArea,
           // InputTag,
           InputNumber,
-          // Radio,
+          Radio,
           // RadioGroup,
           Switch,
           Tag,
