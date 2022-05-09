@@ -23,7 +23,7 @@ import Avatar from '@/components/materials/Avatar';
 // import Card from '@/components/materials/Card';
 // import Carousel from '@/components/materials/Carousel';
 // import Cascader from '@/components/materials/Cascader';
-// import Checkbox from '@/components/materials/Checkbox';
+import Checkbox from '@/components/materials/Checkbox';
 // import CheckboxGroup from '@/components/materials/CheckboxGroup';
 // import Collapse from '@/components/materials/Collapse';
 // import CollapseItem from '@/components/materials/CollapseItem';
@@ -73,7 +73,7 @@ const Home = () => {
           // Card,
           // Carousel,
           // Cascader,
-          // Checkbox,
+          Checkbox,
           // CheckboxGroup,
           // Collapse,
           // CollapseItem,

@@ -16,7 +16,7 @@ import Avatar from '@/components/materials/Avatar';
 // import Card from '@/components/materials/Card';
 // import Carousel from '@/components/materials/Carousel';
 // import Cascader from '@/components/materials/Cascader';
-// import Checkbox from '@/components/materials/Checkbox';
+import Checkbox from '@/components/materials/Checkbox';
 // import CheckboxGroup from '@/components/materials/CheckboxGroup';
 // import Collapse from '@/components/materials/Collapse';
 // import CollapseItem from '@/components/materials/CollapseItem';
@@ -174,14 +174,14 @@ export const renderMaterial = (props: PropFunctionalType, category: MaterialCate
     //     />
     //   );
     // },
-    // [MaterialCategory.Checkbox]: () => {
-    //   return (
-    //     <Checkbox
-    //       userProps={userProps}
-    //       styleProps={styleProps}
-    //     />
-    //   );
-    // },
+    [MaterialCategory.Checkbox]: () => {
+      return (
+        <Checkbox
+          userProps={userProps}
+          styleProps={styleProps}
+        />
+      );
+    },
     // [MaterialCategory.CheckboxGroup]: () => {
     //   return (
     //     <CheckboxGroup

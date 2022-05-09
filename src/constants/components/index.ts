@@ -15,7 +15,7 @@ import { AvatarComponentsMessage } from './avatar';
 // import { CardComponentsMessage } from './card';
 // import { CarouselComponentsMessage } from './carousel';
 // import { CascaderComponentsMessage } from './cascader';
-// import { CheckboxComponentsMessage } from './checkbox';
+import { CheckboxComponentsMessage } from './checkbox';
 // import { CheckboxGroupComponentsMessage } from './checkboxgroup';
 // import { CollapseComponentsMessage } from './collapse';
 // import { CollapseItemComponentsMessage } from './collapseitem';
@@ -54,7 +54,7 @@ export { AvatarComponentsMessage } from './avatar';
 // export { CardComponentsMessage } from './card';
 // export { CarouselComponentsMessage } from './carousel';
 // export { CascaderComponentsMessage } from './cascader';
-// export { CheckboxComponentsMessage } from './checkbox';
+export { CheckboxComponentsMessage } from './checkbox';
 // export { CheckboxGroupComponentsMessage } from './checkboxgroup';
 // export { CollapseComponentsMessage } from './collapse';
 // export { CollapseItemComponentsMessage } from './collapseitem';
@@ -96,7 +96,7 @@ export const ComponentsMessage: ComponentType[] = [
   // CardComponentsMessage,
   // CarouselComponentsMessage,
   // CascaderComponentsMessage,
-  // CheckboxComponentsMessage,
+  CheckboxComponentsMessage,
   // CheckboxGroupComponentsMessage,
   // CollapseComponentsMessage,
   // CollapseItemComponentsMessage,
