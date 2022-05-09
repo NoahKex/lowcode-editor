@@ -44,6 +44,7 @@ import TextArea from '@/components/materials/TextArea';
 import InputNumber from '@/components/materials/InputNumber';
 import Radio from '@/components/materials/Radio';
 // import RadioGroup from '@/components/materials/RadioGroup';
+import Select from '@/components/materials/Select';
 import Switch from '@/components/materials/Switch';
 import Tag from '@/components/materials/Tag';
 
@@ -94,6 +95,7 @@ const Home = () => {
           InputNumber,
           Radio,
           // RadioGroup,
+          Select,
           Switch,
           Tag,
         }}

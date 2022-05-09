@@ -36,6 +36,7 @@ import { TextAreaComponentsMessage } from './textarea';
 import { InputNumberComponentsMessage } from './inputnumber';
 import { RadioComponentsMessage } from './radio';
 // import { RadioGroupComponentsMessage } from './radiogroup';
+import { SelectComponentsMessage } from './select';
 import { SwitchComponentsMessage } from './switch';
 import { TagComponentsMessage } from './tag';
 
@@ -75,6 +76,7 @@ export { TextAreaComponentsMessage } from './textarea';
 export { InputNumberComponentsMessage } from './inputnumber';
 export { RadioComponentsMessage } from './radio';
 // export { RadioGroupComponentsMessage } from './radiogroup';
+export { SelectComponentsMessage } from './select';
 export { SwitchComponentsMessage } from './switch';
 export { TagComponentsMessage } from './tag';
 
@@ -117,6 +119,7 @@ export const ComponentsMessage: ComponentType[] = [
   InputNumberComponentsMessage,
   RadioComponentsMessage,
   // RadioGroupComponentsMessage,
+  SelectComponentsMessage,
   SwitchComponentsMessage,
   TagComponentsMessage,
 ];

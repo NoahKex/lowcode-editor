@@ -232,6 +232,10 @@ export enum MaterialCategory {
    */
   RadioGroup,
   /**
+   * Select
+   */
+  Select,
+  /**
    * Switch
    */
   Switch,
