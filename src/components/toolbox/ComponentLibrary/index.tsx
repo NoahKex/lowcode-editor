@@ -36,7 +36,7 @@ const ComponentLibrary = ({ onMaterialMouseDown }: {onMaterialMouseDown: () => v
                       <S.SortTitle style={{ marginTop: i === 0 ? '-2px' : '10px' }}>{category}</S.SortTitle>
                       {
                         filteredSortList.map((materialItem) => {
-                          const { render, props, styles, componentName } = materialItem;
+                          const { render, props, styles, icon, componentName } = materialItem;
                           return (
                             <StyledMaterialButton
                               key={componentName}
@@ -48,7 +48,7 @@ const ComponentLibrary = ({ onMaterialMouseDown }: {onMaterialMouseDown: () => v
                               }, render))}
                             >
                               <S.MaterialIcon
-                                src="https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/7b75627f14234b708d3ad3e064d8bed5~tplv-uwbnlip3yd-image.image"
+                                src={icon}
                               />
                               {componentName}
                             </StyledMaterialButton>

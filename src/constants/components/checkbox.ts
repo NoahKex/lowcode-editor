@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { ComponentType } from '@/types';
 import { MaterialCategory, MaterialGroupSortCategory, MaterialSortCategory, SetterCategory } from '@/constants/category';
 
@@ -9,7 +10,7 @@ export const CheckboxComponentsMessage: ComponentType = {
   title: '复选框',
   description: '在一组数据中，用户可通过复选框选择一个或多个数据',
   docUrl: '',
-  icon: '',
+  icon: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0zOSA2SDlDNy4zNDMxNSA2IDYgNy4zNDMxNSA2IDlWMzlDNiA0MC42NTY5IDcuMzQzMTUgNDIgOSA0MkgzOUM0MC42NTY5IDQyIDQyIDQwLjY1NjkgNDIgMzlWOUM0MiA3LjM0MzE1IDQwLjY1NjkgNiAzOSA2WiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjQiLz48cGF0aCBkPSJNMzIgMTZIMTZWMzJIMzJWMTZaIiBmaWxsPSJub25lIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+',
   render: MaterialCategory.Checkbox,
   sort: {
     groupSortCategory: MaterialGroupSortCategory.Basic,

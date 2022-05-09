@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { ComponentType } from '@/types';
 import { MaterialCategory, MaterialGroupSortCategory, MaterialSortCategory, SetterCategory } from '@/constants/category';
 
@@ -9,7 +10,7 @@ export const LinkComponentsMessage: ComponentType = {
   title: '链接',
   description: '链接的基本样式',
   docUrl: '',
-  icon: '',
+  icon: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4wMSIvPjxwYXRoIGQ9Ik0yNC43MDcxIDkuNTY0OTZMOS44NTc4OSAyNC40MTQyQzYuMzQzMTcgMjcuOTI4OSA2LjM0MzE3IDMzLjYyNzQgOS44NTc4OSAzNy4xNDIxVjM3LjE0MjFDMTMuMzcyNiA0MC42NTY4IDE5LjA3MTEgNDAuNjU2OCAyMi41ODU4IDM3LjE0MjFMNDAuMjYzNSAxOS40NjQ1QzQyLjYwNjYgMTcuMTIxMyA0Mi42MDY2IDEzLjMyMjMgNDAuMjYzNSAxMC45NzkyVjEwLjk3OTJDMzcuOTIwMyA4LjYzNjAzIDM0LjEyMTMgOC42MzYwMyAzMS43NzgyIDEwLjk3OTJMMTQuMTAwNSAyOC42NTY4QzEyLjkyOSAyOS44Mjg0IDEyLjkyOSAzMS43Mjc5IDE0LjEwMDUgMzIuODk5NVYzMi44OTk1QzE1LjI3MjEgMzQuMDcxMSAxNy4xNzE2IDM0LjA3MTEgMTguMzQzMiAzMi44OTk1TDMzLjE5MjQgMTguMDUwMiIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==',
   render: MaterialCategory.Link,
   sort: {
     groupSortCategory: MaterialGroupSortCategory.Basic,

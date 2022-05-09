@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { ComponentType } from '@/types';
 import { MaterialCategory, MaterialGroupSortCategory, MaterialSortCategory, SetterCategory } from '@/constants/category';
 
@@ -9,7 +10,7 @@ export const TagComponentsMessage: ComponentType = {
   title: '标签',
   description: '用于信息的选择、筛选、分类。用户通过标签进行信息反馈和交互操作',
   docUrl: '',
-  icon: '',
+  icon: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4wMSIvPjxwYXRoIGQ9Ik00Mi4xNjkxIDI5LjI0NTFMMjkuMjYzMSA0Mi4xNTExQzI4LjU4NzkgNDIuODI3MSAyNy42NzE2IDQzLjIwNjkgMjYuNzE2MSA0My4yMDY5QzI1Ljc2MDYgNDMuMjA2OSAyNC44NDQ0IDQyLjgyNzEgMjQuMTY5MSA0Mi4xNTExTDggMjZWOEgyNkw0Mi4xNjkxIDI0LjE2OTFDNDMuNTY0OSAyNS41NzMyIDQzLjU2NDkgMjcuODQxIDQyLjE2OTEgMjkuMjQ1MVoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xOC41IDIxQzE5Ljg4MDcgMjEgMjEgMTkuODgwNyAyMSAxOC41QzIxIDE3LjExOTMgMTkuODgwNyAxNiAxOC41IDE2QzE3LjExOTMgMTYgMTYgMTcuMTE5MyAxNiAxOC41QzE2IDE5Ljg4MDcgMTcuMTE5MyAyMSAxOC41IDIxWiIgZmlsbD0iIzMzMyIvPjwvc3ZnPg==',
   render: MaterialCategory.Tag,
   sort: {
     groupSortCategory: MaterialGroupSortCategory.Basic,
