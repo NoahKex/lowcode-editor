@@ -8,7 +8,7 @@ import { MaterialCategory, MaterialGroupSortCategory, MaterialSortCategory, Sett
 export const ButtonComponentsMessage: ComponentType = {
   componentName: '按钮',
   title: '按钮',
-  description: '按钮是一种命令组件，可发起一个即时操作',
+  description: '按钮可发起一个即时操作',
   docUrl: 'https://arco.design/react/components/button',
   icon: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xOCAyNEgzMSIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxwYXRoIGQ9Ik00IDE3QzQgMTUuODk1NCA0Ljg5NTQzIDE1IDYgMTVINDJDNDMuMTA0NiAxNSA0NCAxNS44OTU0IDQ0IDE3VjMxQzQ0IDMyLjEwNDYgNDMuMTA0NiAzMyA0MiAzM0g2QzQuODk1NDMgMzMgNCAzMi4xMDQ2IDQgMzFWMTdaIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iNCIvPjwvc3ZnPg==',
   render: MaterialCategory.Button,
