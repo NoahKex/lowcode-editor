@@ -118,7 +118,9 @@ const Home = () => {
           </S.EditArea>
           <S.SetArea><Setter /></S.SetArea>
         </Content>
-        <Footer>123</Footer>
+        <Footer>
+          <S.FooterContainer>@snaphooks/xingyun-lowcode-editor @ Copyright BryceLou 2022</S.FooterContainer>
+        </Footer>
       </Editor>
     </Layout>
   );

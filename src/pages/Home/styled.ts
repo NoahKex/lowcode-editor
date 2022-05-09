@@ -28,3 +28,11 @@ padding-left: 10px;
   width: 300px;
   box-shadow: -5px 0 5px -5px #DFDFDF;
 `;
+
+export const FooterContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: #063078;
+`;
