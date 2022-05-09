@@ -11,7 +11,7 @@ export function formatProps({ props, styles }: PropsSection | StylesSection): Re
   if (propsValue) {
     for (const item of propsValue) {
       const { name, defaultValue } = item;
-      if (defaultValue) {
+      if (defaultValue !== undefined) {
         formattedProps[name] = defaultValue;
       }
     }
