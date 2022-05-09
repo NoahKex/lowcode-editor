@@ -5,6 +5,7 @@ import { PropFunctionalType } from '@/types';
 import { formatStyleProps, toUnderline } from '@/utils';
 import { Select as MaterialSelect } from '@arco-design/web-react';
 import { useNode } from '@craftjs/core';
+import { cloneDeep } from 'lodash';
 import styled from 'styled-components';
 
 const StyledMaterialSelect = styled(MaterialSelect)<{
@@ -20,12 +21,17 @@ const StyledMaterialSelect = styled(MaterialSelect)<{
 
 const Select = ({ userProps, styleProps }: PropFunctionalType) => {
   const { connectors: { connect, drag } } = useNode();
+  const { arrowIcon, removeIcon, clearIcon, ...otherUserProps } = userProps;
+
   return (
     <div style={{ display: 'inline-block', width: 'auto', height: 'auto' }} ref={(ref) => connect(drag(ref as HTMLDivElement))}>
       <StyledMaterialSelect
         className="material-user"
         userstyles={formatStyleProps(styleProps)}
-        {...userProps}
+        arrowIcon={cloneDeep(arrowIcon)}
+        removeIcon={cloneDeep(removeIcon)}
+        clearIcon={cloneDeep(clearIcon)}
+        {...otherUserProps}
       />
     </div>
   );

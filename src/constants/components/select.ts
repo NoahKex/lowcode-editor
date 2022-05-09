@@ -1,5 +1,6 @@
 import { ComponentType } from '@/types';
 import { MaterialCategory, MaterialGroupSortCategory, MaterialSortCategory, SetterCategory } from '@/constants/category';
+import { IconCategory, IconMapping } from '../setter';
 
 /**
  * Select组件
@@ -238,7 +239,7 @@ export const SelectComponentsMessage: ComponentType = {
       name: 'arrowIcon',
       propType: 'any',
       description: '箭头图标',
-      defaultValue: null,
+      defaultValue: IconMapping[IconCategory.IconDown],
       setter: {
         name: SetterCategory.IconSelect,
       },
@@ -247,7 +248,7 @@ export const SelectComponentsMessage: ComponentType = {
       name: 'removeIcon',
       propType: 'any',
       description: '选中项删除图标（只在多选模式下生效）',
-      defaultValue: null,
+      defaultValue: IconMapping[IconCategory.IconClose],
       setter: {
         name: SetterCategory.IconSelect,
       },
@@ -256,25 +257,13 @@ export const SelectComponentsMessage: ComponentType = {
       name: 'clearIcon',
       propType: 'any',
       description: '清除所有内容按钮图标（只在开启允许清除模式下生效）',
-      defaultValue: null,
+      defaultValue: IconMapping[IconCategory.IconClose],
       setter: {
         name: SetterCategory.IconSelect,
       },
     },
   ],
   styles: [
-    {
-      name: 'height',
-      propType: 'string',
-      description: '高度',
-      defaultValue: '30px',
-      setter: {
-        name: SetterCategory.WithUnitInputNumber,
-        options: {
-          minNumber: 0,
-        },
-      },
-    },
     {
       name: 'width',
       propType: 'string',
