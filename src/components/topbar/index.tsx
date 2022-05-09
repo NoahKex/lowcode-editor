@@ -5,11 +5,14 @@ import { IconRedo, IconUndo } from '@arco-design/web-react/icon';
 import copy from 'copy-to-clipboard';
 import lz from 'lzutf8';
 import { useState } from 'react';
+import { DESIGNER_DATA } from '@/constants';
 
 const { TextArea } = Input;
 
 const TopBar = () => {
   const { actions, query } = useEditor();
+  const { history: historyOption } = actions;
+  const { history: historyStatus } = query;
   const [loadDataVisible, setLoadDataVisible] = useState(false);
   const [inputData, setInputData] = useState('');
   return (
@@ -20,8 +23,8 @@ const TopBar = () => {
           <S.Title>行云低代码设计器</S.Title>
         </S.LogoContainer>
         <S.HistoryContainer>
-          <Button type="secondary" icon={<IconUndo />} />
-          <Button type="secondary" icon={<IconRedo />} />
+          <Button title="撤销" disabled={!historyStatus.canUndo()} type="secondary" icon={<IconUndo />} onClick={() => historyOption.undo()} />
+          <Button title="重做" disabled={!historyStatus.canRedo()} type="secondary" icon={<IconRedo />} onClick={() => historyOption.redo()} />
         </S.HistoryContainer>
         <S.OperationContainer>
           <Button
@@ -38,7 +41,31 @@ const TopBar = () => {
           >保存
           </Button>
           <Button type="primary" style={{ marginRight: '5px' }}>预览</Button>
-          <Button style={{ marginRight: '5px' }} onClick={() => setLoadDataVisible(true)}>导入数据</Button>
+          <Button
+            status="danger"
+            style={{ marginRight: '5px' }}
+            onClick={() => {
+              Modal.confirm({
+                title: '提示',
+                content:
+                  '确认要删除当前设计器所配置的数据吗（此操作将清空设计器画布，请再次确认）',
+                okButtonProps: { status: 'danger' },
+                onOk: () => {
+                  actions.deserialize(lz.decompress(lz.decodeBase64(DESIGNER_DATA)));
+                  Message.success('设计器数据已清空！');
+                },
+              });
+            }}
+          >清空数据
+          </Button>
+          <Button
+            style={{ marginRight: '5px' }}
+            onClick={() => {
+              setInputData('');
+              setLoadDataVisible(true);
+            }}
+          >导入数据
+          </Button>
         </S.OperationContainer>
       </S.TopBarContainer>
       <Modal
