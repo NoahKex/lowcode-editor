@@ -6,11 +6,13 @@ import copy from 'copy-to-clipboard';
 import lz from 'lzutf8';
 import { useState } from 'react';
 import { DESIGNER_DATA } from '@/constants';
+import { useHistory } from 'ice';
 
 const { TextArea } = Input;
 
 const TopBar = () => {
   const { actions, query } = useEditor();
+  const history = useHistory();
   const { history: historyOption } = actions;
   const { history: historyStatus } = query;
   const [loadDataVisible, setLoadDataVisible] = useState(false);
@@ -40,7 +42,14 @@ const TopBar = () => {
             }}
           >保存
           </Button>
-          <Button type="primary" style={{ marginRight: '5px' }}>预览</Button>
+          <Button
+            type="primary"
+            style={{ marginRight: '5px' }}
+            onClick={() => {
+              window.open(`/preview?designer_data=${encodeURIComponent(lz.encodeBase64(lz.compress(query.serialize())))}`);
+            }}
+          >预览
+          </Button>
           <Button
             status="danger"
             style={{ marginRight: '5px' }}

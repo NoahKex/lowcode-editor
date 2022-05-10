@@ -1,13 +1,6 @@
-import Setter from '@/components/setter';
-import ToolBox from '@/components/toolbox';
-import TopBar from '@/components/topbar';
-import { Layout } from '@arco-design/web-react';
-import * as S from './styled';
+import { getSearchParams } from 'ice';
 import { Editor, Frame } from '@craftjs/core';
-import RenderNode from '@/components/custom/RenderNode';
-import { PageMessage } from '@/constants';
-import { renderMaterial } from '@/components/toolbox/ComponentLibrary/render';
-import { formatProps } from '@/utils';
+import lz from 'lzutf8';
 
 import Page from '@/components/materials/Page';
 import Button from '@/components/materials/Button';
@@ -49,82 +42,57 @@ import Select from '@/components/materials/Select';
 import Switch from '@/components/materials/Switch';
 import Tag from '@/components/materials/Tag';
 
-const { Header } = Layout;
-const { Content } = Layout;
-const { Footer } = Layout;
-
-const Home = () => {
-  const { render, props, styles } = PageMessage;
-
+const Preview = () => {
+  const search = getSearchParams();
+  const designerData = decodeURIComponent(search['designer_data'] as string);
   return (
-    <Layout style={{ height: '100vh', width: '100vw', minWidth: '1000px' }}>
-      <Editor
-        resolver={{
-          Page,
-          Button,
-          Container,
-          Text,
-          Link,
-          // Alert,
-          Avatar,
-          // AvatarGroup,
-          // Badge,
-          // Breadcrumb,
-          // BreadCrumbItem,
-          // ButtonGroup,
-          // Card,
-          // Carousel,
-          // Cascader,
-          Checkbox,
-          // CheckboxGroup,
-          // Collapse,
-          // CollapseItem,
-          // DatePicker,
-          // MonthPicker,
-          // YearPicker,
-          // WeekPicker,
-          // QuarterPicker,
-          // RangePicker,
-          // Descriptions,
-          Divider,
-          // Dropdown,
-          // DropdownButton,
-          // Empty,
-          Input,
-          TextArea,
-          // InputTag,
-          InputNumber,
-          Radio,
-          // RadioGroup,
-          Select,
-          Switch,
-          Tag,
-        }}
-        onRender={RenderNode}
-      >
-        <Header>
-          <TopBar />
-        </Header>
-        <Content style={{ display: 'flex' }}>
-          <S.ToolArea><ToolBox /></S.ToolArea>
-          <S.EditArea>
-            <Frame>
-              {
-                renderMaterial({
-                  userProps: formatProps({ props }),
-                  styleProps: formatProps({ styles }),
-                }, render)
-              }
-            </Frame>
-          </S.EditArea>
-          <S.SetArea><Setter /></S.SetArea>
-        </Content>
-        <Footer>
-          <S.FooterContainer>@snaphooks/xingyun-lowcode-editor @ Copyright BryceLou 2022</S.FooterContainer>
-        </Footer>
-      </Editor>
-    </Layout>
+    <Editor
+      enabled={false}
+      resolver={{
+        Page,
+        Button,
+        Container,
+        Text,
+        Link,
+        // Alert,
+        Avatar,
+        // AvatarGroup,
+        // Badge,
+        // Breadcrumb,
+        // BreadCrumbItem,
+        // ButtonGroup,
+        // Card,
+        // Carousel,
+        // Cascader,
+        Checkbox,
+        // CheckboxGroup,
+        // Collapse,
+        // CollapseItem,
+        // DatePicker,
+        // MonthPicker,
+        // YearPicker,
+        // WeekPicker,
+        // QuarterPicker,
+        // RangePicker,
+        // Descriptions,
+        Divider,
+        // Dropdown,
+        // DropdownButton,
+        // Empty,
+        Input,
+        TextArea,
+        // InputTag,
+        InputNumber,
+        Radio,
+        // RadioGroup,
+        Select,
+        Switch,
+        Tag,
+      }}
+    >
+      <Frame data={lz.decompress(lz.decodeBase64(designerData))} />
+    </Editor>
   );
 };
 
-export default Home;
+export default Preview;
