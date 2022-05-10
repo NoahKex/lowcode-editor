@@ -4,7 +4,7 @@ const InputSetter = ({ value, maxLength, onChange }) => {
   return (
     <Input
       value={value}
-      maxLength={maxLength ?? 10}
+      maxLength={maxLength}
       allowClear
       placeholder="请输入"
       onChange={onChange}

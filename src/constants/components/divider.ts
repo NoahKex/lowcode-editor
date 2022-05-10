@@ -24,9 +24,6 @@ export const DividerComponentsMessage: ComponentType = {
       defaultValue: 'Xingyun',
       setter: {
         name: SetterCategory.Input,
-        options: {
-          maxLength: 10,
-        },
       },
     },
     {

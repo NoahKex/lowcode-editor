@@ -70,9 +70,6 @@ export const SwitchComponentsMessage: ComponentType = {
       defaultValue: '',
       setter: {
         name: SetterCategory.Input,
-        options: {
-          maxLength: 10,
-        },
       },
     },
     {
@@ -82,9 +79,6 @@ export const SwitchComponentsMessage: ComponentType = {
       defaultValue: '',
       setter: {
         name: SetterCategory.Input,
-        options: {
-          maxLength: 10,
-        },
       },
     },
     {

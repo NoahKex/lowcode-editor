@@ -24,9 +24,6 @@ export const TextComponentsMessage: ComponentType = {
       defaultValue: '一段文字',
       setter: {
         name: SetterCategory.Input,
-        options: {
-          maxLength: 10,
-        },
       },
     },
   ],

@@ -76,17 +76,11 @@ export const CheckboxComponentsMessage: ComponentType = {
               name: SetterCategory.Input,
               description: '显示值',
               defaultValue: '选项x',
-              options: {
-                maxLength: 10,
-              },
             },
             value: {
               name: SetterCategory.Input,
               description: '实际值',
               defaultValue: 'x',
-              options: {
-                maxLength: 10,
-              },
             },
             disabled: {
               name: SetterCategory.Switch,

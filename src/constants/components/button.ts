@@ -24,9 +24,6 @@ export const ButtonComponentsMessage: ComponentType = {
       defaultValue: '按钮',
       setter: {
         name: SetterCategory.Input,
-        options: {
-          maxLength: 10,
-        },
       },
     },
     {

@@ -24,9 +24,6 @@ export const TagComponentsMessage: ComponentType = {
       defaultValue: 'tag',
       setter: {
         name: SetterCategory.Input,
-        options: {
-          maxLength: 10,
-        },
       },
     },
     {
