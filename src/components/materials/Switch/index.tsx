@@ -20,12 +20,15 @@ const StyledMaterialSwitch = styled(MaterialSwitch)<{
 
 const Switch = ({ userProps, styleProps }: PropFunctionalType) => {
   const { connectors: { connect, drag } } = useNode();
+  const { userType, ...otherUserProps } = userProps;
+
   return (
     <StyledMaterialSwitch
       className="material-user"
       userstyles={formatStyleProps(styleProps)}
       ref={(ref) => connect(drag(ref as HTMLDivElement))}
-      {...userProps}
+      type={userType}
+      {...otherUserProps}
     />
   );
 };

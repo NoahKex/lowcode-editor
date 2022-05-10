@@ -27,7 +27,7 @@ export const DividerComponentsMessage: ComponentType = {
       },
     },
     {
-      name: 'type',
+      name: 'userType',
       propType: 'any',
       description: '分割线类型',
       defaultValue: 'horizontal',

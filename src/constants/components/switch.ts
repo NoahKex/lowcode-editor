@@ -39,7 +39,7 @@ export const SwitchComponentsMessage: ComponentType = {
       },
     },
     {
-      name: 'type',
+      name: 'userType',
       propType: 'any',
       description: '开关样式类型',
       defaultValue: 'circle',

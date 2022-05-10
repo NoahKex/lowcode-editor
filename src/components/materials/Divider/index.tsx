@@ -20,12 +20,15 @@ const StyledMaterialDivider = styled(MaterialDivider)<{
 
 const Divider = ({ userProps, styleProps }: PropFunctionalType) => {
   const { connectors: { connect, drag } } = useNode();
+  const { userType, ...otherUserProps } = userProps;
+
   return (
     <StyledMaterialDivider
       className="material-user"
       userstyles={formatStyleProps(styleProps)}
       ref={(ref) => connect(drag(ref as HTMLDivElement))}
-      {...userProps}
+      type={userType}
+      {...otherUserProps}
     />
   );
 };

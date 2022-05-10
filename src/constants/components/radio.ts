@@ -18,7 +18,7 @@ export const RadioComponentsMessage: ComponentType = {
   },
   props: [
     {
-      name: 'type',
+      name: 'userType',
       propType: 'any',
       description: '单选框类型',
       defaultValue: 'radio',

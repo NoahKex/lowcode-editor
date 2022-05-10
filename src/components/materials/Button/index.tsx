@@ -20,12 +20,15 @@ const StyledMaterialButton = styled(MaterialButton)<{
 
 const Button = ({ userProps, styleProps }: PropFunctionalType) => {
   const { connectors: { connect, drag } } = useNode();
+  const { userType, ...otherUserProps } = userProps;
+
   return (
     <StyledMaterialButton
       className="material-user"
       userstyles={formatStyleProps(styleProps)}
       ref={(ref) => connect(drag(ref as HTMLDivElement))}
-      {...userProps}
+      type={userType}
+      {...otherUserProps}
     />
   );
 };

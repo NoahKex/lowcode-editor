@@ -36,7 +36,7 @@ export const ButtonComponentsMessage: ComponentType = {
       },
     },
     {
-      name: 'type',
+      name: 'userType',
       propType: 'string',
       description: '按钮类型',
       defaultValue: 'default',

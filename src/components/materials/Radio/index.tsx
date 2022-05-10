@@ -22,12 +22,15 @@ const StyledMaterialRadio = styled(RadioGroup)<{
 
 const Radio = ({ userProps, styleProps }: PropFunctionalType) => {
   const { connectors: { connect, drag } } = useNode();
+  const { userType, ...otherUserProps } = userProps;
+
   return (
     <div style={{ display: 'inline-block', width: 'auto', height: 'auto' }} ref={(ref) => connect(drag(ref as HTMLDivElement))}>
       <StyledMaterialRadio
         className="material-user"
         userstyles={formatStyleProps(styleProps)}
-        {...userProps}
+        type={userType}
+        {...otherUserProps}
       />
     </div>
   );
