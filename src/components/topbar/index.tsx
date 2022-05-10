@@ -6,17 +6,18 @@ import copy from 'copy-to-clipboard';
 import lz from 'lzutf8';
 import { useState } from 'react';
 import { DESIGNER_DATA } from '@/constants';
-import { useHistory } from 'ice';
+import { redoAtom, undoAtom } from '@/store';
+import { useAtom } from 'jotai';
 
 const { TextArea } = Input;
 
 const TopBar = () => {
   const { actions, query } = useEditor();
-  const history = useHistory();
   const { history: historyOption } = actions;
-  const { history: historyStatus } = query;
   const [loadDataVisible, setLoadDataVisible] = useState(false);
   const [inputData, setInputData] = useState('');
+  const [canRedo] = useAtom(redoAtom);
+  const [canUndo] = useAtom(undoAtom);
   return (
     <>
       <S.TopBarContainer>
@@ -25,8 +26,8 @@ const TopBar = () => {
           <S.Title>行云低代码设计器</S.Title>
         </S.LogoContainer>
         <S.HistoryContainer>
-          <Button title="撤销" disabled={!historyStatus.canUndo()} type="secondary" icon={<IconUndo />} onClick={() => historyOption.undo()} />
-          <Button title="重做" disabled={!historyStatus.canRedo()} type="secondary" icon={<IconRedo />} onClick={() => historyOption.redo()} />
+          <Button title="撤销" disabled={!canUndo} type="secondary" icon={<IconUndo />} onClick={() => historyOption.undo()} />
+          <Button title="重做" disabled={!canRedo} type="secondary" icon={<IconRedo />} onClick={() => historyOption.redo()} />
         </S.HistoryContainer>
         <S.OperationContainer>
           <Button

@@ -3,11 +3,12 @@ import ToolBox from '@/components/toolbox';
 import TopBar from '@/components/topbar';
 import { Layout } from '@arco-design/web-react';
 import * as S from './styled';
-import { Editor, Frame } from '@craftjs/core';
+import { Editor, Frame, useEditor } from '@craftjs/core';
 import RenderNode from '@/components/custom/RenderNode';
 import { PageMessage } from '@/constants';
 import { renderMaterial } from '@/components/toolbox/ComponentLibrary/render';
 import { formatProps } from '@/utils';
+import { useAtom } from 'jotai';
 
 import Page from '@/components/materials/Page';
 import Button from '@/components/materials/Button';
@@ -48,6 +49,7 @@ import Radio from '@/components/materials/Radio';
 import Select from '@/components/materials/Select';
 import Switch from '@/components/materials/Switch';
 import Tag from '@/components/materials/Tag';
+import { redoAtom, undoAtom } from '@/store';
 
 const { Header } = Layout;
 const { Content } = Layout;
@@ -55,6 +57,9 @@ const { Footer } = Layout;
 
 const Home = () => {
   const { render, props, styles } = PageMessage;
+
+  const [, setCanRedo] = useAtom(redoAtom);
+  const [, setCanUndo] = useAtom(undoAtom);
 
   return (
     <Layout style={{ height: '100vh', width: '100vw', minWidth: '1000px' }}>
@@ -101,6 +106,11 @@ const Home = () => {
           Tag,
         }}
         onRender={RenderNode}
+        onNodesChange={(query) => {
+          const { history: historyStatus } = query;
+          setCanRedo(historyStatus.canRedo());
+          setCanUndo(historyStatus.canUndo());
+        }}
       >
         <Header>
           <TopBar />
