@@ -62,7 +62,7 @@ export const RadioComponentsMessage: ComponentType = {
     {
       name: 'size',
       propType: 'any',
-      description: '单选框尺寸（只在按钮类型下生效）',
+      description: '单选框尺寸',
       defaultValue: 'default',
       setter: {
         name: SetterCategory.Select,
