@@ -3,7 +3,7 @@ import ToolBox from '@/components/toolbox';
 import TopBar from '@/components/topbar';
 import { Layout } from '@arco-design/web-react';
 import * as S from './styled';
-import { Editor, Frame, useEditor } from '@craftjs/core';
+import { Editor, Frame } from '@craftjs/core';
 import RenderNode from '@/components/custom/RenderNode';
 import { PageMessage } from '@/constants';
 import { renderMaterial } from '@/components/toolbox/ComponentLibrary/render';
