@@ -1,5 +1,5 @@
 import { SettingsPropsName } from '@/constants';
-import { Tabs, Form, Divider } from '@arco-design/web-react';
+import { Tabs, Form, Divider, Empty } from '@arco-design/web-react';
 import { IconBrush, IconEdit, IconRobot } from '@arco-design/web-react/icon';
 import { useEditor } from '@craftjs/core';
 import React from 'react';
@@ -57,7 +57,7 @@ const Setter = () => {
         wip
       </StyledTabPane>
     </Tabs>
-  ) : <S.SetterTitle>请先从画布中选择节点</S.SetterTitle>;
+  ) : (<S.EmptyContainer><Empty description="请先从画布中选择节点" /></S.EmptyContainer>);
 };
 
 export default Setter;
