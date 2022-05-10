@@ -39,7 +39,7 @@ interface TriggerPopupPropsType {
 }
 
 const TriggerPopup = ({ value, materialOptions, valueOnChange }: TriggerPopupPropsType) => {
-  const renderOptionSetter = (optionSetterName: SetterCategory, currentProperty: string, currentOptions: Record<string, any>): JSX.Element => {
+  const renderOptionSetter = (optionSetterName: SetterCategory, currentProperty: string, currentOptions: Record<string, any> = {}): JSX.Element => {
     const setterObject: Record<SetterCategory, () => JSX.Element> = {
       [SetterCategory.Input]: () => {
         return (
