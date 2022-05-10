@@ -201,38 +201,38 @@ export const AvatarComponentsMessage: ComponentType = {
         options: {
           selectOptions: [{
             value: 'none',
-            description: '不显示',
+            label: '不显示',
           }, {
             value: 'dotted',
-            description: '圆点',
+            label: '圆点',
           },
           {
             value: 'dashed',
-            description: '虚线',
+            label: '虚线',
           },
           {
             value: 'solid',
-            description: '实线',
+            label: '实线',
           },
           {
             value: 'double',
-            description: '双实线',
+            label: '双实线',
           },
           {
             value: 'groove',
-            description: '雕刻效果',
+            label: '雕刻效果',
           },
           {
             value: 'ridge',
-            description: '浮雕效果',
+            label: '浮雕效果',
           },
           {
             value: 'inset',
-            description: '陷入效果',
+            label: '陷入效果',
           },
           {
             value: 'outset',
-            description: '突出效果',
+            label: '突出效果',
           }],
         },
       },

@@ -180,18 +180,18 @@ export const LayoutComponentsMessage: ComponentType = {
         options: {
           selectOptions: [{
             value: '100',
-            description: '100 极细',
+            label: '100 极细',
           }, {
             value: '400',
-            description: '400 普通',
+            label: '400 普通',
           },
           {
             value: 'bold',
-            description: '700 加粗',
+            label: '700 加粗',
           },
           {
             value: '900',
-            description: '900 黑体',
+            label: '900 黑体',
           }],
         },
       },
@@ -347,38 +347,38 @@ export const LayoutComponentsMessage: ComponentType = {
         options: {
           selectOptions: [{
             value: 'none',
-            description: '不显示',
+            label: '不显示',
           }, {
             value: 'dotted',
-            description: '圆点',
+            label: '圆点',
           },
           {
             value: 'dashed',
-            description: '虚线',
+            label: '虚线',
           },
           {
             value: 'solid',
-            description: '实线',
+            label: '实线',
           },
           {
             value: 'double',
-            description: '双实线',
+            label: '双实线',
           },
           {
             value: 'groove',
-            description: '雕刻效果',
+            label: '雕刻效果',
           },
           {
             value: 'ridge',
-            description: '浮雕效果',
+            label: '浮雕效果',
           },
           {
             value: 'inset',
-            description: '陷入效果',
+            label: '陷入效果',
           },
           {
             value: 'outset',
-            description: '突出效果',
+            label: '突出效果',
           }],
         },
       },
@@ -437,42 +437,42 @@ export const LayoutComponentsMessage: ComponentType = {
         options: {
           selectOptions: [{
             value: 'auto',
-            description: '自动',
+            label: '自动',
           }, {
             value: 'default',
-            description: '箭头',
+            label: '箭头',
           },
           {
             value: 'help',
-            description: '帮助',
+            label: '帮助',
           },
           {
             value: 'pointer',
-            description: '可点击',
+            label: '可点击',
           },
           {
             value: 'wait',
-            description: '等待',
+            label: '等待',
           },
           {
             value: 'crosshair',
-            description: '指针',
+            label: '指针',
           },
           {
             value: 'text',
-            description: '文本',
+            label: '文本',
           },
           {
             value: 'not-allowed',
-            description: '不可选中',
+            label: '不可选中',
           },
           {
             value: 'zoom-in',
-            description: '可放大',
+            label: '可放大',
           },
           {
             value: 'zoom-out',
-            description: '可缩小',
+            label: '可缩小',
           }],
         },
       },

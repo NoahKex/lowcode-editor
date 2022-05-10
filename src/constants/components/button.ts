@@ -45,25 +45,25 @@ export const ButtonComponentsMessage: ComponentType = {
         options: {
           selectOptions: [{
             value: 'default',
-            description: '默认',
+            label: '默认',
           }, {
             value: 'primary',
-            description: '主要',
+            label: '主要',
           },
           {
             value: 'secondary',
-            description: '次要',
+            label: '次要',
           },
           {
             value: 'dashed',
-            description: '虚线',
+            label: '虚线',
           },
           {
             value: 'text',
-            description: '文本',
+            label: '文本',
           }, {
             value: 'outline',
-            description: '线性',
+            label: '线性',
           }],
         },
       },
@@ -78,18 +78,18 @@ export const ButtonComponentsMessage: ComponentType = {
         options: {
           selectOptions: [{
             value: 'default',
-            description: '默认',
+            label: '默认',
           }, {
             value: 'warning',
-            description: '警告',
+            label: '警告',
           },
           {
             value: 'danger',
-            description: '危险',
+            label: '危险',
           },
           {
             value: 'success',
-            description: '成功',
+            label: '成功',
           }],
         },
       },
@@ -104,19 +104,19 @@ export const ButtonComponentsMessage: ComponentType = {
         options: {
           selectOptions: [{
             value: 'mini',
-            description: '迷你',
+            label: '迷你',
           },
           {
             value: 'small',
-            description: '小',
+            label: '小',
           },
           {
             value: 'default',
-            description: '中',
+            label: '中',
           },
           {
             value: 'large',
-            description: '大',
+            label: '大',
           }],
         },
       },
@@ -131,15 +131,15 @@ export const ButtonComponentsMessage: ComponentType = {
         options: {
           selectOptions: [{
             value: 'square',
-            description: '长方形',
+            label: '长方形',
           },
           {
             value: 'circle',
-            description: '圆形',
+            label: '圆形',
           },
           {
             value: 'round',
-            description: '全圆角',
+            label: '全圆角',
           }],
         },
       },
@@ -174,18 +174,18 @@ export const ButtonComponentsMessage: ComponentType = {
         options: {
           selectOptions: [{
             value: '100',
-            description: '100 极细',
+            label: '100 极细',
           }, {
             value: '400',
-            description: '400 普通',
+            label: '400 普通',
           },
           {
             value: 'bold',
-            description: '700 加粗',
+            label: '700 加粗',
           },
           {
             value: '900',
-            description: '900 黑体',
+            label: '900 黑体',
           }],
         },
       },
@@ -291,38 +291,38 @@ export const ButtonComponentsMessage: ComponentType = {
         options: {
           selectOptions: [{
             value: 'none',
-            description: '不显示',
+            label: '不显示',
           }, {
             value: 'dotted',
-            description: '圆点',
+            label: '圆点',
           },
           {
             value: 'dashed',
-            description: '虚线',
+            label: '虚线',
           },
           {
             value: 'solid',
-            description: '实线',
+            label: '实线',
           },
           {
             value: 'double',
-            description: '双实线',
+            label: '双实线',
           },
           {
             value: 'groove',
-            description: '雕刻效果',
+            label: '雕刻效果',
           },
           {
             value: 'ridge',
-            description: '浮雕效果',
+            label: '浮雕效果',
           },
           {
             value: 'inset',
-            description: '陷入效果',
+            label: '陷入效果',
           },
           {
             value: 'outset',
-            description: '突出效果',
+            label: '突出效果',
           }],
         },
       },

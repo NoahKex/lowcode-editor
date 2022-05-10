@@ -48,19 +48,19 @@ export const LinkComponentsMessage: ComponentType = {
         options: {
           selectOptions: [{
             value: ' ',
-            description: '默认',
+            label: '默认',
           },
           {
             value: 'error',
-            description: '错误',
+            label: '错误',
           },
           {
             value: 'success',
-            description: '成功',
+            label: '成功',
           },
           {
             value: 'warning',
-            description: '警告',
+            label: '警告',
           }],
         },
       },
@@ -95,18 +95,18 @@ export const LinkComponentsMessage: ComponentType = {
         options: {
           selectOptions: [{
             value: '100',
-            description: '100 极细',
+            label: '100 极细',
           }, {
             value: '400',
-            description: '400 普通',
+            label: '400 普通',
           },
           {
             value: 'bold',
-            description: '700 加粗',
+            label: '700 加粗',
           },
           {
             value: '900',
-            description: '900 黑体',
+            label: '900 黑体',
           }],
         },
       },
@@ -199,38 +199,38 @@ export const LinkComponentsMessage: ComponentType = {
         options: {
           selectOptions: [{
             value: 'none',
-            description: '不显示',
+            label: '不显示',
           }, {
             value: 'dotted',
-            description: '圆点',
+            label: '圆点',
           },
           {
             value: 'dashed',
-            description: '虚线',
+            label: '虚线',
           },
           {
             value: 'solid',
-            description: '实线',
+            label: '实线',
           },
           {
             value: 'double',
-            description: '双实线',
+            label: '双实线',
           },
           {
             value: 'groove',
-            description: '雕刻效果',
+            label: '雕刻效果',
           },
           {
             value: 'ridge',
-            description: '浮雕效果',
+            label: '浮雕效果',
           },
           {
             value: 'inset',
-            description: '陷入效果',
+            label: '陷入效果',
           },
           {
             value: 'outset',
-            description: '突出效果',
+            label: '突出效果',
           }],
         },
       },
