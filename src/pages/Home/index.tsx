@@ -23,7 +23,7 @@ import Avatar from '@/components/materials/Avatar';
 // import BreadCrumbItem from '@/components/materials/BreadCrumbItem';
 // import ButtonGroup from '@/components/materials/ButtonGroup';
 // import Card from '@/components/materials/Card';
-// import Carousel from '@/components/materials/Carousel';
+import Carousel from '@/components/materials/Carousel';
 // import Cascader from '@/components/materials/Cascader';
 import Checkbox from '@/components/materials/Checkbox';
 // import CheckboxGroup from '@/components/materials/CheckboxGroup';
@@ -78,7 +78,7 @@ const Home = () => {
           // BreadCrumbItem,
           // ButtonGroup,
           // Card,
-          // Carousel,
+          Carousel,
           // Cascader,
           Checkbox,
           // CheckboxGroup,

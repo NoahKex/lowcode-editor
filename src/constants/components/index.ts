@@ -13,7 +13,7 @@ import { AvatarComponentsMessage } from './avatar';
 // import { BreadCrumbItemComponentsMessage } from './breadcrumbitem';
 // import { ButtonGroupComponentsMessage } from './buttongroup';
 // import { CardComponentsMessage } from './card';
-// import { CarouselComponentsMessage } from './carousel';
+import { CarouselComponentsMessage } from './carousel';
 // import { CascaderComponentsMessage } from './cascader';
 import { CheckboxComponentsMessage } from './checkbox';
 // import { CheckboxGroupComponentsMessage } from './checkboxgroup';
@@ -53,7 +53,7 @@ export { AvatarComponentsMessage } from './avatar';
 // export { BreadCrumbItemComponentsMessage } from './breadcrumbitem';
 // export { ButtonGroupComponentsMessage } from './buttongroup';
 // export { CardComponentsMessage } from './card';
-// export { CarouselComponentsMessage } from './carousel';
+export { CarouselComponentsMessage } from './carousel';
 // export { CascaderComponentsMessage } from './cascader';
 export { CheckboxComponentsMessage } from './checkbox';
 // export { CheckboxGroupComponentsMessage } from './checkboxgroup';
@@ -96,7 +96,7 @@ export const ComponentsMessage: ComponentType[] = [
   // BreadCrumbItemComponentsMessage,
   // ButtonGroupComponentsMessage,
   // CardComponentsMessage,
-  // CarouselComponentsMessage,
+  CarouselComponentsMessage,
   // CascaderComponentsMessage,
   CheckboxComponentsMessage,
   // CheckboxGroupComponentsMessage,
