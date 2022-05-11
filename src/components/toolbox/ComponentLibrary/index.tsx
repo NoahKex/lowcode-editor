@@ -40,7 +40,7 @@ const ComponentLibrary = ({ onMaterialMouseDown }: {onMaterialMouseDown: () => v
                 return filteredSortList.length > 0 && (
                   (
                     <div key={category}>
-                      <S.SortTitle style={{ marginTop: i === 0 ? '-2px' : '10px' }}>{<IconSort />} {category}</S.SortTitle>
+                      <S.SortTitle style={{ marginTop: i === 0 ? '-2px' : '30px' }}>{<IconSort />} {category}</S.SortTitle>
                       {
                         filteredSortList.map((materialItem) => {
                           const { render, props, styles, description, icon, componentName } = materialItem;
