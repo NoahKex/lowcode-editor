@@ -26,7 +26,7 @@ import Checkbox from '@/components/materials/Checkbox';
 // import WeekPicker from '@/components/materials/WeekPicker';
 // import QuarterPicker from '@/components/materials/QuarterPicker';
 // import RangePicker from '@/components/materials/RangePicker';
-// import Descriptions from '@/components/materials/Descriptions';
+import Descriptions from '@/components/materials/Descriptions';
 import Divider from '@/components/materials/Divider';
 // import Dropdown from '@/components/materials/Dropdown';
 // import DropdownButton from '@/components/materials/DropdownButton';
@@ -255,14 +255,14 @@ export const renderMaterial = (props: PropFunctionalType, category: MaterialCate
     //     />
     //   );
     // },
-    // [MaterialCategory.Descriptions]: () => {
-    //   return (
-    //     <Descriptions
-    //       userProps={userProps}
-    //       styleProps={styleProps}
-    //     />
-    //   );
-    // },
+    [MaterialCategory.Descriptions]: () => {
+      return (
+        <Descriptions
+          userProps={userProps}
+          styleProps={styleProps}
+        />
+      );
+    },
     [MaterialCategory.Divider]: () => {
       return (
         <Divider

@@ -35,7 +35,7 @@ import Checkbox from '@/components/materials/Checkbox';
 // import WeekPicker from '@/components/materials/WeekPicker';
 // import QuarterPicker from '@/components/materials/QuarterPicker';
 // import RangePicker from '@/components/materials/RangePicker';
-// import Descriptions from '@/components/materials/Descriptions';
+import Descriptions from '@/components/materials/Descriptions';
 import Divider from '@/components/materials/Divider';
 // import Dropdown from '@/components/materials/Dropdown';
 // import DropdownButton from '@/components/materials/DropdownButton';
@@ -90,7 +90,7 @@ const Home = () => {
           // WeekPicker,
           // QuarterPicker,
           // RangePicker,
-          // Descriptions,
+          Descriptions,
           Divider,
           // Dropdown,
           // DropdownButton,

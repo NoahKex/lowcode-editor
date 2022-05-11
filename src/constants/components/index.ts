@@ -25,7 +25,7 @@ import { CheckboxComponentsMessage } from './checkbox';
 // import { WeekPickerComponentsMessage } from './weekpicker';
 // import { QuarterPickerComponentsMessage } from './quarterpicker';
 // import { RangePickerComponentsMessage } from './rangepicker';
-// import { DescriptionsComponentsMessage } from './descriptions';
+import { DescriptionsComponentsMessage } from './descriptions';
 import { DividerComponentsMessage } from './divider';
 // import { DropdownComponentsMessage } from './dropdown';
 // import { DropdownButtonComponentsMessage } from './dropdownbutton';
@@ -65,7 +65,7 @@ export { CheckboxComponentsMessage } from './checkbox';
 // export { WeekPickerComponentsMessage } from './weekpicker';
 // export { QuarterPickerComponentsMessage } from './quarterpicker';
 // export { RangePickerComponentsMessage } from './rangepicker';
-// export { DescriptionsComponentsMessage } from './descriptions';
+export { DescriptionsComponentsMessage } from './descriptions';
 export { DividerComponentsMessage } from './divider';
 // export { DropdownComponentsMessage } from './dropdown';
 // export { DropdownButtonComponentsMessage } from './dropdownbutton';
@@ -108,7 +108,7 @@ export const ComponentsMessage: ComponentType[] = [
   // WeekPickerComponentsMessage,
   // QuarterPickerComponentsMessage,
   // RangePickerComponentsMessage,
-  // DescriptionsComponentsMessage,
+  DescriptionsComponentsMessage,
   DividerComponentsMessage,
   // DropdownComponentsMessage,
   // DropdownButtonComponentsMessage,
