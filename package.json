@@ -4,7 +4,7 @@
   "description": "lowcode editor",
   "dependencies": {
     "@arco-design/web-react": "^2.31.1",
-    "@craftjs/core": "*",
+    "@craftjs/core": "^0.2.0-beta.4",
     "@craftjs/layers": "*",
     "ahooks": "^3.3.0",
     "copy-to-clipboard": "^3.3.1",

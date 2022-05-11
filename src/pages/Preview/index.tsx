@@ -1,6 +1,7 @@
 import { getSearchParams } from 'ice';
-import { Editor, Frame } from '@craftjs/core';
+import { Editor } from '@craftjs/core';
 import lz from 'lzutf8';
+import PreviewFrame from './frame';
 
 import Page from '@/components/materials/Page';
 import Button from '@/components/materials/Button';
@@ -47,7 +48,6 @@ const Preview = () => {
   const designerData = decodeURIComponent(search['designer_data'] as string);
   return (
     <Editor
-      enabled={false}
       resolver={{
         Page,
         Button,
@@ -90,7 +90,7 @@ const Preview = () => {
         Tag,
       }}
     >
-      <Frame data={lz.decompress(lz.decodeBase64(designerData))} />
+      <PreviewFrame data={lz.decompress(lz.decodeBase64(designerData))} />
     </Editor>
   );
 };
