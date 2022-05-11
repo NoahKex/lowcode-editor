@@ -64,6 +64,10 @@ const Home = () => {
   return (
     <Layout style={{ height: '100vh', width: '100vw', minWidth: '1000px' }}>
       <Editor
+        indicator={{
+          success: '#4080FF',
+          error: '#F76560',
+        }}
         resolver={{
           Page,
           Button,
