@@ -9,6 +9,7 @@ import { PageMessage } from '@/constants';
 import { renderMaterial } from '@/components/toolbox/ComponentLibrary/render';
 import { formatProps } from '@/utils';
 import { useAtom } from 'jotai';
+import { redoAtom, undoAtom } from '@/store';
 
 import Page from '@/components/materials/Page';
 import Button from '@/components/materials/Button';
@@ -49,7 +50,6 @@ import Radio from '@/components/materials/Radio';
 import Select from '@/components/materials/Select';
 import Switch from '@/components/materials/Switch';
 import Tag from '@/components/materials/Tag';
-import { redoAtom, undoAtom } from '@/store';
 
 const { Header } = Layout;
 const { Content } = Layout;

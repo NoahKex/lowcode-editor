@@ -14,8 +14,8 @@ import Avatar from '@/components/materials/Avatar';
 // import Breadcrumb from '@/components/materials/Breadcrumb';
 // import BreadCrumbItem from '@/components/materials/BreadCrumbItem';
 // import ButtonGroup from '@/components/materials/ButtonGroup';
-// import Card from '@/components/materials/Card';
-// import Carousel from '@/components/materials/Carousel';
+import Card from '@/components/materials/Card';
+import Carousel from '@/components/materials/Carousel';
 // import Cascader from '@/components/materials/Cascader';
 import Checkbox from '@/components/materials/Checkbox';
 // import CheckboxGroup from '@/components/materials/CheckboxGroup';
@@ -27,7 +27,7 @@ import Checkbox from '@/components/materials/Checkbox';
 // import WeekPicker from '@/components/materials/WeekPicker';
 // import QuarterPicker from '@/components/materials/QuarterPicker';
 // import RangePicker from '@/components/materials/RangePicker';
-// import Descriptions from '@/components/materials/Descriptions';
+import Descriptions from '@/components/materials/Descriptions';
 import Divider from '@/components/materials/Divider';
 // import Dropdown from '@/components/materials/Dropdown';
 // import DropdownButton from '@/components/materials/DropdownButton';
@@ -61,8 +61,8 @@ const Preview = () => {
         // Breadcrumb,
         // BreadCrumbItem,
         // ButtonGroup,
-        // Card,
-        // Carousel,
+        Card,
+        Carousel,
         // Cascader,
         Checkbox,
         // CheckboxGroup,
@@ -74,7 +74,7 @@ const Preview = () => {
         // WeekPicker,
         // QuarterPicker,
         // RangePicker,
-        // Descriptions,
+        Descriptions,
         Divider,
         // Dropdown,
         // DropdownButton,
