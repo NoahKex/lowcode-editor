@@ -12,7 +12,7 @@ import { AvatarComponentsMessage } from './avatar';
 // import { BreadcrumbComponentsMessage } from './breadcrumb';
 // import { BreadCrumbItemComponentsMessage } from './breadcrumbitem';
 // import { ButtonGroupComponentsMessage } from './buttongroup';
-// import { CardComponentsMessage } from './card';
+import { CardComponentsMessage } from './card';
 import { CarouselComponentsMessage } from './carousel';
 // import { CascaderComponentsMessage } from './cascader';
 import { CheckboxComponentsMessage } from './checkbox';
@@ -52,7 +52,7 @@ export { AvatarComponentsMessage } from './avatar';
 // export { BreadcrumbComponentsMessage } from './breadcrumb';
 // export { BreadCrumbItemComponentsMessage } from './breadcrumbitem';
 // export { ButtonGroupComponentsMessage } from './buttongroup';
-// export { CardComponentsMessage } from './card';
+export { CardComponentsMessage } from './card';
 export { CarouselComponentsMessage } from './carousel';
 // export { CascaderComponentsMessage } from './cascader';
 export { CheckboxComponentsMessage } from './checkbox';
@@ -95,7 +95,7 @@ export const ComponentsMessage: ComponentType[] = [
   // BreadcrumbComponentsMessage,
   // BreadCrumbItemComponentsMessage,
   // ButtonGroupComponentsMessage,
-  // CardComponentsMessage,
+  CardComponentsMessage,
   CarouselComponentsMessage,
   // CascaderComponentsMessage,
   CheckboxComponentsMessage,

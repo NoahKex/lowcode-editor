@@ -13,7 +13,7 @@ import Avatar from '@/components/materials/Avatar';
 // import Breadcrumb from '@/components/materials/Breadcrumb';
 // import BreadCrumbItem from '@/components/materials/BreadCrumbItem';
 // import ButtonGroup from '@/components/materials/ButtonGroup';
-// import Card from '@/components/materials/Card';
+import Card from '@/components/materials/Card';
 import Carousel from '@/components/materials/Carousel';
 // import Cascader from '@/components/materials/Cascader';
 import Checkbox from '@/components/materials/Checkbox';
@@ -151,14 +151,14 @@ export const renderMaterial = (props: PropFunctionalType, category: MaterialCate
     //     />
     //   );
     // },
-    // [MaterialCategory.Card]: () => {
-    //   return (
-    //     <Card
-    //       userProps={userProps}
-    //       styleProps={styleProps}
-    //     />
-    //   );
-    // },
+    [MaterialCategory.Card]: () => {
+      return (
+        <Card
+          userProps={userProps}
+          styleProps={styleProps}
+        />
+      );
+    },
     [MaterialCategory.Carousel]: () => {
       return (
         <Carousel
