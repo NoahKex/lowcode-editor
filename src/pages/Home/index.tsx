@@ -53,6 +53,7 @@ import Tag from '@/components/materials/Tag';
 import Result from '@/components/materials/Result';
 import Statistic from '@/components/materials/Statistic';
 import Breadcrumb from '@/components/materials/Breadcrumb';
+import Timeline from '@/components/materials/Timeline';
 
 const { Header } = Layout;
 const { Content } = Layout;
@@ -114,6 +115,7 @@ const Home = () => {
           Result,
           Statistic,
           Breadcrumb,
+          Timeline,
         }}
         onRender={RenderNode}
         onNodesChange={(query) => {

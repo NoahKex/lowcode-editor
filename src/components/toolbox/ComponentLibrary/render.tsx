@@ -43,6 +43,7 @@ import Tag from '@/components/materials/Tag';
 import Result from '@/components/materials/Result';
 import Statistic from '@/components/materials/Statistic';
 import Breadcrumb from '@/components/materials/Breadcrumb';
+import Timeline from '@/components/materials/Timeline';
 
 /**
  * 初始化渲染材料组件
@@ -389,6 +390,14 @@ export const renderMaterial = (props: PropFunctionalType, category: MaterialCate
     [MaterialCategory.Breadcrumb]: () => {
       return (
         <Breadcrumb
+          userProps={userProps}
+          styleProps={styleProps}
+        />
+      );
+    },
+    [MaterialCategory.Timeline]: () => {
+      return (
+        <Timeline
           userProps={userProps}
           styleProps={styleProps}
         />

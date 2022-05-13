@@ -45,6 +45,7 @@ import Tag from '@/components/materials/Tag';
 import Result from '@/components/materials/Result';
 import Statistic from '@/components/materials/Statistic';
 import Breadcrumb from '@/components/materials/Breadcrumb';
+import Timeline from '@/components/materials/Timeline';
 
 const Preview = () => {
   const search = getSearchParams();
@@ -94,6 +95,7 @@ const Preview = () => {
         Result,
         Statistic,
         Breadcrumb,
+        Timeline,
       }}
     >
       <PreviewFrame data={lz.decompress(lz.decodeBase64(designerData))} />
