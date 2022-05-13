@@ -243,6 +243,18 @@ export enum MaterialCategory {
    * Tag
    */
   Tag,
+  /**
+   * Result
+   */
+  Result,
+  /**
+   * Statistic
+   */
+  Statistic,
+  /**
+   * Timeline
+   */
+  Timeline,
 }
 
 /**

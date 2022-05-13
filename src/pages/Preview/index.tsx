@@ -42,6 +42,7 @@ import Radio from '@/components/materials/Radio';
 import Select from '@/components/materials/Select';
 import Switch from '@/components/materials/Switch';
 import Tag from '@/components/materials/Tag';
+import Result from '@/components/materials/Result';
 
 const Preview = () => {
   const search = getSearchParams();
@@ -88,6 +89,7 @@ const Preview = () => {
         Select,
         Switch,
         Tag,
+        Result,
       }}
     >
       <PreviewFrame data={lz.decompress(lz.decodeBase64(designerData))} />

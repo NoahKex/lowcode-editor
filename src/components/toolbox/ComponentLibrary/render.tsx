@@ -40,6 +40,7 @@ import Radio from '@/components/materials/Radio';
 import Select from '@/components/materials/Select';
 import Switch from '@/components/materials/Switch';
 import Tag from '@/components/materials/Tag';
+import Result from '@/components/materials/Result';
 
 /**
  * 初始化渲染材料组件
@@ -362,6 +363,14 @@ export const renderMaterial = (props: PropFunctionalType, category: MaterialCate
     [MaterialCategory.Tag]: () => {
       return (
         <Tag
+          userProps={userProps}
+          styleProps={styleProps}
+        />
+      );
+    },
+    [MaterialCategory.Result]: () => {
+      return (
+        <Result
           userProps={userProps}
           styleProps={styleProps}
         />

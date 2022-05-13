@@ -39,6 +39,7 @@ import { RadioComponentsMessage } from './radio';
 import { SelectComponentsMessage } from './select';
 import { SwitchComponentsMessage } from './switch';
 import { TagComponentsMessage } from './tag';
+import { ResultComponentsMessage } from './result';
 
 export { PageMessage } from './page';
 export { ButtonComponentsMessage } from './button';
@@ -79,6 +80,7 @@ export { RadioComponentsMessage } from './radio';
 export { SelectComponentsMessage } from './select';
 export { SwitchComponentsMessage } from './switch';
 export { TagComponentsMessage } from './tag';
+export { ResultComponentsMessage } from './result';
 
 /**
  * 组件列表
@@ -122,6 +124,7 @@ export const ComponentsMessage: ComponentType[] = [
   SelectComponentsMessage,
   SwitchComponentsMessage,
   TagComponentsMessage,
+  ResultComponentsMessage,
 ];
 
 /**

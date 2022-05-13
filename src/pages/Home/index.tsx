@@ -50,6 +50,7 @@ import Radio from '@/components/materials/Radio';
 import Select from '@/components/materials/Select';
 import Switch from '@/components/materials/Switch';
 import Tag from '@/components/materials/Tag';
+import Result from '@/components/materials/Result';
 
 const { Header } = Layout;
 const { Content } = Layout;
@@ -108,6 +109,7 @@ const Home = () => {
           Select,
           Switch,
           Tag,
+          Result,
         }}
         onRender={RenderNode}
         onNodesChange={(query) => {
