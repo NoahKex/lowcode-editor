@@ -42,6 +42,7 @@ import Switch from '@/components/materials/Switch';
 import Tag from '@/components/materials/Tag';
 import Result from '@/components/materials/Result';
 import Statistic from '@/components/materials/Statistic';
+import Breadcrumb from '@/components/materials/Breadcrumb';
 
 /**
  * 初始化渲染材料组件
@@ -380,6 +381,14 @@ export const renderMaterial = (props: PropFunctionalType, category: MaterialCate
     [MaterialCategory.Statistic]: () => {
       return (
         <Statistic
+          userProps={userProps}
+          styleProps={styleProps}
+        />
+      );
+    },
+    [MaterialCategory.Breadcrumb]: () => {
+      return (
+        <Breadcrumb
           userProps={userProps}
           styleProps={styleProps}
         />

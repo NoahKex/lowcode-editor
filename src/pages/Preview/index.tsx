@@ -44,6 +44,7 @@ import Switch from '@/components/materials/Switch';
 import Tag from '@/components/materials/Tag';
 import Result from '@/components/materials/Result';
 import Statistic from '@/components/materials/Statistic';
+import Breadcrumb from '@/components/materials/Breadcrumb';
 
 const Preview = () => {
   const search = getSearchParams();
@@ -92,6 +93,7 @@ const Preview = () => {
         Tag,
         Result,
         Statistic,
+        Breadcrumb,
       }}
     >
       <PreviewFrame data={lz.decompress(lz.decodeBase64(designerData))} />

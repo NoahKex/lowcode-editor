@@ -41,6 +41,7 @@ import { SwitchComponentsMessage } from './switch';
 import { TagComponentsMessage } from './tag';
 import { ResultComponentsMessage } from './result';
 import { StatisticComponentsMessage } from './statistic';
+import { BreadcrumbComponentsMessage } from './breadcrumb';
 
 export { PageMessage } from './page';
 export { ButtonComponentsMessage } from './button';
@@ -83,6 +84,7 @@ export { SwitchComponentsMessage } from './switch';
 export { TagComponentsMessage } from './tag';
 export { ResultComponentsMessage } from './result';
 export { StatisticComponentsMessage } from './statistic';
+export { BreadcrumbComponentsMessage } from './breadcrumb';
 
 /**
  * 组件列表
@@ -128,6 +130,7 @@ export const ComponentsMessage: ComponentType[] = [
   TagComponentsMessage,
   ResultComponentsMessage,
   StatisticComponentsMessage,
+  BreadcrumbComponentsMessage,
 ];
 
 /**
