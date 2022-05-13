@@ -51,6 +51,7 @@ import Select from '@/components/materials/Select';
 import Switch from '@/components/materials/Switch';
 import Tag from '@/components/materials/Tag';
 import Result from '@/components/materials/Result';
+import Statistic from '@/components/materials/Statistic';
 
 const { Header } = Layout;
 const { Content } = Layout;
@@ -110,6 +111,7 @@ const Home = () => {
           Switch,
           Tag,
           Result,
+          Statistic,
         }}
         onRender={RenderNode}
         onNodesChange={(query) => {

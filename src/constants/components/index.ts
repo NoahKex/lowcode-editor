@@ -40,6 +40,7 @@ import { SelectComponentsMessage } from './select';
 import { SwitchComponentsMessage } from './switch';
 import { TagComponentsMessage } from './tag';
 import { ResultComponentsMessage } from './result';
+import { StatisticComponentsMessage } from './statistic';
 
 export { PageMessage } from './page';
 export { ButtonComponentsMessage } from './button';
@@ -81,6 +82,7 @@ export { SelectComponentsMessage } from './select';
 export { SwitchComponentsMessage } from './switch';
 export { TagComponentsMessage } from './tag';
 export { ResultComponentsMessage } from './result';
+export { StatisticComponentsMessage } from './statistic';
 
 /**
  * 组件列表
@@ -125,6 +127,7 @@ export const ComponentsMessage: ComponentType[] = [
   SwitchComponentsMessage,
   TagComponentsMessage,
   ResultComponentsMessage,
+  StatisticComponentsMessage,
 ];
 
 /**
