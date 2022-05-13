@@ -20,12 +20,20 @@ const StyledMaterialInputNumber = styled(MaterialInputNumber)<{
 
 const InputNumber = ({ userProps, styleProps }: PropFunctionalType) => {
   const { connectors: { connect, drag } } = useNode();
+  const { min, max, ...otherUserProps } = userProps;
+  if (min) {
+    otherUserProps.min = min;
+  }
+  if (max) {
+    otherUserProps.max = max;
+  }
+
   return (
     <div style={{ display: 'inline-block', width: 'auto', height: 'auto' }} ref={(ref) => connect(drag(ref as HTMLDivElement))}>
       <StyledMaterialInputNumber
         className="material-user"
         userstyles={formatStyleProps(styleProps)}
-        {...userProps}
+        {...otherUserProps}
       />
     </div>
   );
