@@ -43,6 +43,7 @@ import { ResultComponentsMessage } from './result';
 import { StatisticComponentsMessage } from './statistic';
 import { BreadcrumbComponentsMessage } from './breadcrumb';
 import { TimelineComponentsMessage } from './timeline';
+import { ImageComponentsMessage } from './image';
 
 export { PageMessage } from './page';
 export { ButtonComponentsMessage } from './button';
@@ -87,6 +88,7 @@ export { ResultComponentsMessage } from './result';
 export { StatisticComponentsMessage } from './statistic';
 export { BreadcrumbComponentsMessage } from './breadcrumb';
 export { TimelineComponentsMessage } from './timeline';
+export { ImageComponentsMessage } from './image';
 
 /**
  * 组件列表
@@ -134,6 +136,7 @@ export const ComponentsMessage: ComponentType[] = [
   StatisticComponentsMessage,
   BreadcrumbComponentsMessage,
   TimelineComponentsMessage,
+  ImageComponentsMessage,
 ];
 
 /**

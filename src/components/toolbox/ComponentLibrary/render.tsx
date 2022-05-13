@@ -44,6 +44,7 @@ import Result from '@/components/materials/Result';
 import Statistic from '@/components/materials/Statistic';
 import Breadcrumb from '@/components/materials/Breadcrumb';
 import Timeline from '@/components/materials/Timeline';
+import Image from '@/components/materials/Image';
 
 /**
  * 初始化渲染材料组件
@@ -398,6 +399,14 @@ export const renderMaterial = (props: PropFunctionalType, category: MaterialCate
     [MaterialCategory.Timeline]: () => {
       return (
         <Timeline
+          userProps={userProps}
+          styleProps={styleProps}
+        />
+      );
+    },
+    [MaterialCategory.Image]: () => {
+      return (
+        <Image
           userProps={userProps}
           styleProps={styleProps}
         />

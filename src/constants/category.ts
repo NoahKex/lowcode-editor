@@ -255,6 +255,10 @@ export enum MaterialCategory {
    * Timeline
    */
   Timeline,
+  /**
+   * Image
+   */
+  Image,
 }
 
 /**
