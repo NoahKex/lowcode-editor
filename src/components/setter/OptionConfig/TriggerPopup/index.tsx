@@ -147,7 +147,7 @@ const TriggerPopup = ({ value, materialOptions, valueOnChange }: TriggerPopupPro
   };
   return (
     <S.TriggerPopupContainer >
-      <Form labelCol={{ span: 6 }} wrapperCol={{ span: 18 }}>
+      <Form labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}>
         {Object.keys(materialOptions).map((item) => {
           const { name, description, options } = materialOptions[item];
           return (
